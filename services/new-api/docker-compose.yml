@@ -1,0 +1,12 @@
+services:
+  new-api:
+    image: ghcr.io/quantumnous/new-api:latest
+    container_name: new-api
+    restart: always
+    command: --log-dir /data/logs
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/data
+    environment:
+      - TZ=Asia/Taipei

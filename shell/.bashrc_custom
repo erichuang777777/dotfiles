@@ -1,0 +1,11 @@
+# 自訂路徑與命令別名
+alias dc='docker compose'
+alias cls='clear'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# 掛載本地私有變數
+if [ -f ~/.bashrc.local ]; then
+    source ~/.bashrc.local
+fi
