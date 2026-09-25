@@ -1,0 +1,29 @@
+﻿# 主力運算節點 (ARM 24G) - Hermes
+Host hermes
+    HostName 138.2.38.224
+    User ubuntu
+    IdentityFile C:\Users\user\Documents\SSHkey\oracle-ssh-key-2026-09-09.key
+
+# 網關與備份節點 (x86)
+Host x86-1
+    HostName 152.69.192.181
+    User ubuntu
+    IdentityFile C:\Users\user\Documents\SSHkey\oracle-x86-1-ssh-key-2026-09-09.key
+
+# 哨兵監控節點 (x86)
+Host x86-2
+    HostName 161.33.12.55
+    User ubuntu
+    IdentityFile C:\Users\user\Documents\SSHkey\oracle-x86-2-ssh-key-2026-09-09.key
+
+Host macmini
+    HostName 100.120.254.109
+    User eric777
+
+Host gb10 gb-10
+    HostName 100.118.33.58
+    User altos
+
+Host home
+    HostName 100.110.81.104
+    User eric777
