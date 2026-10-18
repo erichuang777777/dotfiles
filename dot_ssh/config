@@ -27,3 +27,7 @@ Host gb10 gb-10
 Host home
     HostName 100.110.81.104
     User user
+
+Host u47vc
+    HostName 100.77.160.106
+    User eric777
