@@ -1,0 +1,86 @@
+{
+  "repo": "mlx-community/gemma-4-31b-it-8bit",
+  "sha": "f5f3dc92ab4af76724c36c21eb6bedadb3a851be",
+  "files": [
+    {
+      "name": ".gitattributes",
+      "size": 1570,
+      "sha256": null
+    },
+    {
+      "name": "README.md",
+      "size": 733,
+      "sha256": null
+    },
+    {
+      "name": "chat_template.jinja",
+      "size": 17466,
+      "sha256": null
+    },
+    {
+      "name": "config.json",
+      "size": 6046,
+      "sha256": null
+    },
+    {
+      "name": "generation_config.json",
+      "size": 208,
+      "sha256": null
+    },
+    {
+      "name": "model-00001-of-00007.safetensors",
+      "size": 5258667341,
+      "sha256": "c3fe7c584ab9fb211c3071ac035628ccc6861c4a7e1b59c200f58b33ddb81435"
+    },
+    {
+      "name": "model-00002-of-00007.safetensors",
+      "size": 5328997408,
+      "sha256": "ed27cbf128295cb8c5fe462ccee517f5840f034b8310af432707c6b01089d2ce"
+    },
+    {
+      "name": "model-00003-of-00007.safetensors",
+      "size": 5270505988,
+      "sha256": "7a6cf32b03f6953bb42d863a4cc28e07289b6ea9fd501dfa9882b19e5539b048"
+    },
+    {
+      "name": "model-00004-of-00007.safetensors",
+      "size": 5329041180,
+      "sha256": "615bb5fb4e2150da2ef820f2beae5dcf7939fae8b6405c5d8cfb376a16d18ff3"
+    },
+    {
+      "name": "model-00005-of-00007.safetensors",
+      "size": 5346547174,
+      "sha256": "f1f2fad40a9535464bc81e522c13021d2478413be623cd07d2db00a2b19fc01d"
+    },
+    {
+      "name": "model-00006-of-00007.safetensors",
+      "size": 5270505993,
+      "sha256": "4dbf38950088a46ed5c9baab1921f5aa75ad4a498ee51e25765c951148983761"
+    },
+    {
+      "name": "model-00007-of-00007.safetensors",
+      "size": 1958855331,
+      "sha256": "67e62dc49c0f849b3f2b119a644d48b6e4caa92a1e2ef4569bc6e90ae826cc85"
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "size": 205370,
+      "sha256": null
+    },
+    {
+      "name": "processor_config.json",
+      "size": 1316,
+      "sha256": null
+    },
+    {
+      "name": "tokenizer.json",
+      "size": 32169626,
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "size": 2740,
+      "sha256": null
+    }
+  ]
+}

@@ -1,0 +1,3354 @@
+{
+  "model": "Muse-Glimmer-30B-8bit",
+  "started": "2026-10-18T01:24:09.163874",
+  "raw_endpoint": true,
+  "repeats": 1,
+  "max_tokens": 4096,
+  "top_p": 0.95,
+  "cases": [
+    {
+      "api": "chat",
+      "repeat": 0,
+      "case": "typed_nested",
+      "turns": [
+        {
+          "text": "",
+          "finish": "tool_calls",
+          "calls": [
+            {
+              "name": "create_draft",
+              "arguments": "{\"title\":\"測試訂單\",\"items\":[{\"sku\":\"TW-0042\",\"quantity\":3}],\"dry_run\":true}",
+              "id": "call_94e1c275"
+            }
+          ],
+          "raw": {
+            "id": "chatcmpl-749e60ff",
+            "object": "chat.completion",
+            "created": 1792311874,
+            "model": "Muse-Glimmer-30B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "reasoning_content": "請使用 create_draft 建立模擬草稿，title 為「測試訂單」，items 只含一項 sku「TW-0042」、quantity 整數 3，dry_run 為布林 true。只輸出 JSON，鍵名 draft_id。\n\nWe need to use create_draft tool. Parameters: title, items, description? The schema says create_draft parameters: title string, items array of objects with sku string, quantity integer, description string? Wait schema: properties title, items, description?, dry_run. Actually schema shows: title, items, description?, dry_run. Required: title, items, dry_run. description is optional? The schema in definition: properties title, items, description, dry_run. Required title, items, dry_run. So description is optional.\n\nUser wants title \"測試訂單\", items only one sku \"TW-0042\", quantity integer 3, dry_run boolean true.\n\nWe need to output JSON, key name draft_id. The tool output presumably returns something with draft_id. We need to call create_draft first.\n\nThen we need to output JSON with key draft_id. Only output JSON, key name draft_id.\n\nProbably need to call create_draft, get result, then output JSON.\n\nWe must not output analysis. Only final answer? The instruction says 只輸出 JSON，鍵名 draft_id。 So final output should be JSON with draft_id.\n\nWe need to call create_draft. Must do function call.\n\nParameters: title = \"測試訂單\"\nitems = [{\"sku\": \"TW-0042\", \"quantity\": 3}]\ndry_run = true\ndescription? Not specified. Maybe omit.\n\nCall create_draft.",
+                  "tool_calls": [
+                    {
+                      "id": "call_94e1c275",
+                      "type": "function",
+                      "function": {
+                        "name": "create_draft",
+                        "arguments": "{\"title\":\"測試訂單\",\"items\":[{\"sku\":\"TW-0042\",\"quantity\":3}],\"dry_run\":true}"
+                      }
+                    }
+                  ]
+                },
+                "finish_reason": "tool_calls"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1011,
+              "completion_tokens": 439,
+              "total_tokens": 1450,
+              "input_tokens": 1011,
+              "output_tokens": 439,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "time_to_first_token": 1.32,
+              "total_time": 25.79,
+              "prompt_eval_duration": 1.32,
+              "generation_duration": 24.47,
+              "prompt_tokens_per_second": 767.45,
+              "generation_tokens_per_second": 17.94
+            }
+          }
+        },
+        {
+          "text": "{\"draft_id\": \"D-09Z\"}",
+          "finish": "stop",
+          "calls": [],
+          "raw": {
+            "id": "chatcmpl-4e27ce18",
+            "object": "chat.completion",
+            "created": 1792311879,
+            "model": "Muse-Glimmer-30B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"draft_id\": \"D-09Z\"}",
+                  "reasoning_content": "We have draft_id D-09Z. Need output JSON with key draft_id. 只輸出 JSON，鍵名 draft_id。\n\nSo output: {\"draft_id\": \"D-09Z\"}\n\nMake sure format correct."
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1483,
+              "completion_tokens": 63,
+              "total_tokens": 1546,
+              "input_tokens": 1483,
+              "output_tokens": 63,
+              "prompt_tokens_details": {
+                "cached_tokens": 1009
+              },
+              "time_to_first_token": 0.83,
+              "total_time": 4.36,
+              "prompt_eval_duration": 0.83,
+              "generation_duration": 3.53,
+              "prompt_tokens_per_second": 569.55,
+              "generation_tokens_per_second": 17.86
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 30.161
+    },
+    {
+      "api": "chat",
+      "repeat": 0,
+      "case": "id_fidelity",
+      "turns": [
+        {
+          "text": "",
+          "finish": "tool_calls",
+          "calls": [
+            {
+              "name": "lookup_ticket",
+              "arguments": "{\"ticket_id\":\"T-00O1lI-09Z\"}",
+              "id": "call_a1a0a777"
+            }
+          ],
+          "raw": {
+            "id": "chatcmpl-6c86b1cc",
+            "object": "chat.completion",
+            "created": 1792311894,
+            "model": "Muse-Glimmer-30B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "reasoning_content": "請用 lookup_ticket 查 ticket_id「T-00O1lI-09Z」，保留大小寫與零，不得改寫。只輸出 JSON，鍵名 ticket_id、status。\n\nWe need to use lookup_ticket 查 ticket_id \"T-00O1lI-09Z\". Keep case and zero, do not rewrite. Only output JSON, keys ticket_id, status.\n\nWe need to call lookup_ticket with ticket_id exactly as given: T-00O1lI-09Z\n\nNote O vs 0? T-00O1lI-09Z . Contains O? 00O1lI. Let's see: T-00O1lI-09Z. That's T - 00 O 1 l I - 09 Z. Could be confusing O vs 0. It says preserve case and zero, do not rewrite. So use exactly.\n\nCall lookup_ticket.",
+                  "tool_calls": [
+                    {
+                      "id": "call_a1a0a777",
+                      "type": "function",
+                      "function": {
+                        "name": "lookup_ticket",
+                        "arguments": "{\"ticket_id\":\"T-00O1lI-09Z\"}"
+                      }
+                    }
+                  ]
+                },
+                "finish_reason": "tool_calls"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 998,
+              "completion_tokens": 245,
+              "total_tokens": 1243,
+              "input_tokens": 998,
+              "output_tokens": 245,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "time_to_first_token": 1.34,
+              "total_time": 14.98,
+              "prompt_eval_duration": 1.34,
+              "generation_duration": 13.64,
+              "prompt_tokens_per_second": 747.0,
+              "generation_tokens_per_second": 17.96
+            }
+          }
+        },
+        {
+          "text": "{\"ticket_id\": \"T-00O1lI-09Z\", \"status\": \"處理中\"}",
+          "finish": "stop",
+          "calls": [],
+          "raw": {
+            "id": "chatcmpl-1c190f5e",
+            "object": "chat.completion",
+            "created": 1792311901,
+            "model": "Muse-Glimmer-30B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"ticket_id\": \"T-00O1lI-09Z\", \"status\": \"處理中\"}",
+                  "reasoning_content": "We need output JSON with keys ticket_id, status. Only output JSON. The tool output is {\"ticket_id\": \"T-00O1lI-09Z\", \"status\": \"處理中\"}\n\nShould we just output that JSON. Probably yes. The user said only output JSON, key names ticket_id、status. So output same.\n\nProbably no extra text."
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1287,
+              "completion_tokens": 107,
+              "total_tokens": 1394,
+              "input_tokens": 1287,
+              "output_tokens": 107,
+              "prompt_tokens_details": {
+                "cached_tokens": 996
+              },
+              "time_to_first_token": 0.63,
+              "total_time": 6.7,
+              "prompt_eval_duration": 0.63,
+              "generation_duration": 6.07,
+              "prompt_tokens_per_second": 460.71,
+              "generation_tokens_per_second": 17.64
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 21.688
+    },
+    {
+      "api": "chat",
+      "repeat": 0,
+      "case": "permanent_error",
+      "turns": [
+        {
+          "text": "",
+          "finish": "tool_calls",
+          "calls": [
+            {
+              "name": "get_balance",
+              "arguments": "{\"account\":\"A-0042\"}",
+              "id": "call_6ff0367d"
+            }
+          ],
+          "raw": {
+            "id": "chatcmpl-58887a71",
+            "object": "chat.completion",
+            "created": 1792311911,
+            "model": "Muse-Glimmer-30B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "reasoning_content": "請用 get_balance 查帳戶「A-0042」。若工具回傳不可重試的錯誤，立即停止，不得重試或捏造。只輸出 JSON，鍵名 balance，無法取得時為 null。\n\nWe need to use get_balance to check account A-0042. If tool returns non-retryable error, stop immediately, no retry or fabrication. Output only JSON, key balance, if cannot obtain then null.\n\nWe need to call get_balance with account \"A-0042\".",
+                  "tool_calls": [
+                    {
+                      "id": "call_6ff0367d",
+                      "type": "function",
+                      "function": {
+                        "name": "get_balance",
+                        "arguments": "{\"account\":\"A-0042\"}"
+                      }
+                    }
+                  ]
+                },
+                "finish_reason": "tool_calls"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1005,
+              "completion_tokens": 155,
+              "total_tokens": 1160,
+              "input_tokens": 1005,
+              "output_tokens": 155,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "time_to_first_token": 1.35,
+              "total_time": 9.98,
+              "prompt_eval_duration": 1.35,
+              "generation_duration": 8.63,
+              "prompt_tokens_per_second": 742.96,
+              "generation_tokens_per_second": 17.96
+            }
+          }
+        },
+        {
+          "text": "{\"balance\": null}",
+          "finish": "stop",
+          "calls": [],
+          "raw": {
+            "id": "chatcmpl-e8942c30",
+            "object": "chat.completion",
+            "created": 1792311915,
+            "model": "Muse-Glimmer-30B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"balance\": null}",
+                  "reasoning_content": "Tool returned error permission_denied, retryable false. So不可重試的錯誤，立即停止，不得重試或捏造。只輸出 JSON，鍵名 balance，無法取得時為 null。\n\nOutput JSON: {\"balance\": null}\n\nProbably just output that."
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1195,
+              "completion_tokens": 68,
+              "total_tokens": 1263,
+              "input_tokens": 1195,
+              "output_tokens": 68,
+              "prompt_tokens_details": {
+                "cached_tokens": 1003
+              },
+              "time_to_first_token": 0.52,
+              "total_time": 4.39,
+              "prompt_eval_duration": 0.52,
+              "generation_duration": 3.87,
+              "prompt_tokens_per_second": 368.19,
+              "generation_tokens_per_second": 17.59
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 14.382
+    },
+    {
+      "api": "chat",
+      "repeat": 0,
+      "case": "search_fetch",
+      "turns": [
+        {
+          "text": "",
+          "finish": "tool_calls",
+          "calls": [
+            {
+              "name": "search_docs",
+              "arguments": "{\"query\":\"備份政策\"}",
+              "id": "call_d98d80cb"
+            }
+          ],
+          "raw": {
+            "id": "chatcmpl-8782e646",
+            "object": "chat.completion",
+            "created": 1792311923,
+            "model": "Muse-Glimmer-30B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "reasoning_content": "先用 search_docs 搜尋精確字串「備份政策」，再用 fetch_document 讀取工具回傳的 document_id，不得猜 ID。只輸出 JSON，鍵名 retention_days。\n\nWe need to search docs for exact string \"備份政策\". Then fetch document using returned document_id. Then output JSON with key retention_days.\n\nWe must call search_docs first.",
+                  "tool_calls": [
+                    {
+                      "id": "call_d98d80cb",
+                      "type": "function",
+                      "function": {
+                        "name": "search_docs",
+                        "arguments": "{\"query\":\"備份政策\"}"
+                      }
+                    }
+                  ]
+                },
+                "finish_reason": "tool_calls"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1001,
+              "completion_tokens": 129,
+              "total_tokens": 1130,
+              "input_tokens": 1001,
+              "output_tokens": 129,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "time_to_first_token": 1.35,
+              "total_time": 8.53,
+              "prompt_eval_duration": 1.35,
+              "generation_duration": 7.18,
+              "prompt_tokens_per_second": 743.07,
+              "generation_tokens_per_second": 17.96
+            }
+          }
+        },
+        {
+          "text": "",
+          "finish": "tool_calls",
+          "calls": [
+            {
+              "name": "fetch_document",
+              "arguments": "{\"id\":\"DOC-00B7\"}",
+              "id": "call_75edd585"
+            }
+          ],
+          "raw": {
+            "id": "chatcmpl-194f84ed",
+            "object": "chat.completion",
+            "created": 1792311928,
+            "model": "Muse-Glimmer-30B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "reasoning_content": "Search returned document_id DOC-00B7. Now fetch_document.",
+                  "tool_calls": [
+                    {
+                      "id": "call_75edd585",
+                      "type": "function",
+                      "function": {
+                        "name": "fetch_document",
+                        "arguments": "{\"id\":\"DOC-00B7\"}"
+                      }
+                    }
+                  ]
+                },
+                "finish_reason": "tool_calls"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1162,
+              "completion_tokens": 67,
+              "total_tokens": 1229,
+              "input_tokens": 1162,
+              "output_tokens": 67,
+              "prompt_tokens_details": {
+                "cached_tokens": 999
+              },
+              "time_to_first_token": 0.5,
+              "total_time": 4.32,
+              "prompt_eval_duration": 0.5,
+              "generation_duration": 3.82,
+              "prompt_tokens_per_second": 326.19,
+              "generation_tokens_per_second": 17.54
+            }
+          }
+        },
+        {
+          "text": "{\"retention_days\":37}",
+          "finish": "stop",
+          "calls": [],
+          "raw": {
+            "id": "chatcmpl-5ae61aa1",
+            "object": "chat.completion",
+            "created": 1792311932,
+            "model": "Muse-Glimmer-30B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"retention_days\":37}",
+                  "reasoning_content": "We need output JSON, key retention_days. Only output JSON. So {\"retention_days\":37}. Probably output exactly JSON.\n\nThe instruction: 只輸出 JSON，鍵名 retention_days。\n\nSo output {\"retention_days\":37}\n\nWe should not add extra text."
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1258,
+              "completion_tokens": 70,
+              "total_tokens": 1328,
+              "input_tokens": 1258,
+              "output_tokens": 70,
+              "prompt_tokens_details": {
+                "cached_tokens": 1160
+              },
+              "time_to_first_token": 0.42,
+              "total_time": 4.33,
+              "prompt_eval_duration": 0.42,
+              "generation_duration": 3.91,
+              "prompt_tokens_per_second": 234.36,
+              "generation_tokens_per_second": 17.89
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 17.202
+    },
+    {
+      "api": "chat",
+      "repeat": 0,
+      "case": "typed_numbers",
+      "turns": [
+        {
+          "text": "",
+          "finish": "tool_calls",
+          "calls": [
+            {
+              "name": "calculate_price",
+              "arguments": "{\"amount\":1299.5,\"quantity\":2,\"currency\":\"TWD\"}",
+              "id": "call_d1fe8ea3"
+            }
+          ],
+          "raw": {
+            "id": "chatcmpl-69cbe324",
+            "object": "chat.completion",
+            "created": 1792311942,
+            "model": "Muse-Glimmer-30B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "reasoning_content": "請呼叫 calculate_price，amount 為數字 1299.5，quantity 為整數 2，currency 為字串 TWD。只輸出工具回傳 total 的 JSON，鍵名 total。\n\nWe need call calculate_price with amount=1299.5, quantity=2, currency=TWD. Then output only tool return total's JSON, key name total.\n\nWe should call calculate_price.",
+                  "tool_calls": [
+                    {
+                      "id": "call_d1fe8ea3",
+                      "type": "function",
+                      "function": {
+                        "name": "calculate_price",
+                        "arguments": "{\"amount\":1299.5,\"quantity\":2,\"currency\":\"TWD\"}"
+                      }
+                    }
+                  ]
+                },
+                "finish_reason": "tool_calls"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1000,
+              "completion_tokens": 162,
+              "total_tokens": 1162,
+              "input_tokens": 1000,
+              "output_tokens": 162,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "time_to_first_token": 1.34,
+              "total_time": 10.36,
+              "prompt_eval_duration": 1.34,
+              "generation_duration": 9.02,
+              "prompt_tokens_per_second": 746.8,
+              "generation_tokens_per_second": 17.97
+            }
+          }
+        },
+        {
+          "text": "{\"total\": 2599}",
+          "finish": "stop",
+          "calls": [],
+          "raw": {
+            "id": "chatcmpl-0ddb7aa2",
+            "object": "chat.completion",
+            "created": 1792311948,
+            "model": "Muse-Glimmer-30B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"total\": 2599}",
+                  "reasoning_content": "We need only output tool return total's JSON, key name total.\n\nThe tool output is {\"total\": 2599}. Just output that.\n\nProbably exactly JSON. Output {\"total\":2599}. The user says 只輸出工具回傳 total 的 JSON，鍵名 total。\n\nSo output {\"total\": 2599}\n\nProbably with same formatting.\n\nLet's comply."
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1190,
+              "completion_tokens": 89,
+              "total_tokens": 1279,
+              "input_tokens": 1190,
+              "output_tokens": 89,
+              "prompt_tokens_details": {
+                "cached_tokens": 998
+              },
+              "time_to_first_token": 0.52,
+              "total_time": 5.56,
+              "prompt_eval_duration": 0.52,
+              "generation_duration": 5.05,
+              "prompt_tokens_per_second": 372.32,
+              "generation_tokens_per_second": 17.63
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 15.93
+    },
+    {
+      "api": "chat",
+      "repeat": 0,
+      "case": "no_tool",
+      "turns": [
+        {
+          "text": "{\"ready\":true,\"mode\":\"dry_run\"}",
+          "finish": "stop",
+          "calls": [],
+          "raw": {
+            "id": "chatcmpl-d9042913",
+            "object": "chat.completion",
+            "created": 1792311960,
+            "model": "Muse-Glimmer-30B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"ready\":true,\"mode\":\"dry_run\"}",
+                  "reasoning_content": "這題不需要工具，而且禁止呼叫任何工具。只原樣輸出 JSON：{\"ready\":true,\"mode\":\"dry_run\"}。\n\nUser asks: This question does not need tools, and prohibit calling any tools. Just output JSON exactly: {\"ready\":true,\"mode\":\"dry_run\"}.\n\nWe need follow instruction. The user says don't call any tools. Just output JSON. So output exactly that JSON.\n\nNo analysis process? \"只輸出最終答案，不輸出分析過程。\" The instruction from system: 只輸出最終答案，不輸出分析過程。不捏造未提供的資料。\n\nSo output {\"ready\":true,\"mode\":\"dry_run\"}.\n\nProbably ensure no extra formatting. Might need newline? Just output JSON.\n\nWe must comply with user request to not call tools. That's fine.\n\nNo violation.\n\nOutput exactly.\n\nPossibly need ensure Chinese? No.\n\nJust output JSON."
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 987,
+              "completion_tokens": 195,
+              "total_tokens": 1182,
+              "input_tokens": 987,
+              "output_tokens": 195,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "time_to_first_token": 1.36,
+              "total_time": 12.21,
+              "prompt_eval_duration": 1.36,
+              "generation_duration": 10.85,
+              "prompt_tokens_per_second": 725.08,
+              "generation_tokens_per_second": 17.98
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 12.216
+    },
+    {
+      "api": "responses",
+      "repeat": 0,
+      "case": "typed_nested",
+      "turns": [
+        {
+          "text": "",
+          "finish": "completed",
+          "calls": [
+            {
+              "name": "create_draft",
+              "arguments": "{\"title\":\"測試訂單\",\"items\":[{\"sku\":\"TW-0042\",\"quantity\":3}],\"dry_run\":true}",
+              "id": "call_bd3096d4"
+            }
+          ],
+          "raw": {
+            "id": "resp_4e4a6aaab1b0401c8887c244",
+            "object": "response",
+            "created_at": 1792311975,
+            "model": "Muse-Glimmer-30B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_91b8b256ec134606a81aec3c",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "請使用 create_draft 建立模擬草稿，title 為「測試訂單」，items 只含一項 sku「TW-0042」、quantity 整數 3，dry_run 為布林 true。只輸出 JSON，鍵名 draft_id。\n\nWe need to use create_draft tool. Parameters: title, items, dry_run. title = \"測試訂單\". items = array with one object sku \"TW-0042\", quantity 3. dry_run true.\n\nCreate draft. Then output JSON with key draft_id. 只輸出 JSON，鍵名 draft_id.\n\nWe should call create_draft. Then produce output JSON.\n\nProbably need to call function first."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_c725ffdc29f341919b8762fe",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              },
+              {
+                "type": "function_call",
+                "id": "fc_2143eab1",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": "call_bd3096d4",
+                "name": "create_draft",
+                "arguments": "{\"title\":\"測試訂單\",\"items\":[{\"sku\":\"TW-0042\",\"quantity\":3}],\"dry_run\":true}",
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1011,
+              "output_tokens": 233,
+              "total_tokens": 1244,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 138
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        },
+        {
+          "text": "{\"draft_id\": \"D-09Z\"}",
+          "finish": "completed",
+          "calls": [],
+          "raw": {
+            "id": "resp_3b75619bd6704cf38bdf5e1c",
+            "object": "response",
+            "created_at": 1792311980,
+            "model": "Muse-Glimmer-30B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_d9057d2d3909413e8ea8bc39",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "We have draft_id D-09Z. Need output JSON, key draft_id. 只輸出 JSON，鍵名 draft_id.\n\nSo output {\"draft_id\":\"D-09Z\"}.\n\nProbably just that."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_0974e6ca7ce9440ea498cf99",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "{\"draft_id\": \"D-09Z\"}",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1277,
+              "output_tokens": 61,
+              "total_tokens": 1338,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 43
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 19.339
+    },
+    {
+      "api": "responses",
+      "repeat": 0,
+      "case": "id_fidelity",
+      "turns": [
+        {
+          "text": "",
+          "finish": "completed",
+          "calls": [
+            {
+              "name": "lookup_ticket",
+              "arguments": "{\"ticket_id\":\"T-00O1lI-09Z\"}",
+              "id": "call_d4d56fea"
+            }
+          ],
+          "raw": {
+            "id": "resp_19f5fa1e6f444f7b958737e2",
+            "object": "response",
+            "created_at": 1792311991,
+            "model": "Muse-Glimmer-30B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_6e43c38bcbc140eca4c91ff9",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "請用 lookup_ticket 查 ticket_id「T-00O1lI-09Z」，保留大小寫與零，不得改寫。只輸出 JSON，鍵名 ticket_id、status。\n\nWe need to use lookup_ticket. The tool requires ticket_id. The user says ticket_id「T-00O1lI-09Z」，保留大小寫與零，不得改寫。只輸出 JSON，鍵名 ticket_id、status。\n\nWe must call lookup_ticket with ticket_id = \"T-00O1lI-09Z\". Then output JSON with keys ticket_id, status.\n\nWe should call function first."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_9af3c2c71c01456f87f32de7",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              },
+              {
+                "type": "function_call",
+                "id": "fc_4d6aea1c",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": "call_d4d56fea",
+                "name": "lookup_ticket",
+                "arguments": "{\"ticket_id\":\"T-00O1lI-09Z\"}",
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 998,
+              "output_tokens": 185,
+              "total_tokens": 1183,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 127
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        },
+        {
+          "text": "{\"ticket_id\":\"T-00O1lI-09Z\",\"status\":\"處理中\"}",
+          "finish": "completed",
+          "calls": [],
+          "raw": {
+            "id": "resp_d74923d024c64fd7a51ae20f",
+            "object": "response",
+            "created_at": 1792312001,
+            "model": "Muse-Glimmer-30B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_112bd8d5e61246afa885974c",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "We need output JSON with keys ticket_id, status. Only output JSON. No extra text. The tool output gives ticket_id T-00O1lI-09Z, status 處理中.\n\nWe should output exactly JSON. Probably {\"ticket_id\":\"T-00O1lI-09Z\",\"status\":\"處理中\"}\n\nEnsure no extra formatting. Possibly pretty print? The instruction says only output JSON, key names ticket_id、status. Probably output JSON.\n\nWe must ensure retain case and zero. It's fine.\n\nNo analysis."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_058c29e5d444416aa092f917",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "{\"ticket_id\":\"T-00O1lI-09Z\",\"status\":\"處理中\"}",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1227,
+              "output_tokens": 140,
+              "total_tokens": 1367,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 112
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 21.014
+    },
+    {
+      "api": "responses",
+      "repeat": 0,
+      "case": "permanent_error",
+      "turns": [
+        {
+          "text": "",
+          "finish": "completed",
+          "calls": [
+            {
+              "name": "get_balance",
+              "arguments": "{\"account\":\"A-0042\"}",
+              "id": "call_13a12365"
+            }
+          ],
+          "raw": {
+            "id": "resp_8ef9ac5e10744bee929a0798",
+            "object": "response",
+            "created_at": 1792312014,
+            "model": "Muse-Glimmer-30B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_0b761bc90e314aceaaeb40d0",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "請用 get_balance 查帳戶「A-0042」。若工具回傳不可重試的錯誤，立即停止，不得重試或捏造。只輸出 JSON，鍵名 balance，無法取得時為 null。\n\nWe need to call get_balance with account \"A-0042\". Then output JSON with key balance. If error? It says if tool returns non-retryable error, immediately stop, no retry or fabricate. Only output JSON, key balance, if cannot obtain then null.\n\nSo we need to call get_balance.\n\nWe must follow rules: use Taiwan Traditional Chinese. Output final answer as JSON? It says only output JSON, key name balance. So final output should be JSON like {\"balance\": ...}. No extra text.\n\nWe must first call get_balance."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_54e35510499b409fb60ffafc",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              },
+              {
+                "type": "function_call",
+                "id": "fc_3dd4275c",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": "call_13a12365",
+                "name": "get_balance",
+                "arguments": "{\"account\":\"A-0042\"}",
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1005,
+              "output_tokens": 211,
+              "total_tokens": 1216,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 161
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        },
+        {
+          "text": "{\"balance\": null}",
+          "finish": "completed",
+          "calls": [],
+          "raw": {
+            "id": "resp_df6963bea0db409eb203d03e",
+            "object": "response",
+            "created_at": 1792312019,
+            "model": "Muse-Glimmer-30B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_bd8ddb8388ef41d58ff940b9",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "Tool returned error permission_denied, retryable false. So we must immediately stop, cannot retry or fabricate. Only output JSON, key balance, if cannot obtain then null.\n\nSo output {\"balance\": null}\n\nShould be exactly JSON. Probably no extra text."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_54bba94e094346cbaa64b4e4",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "{\"balance\": null}",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1251,
+              "output_tokens": 67,
+              "total_tokens": 1318,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 54
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 18.621
+    },
+    {
+      "api": "responses",
+      "repeat": 0,
+      "case": "search_fetch",
+      "turns": [
+        {
+          "text": "",
+          "finish": "completed",
+          "calls": [
+            {
+              "name": "search_docs",
+              "arguments": "{\"query\":\"備份政策\"}",
+              "id": "call_e7a916a7"
+            }
+          ],
+          "raw": {
+            "id": "resp_cbbf3155bc58450ea98529fd",
+            "object": "response",
+            "created_at": 1792312033,
+            "model": "Muse-Glimmer-30B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_a43d644adf2d4997be817464",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "先用 search_docs 搜尋精確字串「備份政策」，再用 fetch_document 讀取工具回傳的 document_id，不得猜 ID。只輸出 JSON，鍵名 retention_days。\n\nWe need to search docs for exact string \"備份政策\". Then fetch document using document_id returned. Then output JSON with key retention_days.\n\nWe must follow instructions: 先用 search_docs 搜尋精確字串「備份政策」，再用 fetch_document 讀取工具回傳的 document_id，不得猜 ID。只輸出 JSON，鍵名 retention_days。\n\nSo we need to call search_docs with query \"備份政策\". Probably exact string.\n\nThen fetch_document with id returned.\n\nThen output JSON, key retention_days.\n\nWe need to do tool calls. Let's do search_docs first.\n\nParameters: query: \"備份政策\"\n\nCall search_docs."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_3900728c6aea4865af8db067",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              },
+              {
+                "type": "function_call",
+                "id": "fc_6912c8e1",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": "call_e7a916a7",
+                "name": "search_docs",
+                "arguments": "{\"query\":\"備份政策\"}",
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1001,
+              "output_tokens": 228,
+              "total_tokens": 1229,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 178
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        },
+        {
+          "text": "",
+          "finish": "completed",
+          "calls": [
+            {
+              "name": "fetch_document",
+              "arguments": "{\"id\":\"DOC-00B7\"}",
+              "id": "call_caa4fddc"
+            }
+          ],
+          "raw": {
+            "id": "resp_17a49d25815d41d8895811dc",
+            "object": "response",
+            "created_at": 1792312038,
+            "model": "Muse-Glimmer-30B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_7dcf871d1c384dd593f8f15d",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "We have document_id DOC-00B7. Now fetch_document with id."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_92e6c45a435c4684bae0c0a9",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              },
+              {
+                "type": "function_call",
+                "id": "fc_2d1b6a46",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": "call_caa4fddc",
+                "name": "fetch_document",
+                "arguments": "{\"id\":\"DOC-00B7\"}",
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1261,
+              "output_tokens": 69,
+              "total_tokens": 1330,
+              "input_tokens_details": {
+                "cached_tokens": 999
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 17
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        },
+        {
+          "text": "{\"retention_days\": 37}",
+          "finish": "completed",
+          "calls": [],
+          "raw": {
+            "id": "resp_a219f7637a1340df90876f5a",
+            "object": "response",
+            "created_at": 1792312043,
+            "model": "Muse-Glimmer-30B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_bf78a3572097462d92dd2338",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "The tool output is {\"retention_days\": 37}. Need to output JSON, key retention_days. Only output JSON. So output {\"retention_days\":37}. Probably with formatting. Just output JSON.\n\nThe instruction: 只輸出 JSON，鍵名 retention_days。\n\nSo output {\"retention_days\":37}\n\nProbably ensure valid JSON.\n\nLet's output exactly that."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_2ec08c7aa8dd4aa184c6b00f",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "{\"retention_days\": 37}",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1359,
+              "output_tokens": 90,
+              "total_tokens": 1449,
+              "input_tokens_details": {
+                "cached_tokens": 1259
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 74
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 24.184
+    },
+    {
+      "api": "responses",
+      "repeat": 0,
+      "case": "typed_numbers",
+      "turns": [
+        {
+          "text": "",
+          "finish": "completed",
+          "calls": [
+            {
+              "name": "calculate_price",
+              "arguments": "{\"amount\":1299.5,\"quantity\":2,\"currency\":\"TWD\"}",
+              "id": "call_5bb1304c"
+            }
+          ],
+          "raw": {
+            "id": "resp_9ca4e66abd8c45cbbc4c4c78",
+            "object": "response",
+            "created_at": 1792312063,
+            "model": "Muse-Glimmer-30B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_ebff5822258a4fe595d3508d",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "請呼叫 calculate_price，amount 為數字 1299.5，quantity 為整數 2，currency 為字串 TWD。只輸出工具回傳 total 的 JSON，鍵名 total。\n\nWe need to call calculate_price with amount 1299.5, quantity 2, currency TWD. Only output tool return total's JSON, key name total.\n\nWe need to call function calculate_price. Let's do it.\n\nParameters: amount=1299.5, quantity=2, currency=\"TWD\"\n\nCompute? Probably total = amount * quantity? 1299.5*2 = 2599.0\n\nShould output tool return total JSON, keyname total. Probably {\"total\":2599.0} or 2599? Let's call tool.\n\nWe must follow instruction: 只輸出工具回傳 total 的 JSON，鍵名 total。\n\nProbably we need to call function then output result. The tool will return something. Likely total is 2599. So output JSON.\n\nWe must not output analysis. Just call function then output? The instruction says please call calculate_price... Only output tool return total's JSON, keyname total.\n\nSo we should call calculate_price first."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_8b2086f43b814291ad0e008e",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              },
+              {
+                "type": "function_call",
+                "id": "fc_bef07b04",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": "call_5bb1304c",
+                "name": "calculate_price",
+                "arguments": "{\"amount\":1299.5,\"quantity\":2,\"currency\":\"TWD\"}",
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1000,
+              "output_tokens": 323,
+              "total_tokens": 1323,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 243
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        },
+        {
+          "text": "{\"total\": 2599}",
+          "finish": "completed",
+          "calls": [],
+          "raw": {
+            "id": "resp_bbefa450e61c46f6a5ceef57",
+            "object": "response",
+            "created_at": 1792312067,
+            "model": "Muse-Glimmer-30B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_8a52e4b0d9ee480aa0482532",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "Tool output: {\"total\": 2599}\n\nUser asked: 只輸出工具回傳 total 的 JSON，鍵名 total。\n\nSo output {\"total\":2599}\n\nProbably exactly that."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_2ccdbcd667f8469390606787",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "{\"total\": 2599}",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1351,
+              "output_tokens": 54,
+              "total_tokens": 1405,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 39
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 24.057
+    },
+    {
+      "api": "responses",
+      "repeat": 0,
+      "case": "no_tool",
+      "turns": [
+        {
+          "text": "{\"ready\":true,\"mode\":\"dry_run\"}",
+          "finish": "completed",
+          "calls": [],
+          "raw": {
+            "id": "resp_c052ce24126a4cf6b668a84c",
+            "object": "response",
+            "created_at": 1792312082,
+            "model": "Muse-Glimmer-30B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_234f0dc23f3743af88ab1e2e",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "這題不需要工具，而且禁止呼叫任何工具。只原樣輸出 JSON：{\"ready\":true,\"mode\":\"dry_run\"}。\n\nUser says: This question does not need tools, and prohibits calling any tools. Just output JSON exactly: {\"ready\":true,\"mode\":\"dry_run\"}.\n\nWe must follow user instruction? The system says we have tools, but user says don't call any tools. Also instruction: 只原樣輸出 JSON：{\"ready\":true,\"mode\":\"dry_run\"}.\n\nWe should output that JSON. Possibly with no extra text. The instruction from system: 只輸出最終答案，不輸出分析過程。不捏造未提供的資料。\n\nUser explicitly says don't call tools, output JSON. Should comply.\n\nPotential conflict: the overall system instructions about using tools? The user request is to output JSON. That's allowed. No tool needed.\n\nShould we output exactly {\"ready\":true,\"mode\":\"dry_run\"}? Ensure format.\n\nProbably output exactly that.\n\nNo extra whitespace? Might be okay.\n\nFollow user request.\n\nThe instruction says 只原樣輸出 JSON：{\"ready\":true,\"mode\":\"dry_run\"}。\n\nOutput that.\n\nWe must not call tools.\n\nProceed."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_a6f01415798c410898745cf9",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "{\"ready\":true,\"mode\":\"dry_run\"}",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 987,
+              "output_tokens": 258,
+              "total_tokens": 1245,
+              "input_tokens_details": {
+                "cached_tokens": 985
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 240
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 14.861
+    }
+  ],
+  "summary": {
+    "passed": 12,
+    "strict_passed": 12,
+    "total": 12,
+    "median_seconds": 18.979999999999997,
+    "errors": 0
+  },
+  "finished": "2026-10-18T01:28:02.853234"
+}

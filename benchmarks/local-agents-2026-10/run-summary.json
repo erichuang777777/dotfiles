@@ -1,0 +1,233 @@
+[
+  {
+    "suite": "baseline-20261015-172714",
+    "model": "GLM-4.7-Flash-8bit",
+    "passed": 50,
+    "strict_passed": 50,
+    "total": 72,
+    "median_seconds": 7.596825,
+    "errors": 0,
+    "source": "results/baseline/benchmark-GLM-4.7-Flash-8bit-20261015-172714.json",
+    "repeats": 3
+  },
+  {
+    "suite": "baseline-20261015-185024",
+    "model": "GLM-4.7-Flash-8bit",
+    "passed": 16,
+    "strict_passed": 16,
+    "total": 24,
+    "median_seconds": 7.360778,
+    "errors": 0,
+    "source": "results/baseline/benchmark-GLM-4.7-Flash-8bit-20261015-185024.json",
+    "repeats": 1
+  },
+  {
+    "suite": "baseline-20261018-085221",
+    "model": "GLM-4.7-Flash-8bit",
+    "passed": 18,
+    "strict_passed": 18,
+    "total": 24,
+    "median_seconds": 7.285254,
+    "errors": 0,
+    "source": "results/baseline/benchmark-GLM-4.7-Flash-8bit-20261018-085221.json",
+    "repeats": 1
+  },
+  {
+    "suite": "baseline-20261014-200024",
+    "model": "Qwen3.8-27B-nvfp4",
+    "passed": 60,
+    "strict_passed": 60,
+    "total": 72,
+    "median_seconds": 5.353098,
+    "errors": 0,
+    "source": "results/baseline/benchmark-Qwen3.8-27B-nvfp4-20261014-200024.json",
+    "repeats": 3
+  },
+  {
+    "suite": "baseline-20261014-195204",
+    "model": "Qwen3.8-Flash-Next-REAP320-oQ3e-DWQ-MTP-Vision-MLX",
+    "passed": 59,
+    "strict_passed": 59,
+    "total": 72,
+    "median_seconds": 2.429151,
+    "errors": 0,
+    "source": "results/baseline/benchmark-Qwen3.8-Flash-Next-REAP320-oQ3e-DWQ-MTP-Vision-MLX-20261014-195204.json",
+    "repeats": 3
+  },
+  {
+    "suite": "baseline-20261014-201213",
+    "model": "Qwen3.8-Flash-Next-oQ4e-mtp",
+    "passed": 66,
+    "strict_passed": 66,
+    "total": 72,
+    "median_seconds": 2.295809,
+    "errors": 1,
+    "source": "results/baseline/benchmark-Qwen3.8-Flash-Next-oQ4e-mtp-20261014-201213.json",
+    "repeats": 3
+  },
+  {
+    "suite": "baseline-20261014-234528",
+    "model": "gpt-oss-120b-mxfp4-bf16",
+    "passed": 71,
+    "strict_passed": 71,
+    "total": 72,
+    "median_seconds": 1.781532,
+    "errors": 0,
+    "source": "results/baseline/benchmark-gpt-oss-120b-mxfp4-bf16-20261014-234528.json",
+    "repeats": 3
+  },
+  {
+    "suite": "baseline-20261015-185559",
+    "model": "gpt-oss-120b-mxfp4-bf16",
+    "passed": 23,
+    "strict_passed": 23,
+    "total": 24,
+    "median_seconds": 1.850976,
+    "errors": 0,
+    "source": "results/baseline/benchmark-gpt-oss-120b-mxfp4-bf16-20261015-185559.json",
+    "repeats": 1
+  },
+  {
+    "suite": "baseline-20261018-085757",
+    "model": "gpt-oss-120b-mxfp4-bf16",
+    "passed": 24,
+    "strict_passed": 24,
+    "total": 24,
+    "median_seconds": 1.848758,
+    "errors": 0,
+    "source": "results/baseline/benchmark-gpt-oss-120b-mxfp4-bf16-20261018-085757.json",
+    "repeats": 1
+  },
+  {
+    "suite": "agent-initial-basic",
+    "model": "GLM-4.7-Flash-8bit",
+    "passed": 34,
+    "strict_passed": 27,
+    "total": 36,
+    "median_seconds": 3.3865,
+    "errors": 0,
+    "source": "results/agent-initial/agent-GLM-4.7-Flash-8bit.json",
+    "repeats": 3
+  },
+  {
+    "suite": "agent-initial-basic",
+    "model": "gpt-oss-120b-mxfp4-bf16",
+    "passed": 29,
+    "strict_passed": 29,
+    "total": 36,
+    "median_seconds": 1.646,
+    "errors": 0,
+    "source": "results/agent-initial/agent-gpt-oss-120b-mxfp4-bf16.json",
+    "repeats": 3
+  },
+  {
+    "suite": "retest-20261015-basic",
+    "model": "GLM-4.7-Flash-8bit",
+    "passed": 11,
+    "strict_passed": 10,
+    "total": 12,
+    "median_seconds": 2.663,
+    "errors": 0,
+    "source": "results/retest-20261015/agent-GLM-4.7-Flash-8bit.json",
+    "repeats": 1
+  },
+  {
+    "suite": "retest-20261015-basic",
+    "model": "gpt-oss-120b-mxfp4-bf16",
+    "passed": 10,
+    "strict_passed": 10,
+    "total": 12,
+    "median_seconds": 2.08,
+    "errors": 0,
+    "source": "results/retest-20261015/agent-gpt-oss-120b-mxfp4-bf16.json",
+    "repeats": 1
+  },
+  {
+    "suite": "retest-20261018-basic",
+    "model": "GLM-4.7-Flash-8bit",
+    "passed": 12,
+    "strict_passed": 10,
+    "total": 12,
+    "median_seconds": 3.4685,
+    "errors": 0,
+    "source": "results/retest-20261018/agent-GLM-4.7-Flash-8bit.json",
+    "repeats": 1
+  },
+  {
+    "suite": "retest-20261018-basic",
+    "model": "gpt-oss-120b-mxfp4-bf16",
+    "passed": 10,
+    "strict_passed": 10,
+    "total": 12,
+    "median_seconds": 2.1735,
+    "errors": 0,
+    "source": "results/retest-20261018/agent-gpt-oss-120b-mxfp4-bf16.json",
+    "repeats": 1
+  },
+  {
+    "suite": "candidates-advanced",
+    "model": "Muse-Glimmer-30B-8bit",
+    "passed": 12,
+    "strict_passed": 12,
+    "total": 12,
+    "median_seconds": 18.98,
+    "errors": 0,
+    "source": "results/candidates/agent-Muse-Glimmer-30B-8bit-advanced.json",
+    "repeats": 1
+  },
+  {
+    "suite": "candidates-basic",
+    "model": "Muse-Glimmer-30B-8bit",
+    "passed": 24,
+    "strict_passed": 24,
+    "total": 24,
+    "median_seconds": 23.2295,
+    "errors": 0,
+    "source": "results/candidates/agent-Muse-Glimmer-30B-8bit.json",
+    "repeats": 2
+  },
+  {
+    "suite": "candidates-advanced",
+    "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+    "passed": 12,
+    "strict_passed": 12,
+    "total": 12,
+    "median_seconds": 2.3775,
+    "errors": 0,
+    "source": "results/candidates/agent-NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit-advanced.json",
+    "repeats": 1
+  },
+  {
+    "suite": "candidates-basic",
+    "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+    "passed": 24,
+    "strict_passed": 24,
+    "total": 24,
+    "median_seconds": 2.5735,
+    "errors": 0,
+    "source": "results/candidates/agent-NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit.json",
+    "repeats": 2
+  },
+  {
+    "suite": "candidates-advanced",
+    "model": "gemma-4-31b-it-8bit",
+    "passed": 12,
+    "strict_passed": 5,
+    "total": 12,
+    "median_seconds": 14.946,
+    "errors": 0,
+    "source": "results/candidates/agent-gemma-4-31b-it-8bit-advanced.json",
+    "repeats": 1
+  },
+  {
+    "suite": "candidates-basic",
+    "model": "gemma-4-31b-it-8bit",
+    "passed": 22,
+    "strict_passed": 9,
+    "total": 24,
+    "median_seconds": 14.7875,
+    "errors": 0,
+    "source": "results/candidates/agent-gemma-4-31b-it-8bit.json",
+    "repeats": 2
+  }
+]

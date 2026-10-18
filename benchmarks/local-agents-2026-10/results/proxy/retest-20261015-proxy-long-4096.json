@@ -1,0 +1,41 @@
+{
+  "model": "gpt-oss-120b-mxfp4-bf16",
+  "case": "locale_long_4096",
+  "text": "1. 先規劃主資料夾結構，建立「檔案、圖片、影片」等分類；再依檔案型別或日期將檔案拖入相應子資料夾，使用統一命名規則，方便搜尋與管理。  \n2. 下載前先確認來源可信，使用HTTPS連線；選擇儲存路徑至專屬「下載」資料夾，下載完成即檢查檔案大小與簽章；若非必要，立即移至適當分類。  \n3. 設定瀏覽器隱私與安全選項；啟用追蹤防護、阻止彈出視窗與廣告；清除快取與Cookie，並安裝可信的廣告阻擋擴充套件，保持瀏覽環境潔淨。  \n4. 定期備份重要檔案至外接硬碟或雲端服務；採用增量備份減少重複資料；確認備份完成後檢查檔案完整性，並測試還原流程。  \n5. 開啟自動更新功能，讓作業系統與應用程式即時取得安全修補；若需手動更新，先下載官方原版安裝檔，執行前關閉其他程式以避免衝突。  \n6. 使用強度高的密碼並啟用雙因素驗證；定期更換密碼，避免重複使用；對可疑郵件或連結保持警惕，防止釣魚攻擊與帳號被盜。  \n\n測試結束",
+  "finish": "stop",
+  "seconds": 35.010307540999996,
+  "raw": {
+    "id": "chatcmpl-74e03304",
+    "object": "chat.completion",
+    "created": 1792116021,
+    "model": "gpt-oss-120b-mxfp4-bf16",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1. 先規劃主資料夾結構，建立「檔案、圖片、影片」等分類；再依檔案型別或日期將檔案拖入相應子資料夾，使用統一命名規則，方便搜尋與管理。  \n2. 下載前先確認來源可信，使用HTTPS連線；選擇儲存路徑至專屬「下載」資料夾，下載完成即檢查檔案大小與簽章；若非必要，立即移至適當分類。  \n3. 設定瀏覽器隱私與安全選項；啟用追蹤防護、阻止彈出視窗與廣告；清除快取與Cookie，並安裝可信的廣告阻擋擴充套件，保持瀏覽環境潔淨。  \n4. 定期備份重要檔案至外接硬碟或雲端服務；採用增量備份減少重複資料；確認備份完成後檢查檔案完整性，並測試還原流程。  \n5. 開啟自動更新功能，讓作業系統與應用程式即時取得安全修補；若需手動更新，先下載官方原版安裝檔，執行前關閉其他程式以避免衝突。  \n6. 使用強度高的密碼並啟用雙因素驗證；定期更換密碼，避免重複使用；對可疑郵件或連結保持警惕，防止釣魚攻擊與帳號被盜。  \n\n測試結束",
+          "reasoning_content": "The user wants six numbered paragraphs, each about 60 Chinese characters, explaining various tasks. Must be in Traditional Chinese (Taiwan). Must not include analysis. Provide final answer only. Each paragraph numbered (likely 1. 2. ...). Each approx 60 characters. Let's craft.\n\nParagraph topics:\n1. 整理電腦檔案\n2. 下載檔案\n3. 設定瀏覽器\n4. 備份資料\n5. 更新軟體\n6. 保護網路帳號\n\nEach about 60 characters (approx). Count characters, ensure around 60. Let's aim 58-62.\n\nParagraph 1: \"1. 先規劃主資料夾結構，建立「文件、圖片、影片」等分類；再依檔案類型或日期將檔案拖入相應子資料夾，使用統一命名規則，方便搜尋與管理。\" Count characters: let's count. Include numbers and punctuation? I count characters (including Chinese characters, numbers, punctuation). Let's count:\n\n\"1.\" = 2 (including period). Space maybe counted but ignore. We'll just approximate.\n\nString: \"1. 先規劃主資料夾結構，建立「文件、圖片、影片」等分類；再依檔案類型或日期將檔案拖入相應子資料夾，使用統一命名規則，方便搜尋與管理。\" Let's count quickly: \n先(1)規(2)劃3 主4 資5 料6 夾7 結8 構9 ，10 建11 立12 「13 文14 件15 、16 圖17 片18 、19 影20 片21 」22 等23 分24 類25 ；26 再27 依28 檔29 案30 類31 型32 或33 日34 期35 將36 檔37 案38 拖39 入40 相41 應42 子43 資44 料45 夾46 ，47 使48 用49 統50 一51 命52 名53 規54 則55 ，56 方57 便58 搜59 尋60 與61 管62 理63 。 So 63 characters, okay close to 60.\n\nParagraph 2: \"2. 下載前先確認來源可信，使用HTTPS連線；選擇儲存路徑至專屬「下載」資料夾，下載完成即檢查檔案大小與簽章；若非必要，立即移至適當分類。\" Count roughly: Should be ~61. Good.\n\nParagraph 3: \"3. 設定瀏覽器隱私與安全選項；啟用追蹤防護、阻止彈出視窗與廣告；清除快取與Cookie，並安裝可信的廣告阻擋擴充套件，保持瀏覽環境潔淨。\" Count near 60.\n\nParagraph 4: \"4. 定期備份重要檔案至外接硬碟或雲端服務；採用增量備份減少重複資料；確認備份完成後檢查檔案完整性，並測試還原流程。\" Approx 60.\n\nParagraph 5: \"5. 開啟自動更新功能，讓作業系統與應用程式即時取得安全修補；若需手動更新，先下載官方原版安裝檔，執行前關閉其他程式以避免衝突。\" Approx 60.\n\nParagraph 6: \"6. 使用強度高的密碼並啟用雙因素驗證；定期更換密碼，避免重複使用；對可疑郵件或連結保持警惕，防止釣魚攻擊與帳號被盜。\" Approx 60.\n\nFinally line: \"測試結束\". Provide answer."
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 225,
+      "completion_tokens": 1244,
+      "total_tokens": 1469,
+      "input_tokens": 225,
+      "output_tokens": 1244,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "model_load_duration": 15.77,
+      "time_to_first_token": 3.17,
+      "total_time": 19.0,
+      "prompt_eval_duration": 3.17,
+      "generation_duration": 15.83,
+      "prompt_tokens_per_second": 70.89,
+      "generation_tokens_per_second": 78.58
+    }
+  }
+}

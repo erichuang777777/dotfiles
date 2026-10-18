@@ -1,0 +1,242 @@
+{
+  "redaction": "Home directory replaced by ~; credential fields redacted; no machine serial/UUID or model weights included. Original stdout/log files omitted.",
+  "files": [
+    {
+      "source": "benchmark-GLM-4.7-Flash-8bit-20261015-172714.json",
+      "published": "results/baseline/benchmark-GLM-4.7-Flash-8bit-20261015-172714.json",
+      "source_sha256": "4c8dddbcc3efb7c0d874b31ac498c1cc8bd4aed7b950b16ecaca93ed71455763",
+      "published_sha256": "d2fce1ed82eb53f4114221f4b077b7ec49af41086d39b9aed116b03691f14049"
+    },
+    {
+      "source": "benchmark-GLM-4.7-Flash-8bit-20261015-185024.json",
+      "published": "results/baseline/benchmark-GLM-4.7-Flash-8bit-20261015-185024.json",
+      "source_sha256": "c9c77638b8b5722cb46783951e8d2d998aa4f656308f498612925402bd8dc4c4",
+      "published_sha256": "5d616dcf813e52598886b5959f6d9fd4473a3301ac8b9b536f12238d29fac2e9"
+    },
+    {
+      "source": "benchmark-GLM-4.7-Flash-8bit-20261018-085221.json",
+      "published": "results/baseline/benchmark-GLM-4.7-Flash-8bit-20261018-085221.json",
+      "source_sha256": "899a6bc48c888ecf929ed98185af6cf59b46835eeb0763494cf3028e863a7d65",
+      "published_sha256": "05027714baa892278ed7c2735952b63a371ceaf3bb25ec53a27a1eac75e306b5"
+    },
+    {
+      "source": "benchmark-Qwen3.8-27B-nvfp4-20261014-200024.json",
+      "published": "results/baseline/benchmark-Qwen3.8-27B-nvfp4-20261014-200024.json",
+      "source_sha256": "9f376798f64e650b6ad2ce15ae6625ad7016895e42a9fb691ef450f96a7d864c",
+      "published_sha256": "c48f9078bfb2aa4e84a0dabc40adb31ea8444fa825b687bc3e8856bb8c0dc47b"
+    },
+    {
+      "source": "benchmark-Qwen3.8-Flash-Next-REAP320-oQ3e-DWQ-MTP-Vision-MLX-20261014-195204.json",
+      "published": "results/baseline/benchmark-Qwen3.8-Flash-Next-REAP320-oQ3e-DWQ-MTP-Vision-MLX-20261014-195204.json",
+      "source_sha256": "fa432bffd5e3bf752884f5a23bccedfd4af4948ebccc0d626dcdbd19e606d3bc",
+      "published_sha256": "3331386fc8dd26e7879a56920e036ba04488a47d988618c9921b03e827e900d3"
+    },
+    {
+      "source": "benchmark-Qwen3.8-Flash-Next-oQ4e-mtp-20261014-201213.json",
+      "published": "results/baseline/benchmark-Qwen3.8-Flash-Next-oQ4e-mtp-20261014-201213.json",
+      "source_sha256": "1e9e90f587d86c94cbb7646b0a07eeb26cafb4cf47b73473ff3f70a3569b3e28",
+      "published_sha256": "73d8d571dbc41b458f6489fb84672b749338c1053bcd5ba7b138108b0c754f40"
+    },
+    {
+      "source": "benchmark-gpt-oss-120b-mxfp4-bf16-20261014-234528.json",
+      "published": "results/baseline/benchmark-gpt-oss-120b-mxfp4-bf16-20261014-234528.json",
+      "source_sha256": "140f1dcbfdf1aa78f6f120c4940a1fb893d8df3534638a785eb4576fa12ba730",
+      "published_sha256": "5f6b737756b38f8e27b922901f5a35943fb6a90a88ab53f622fe319b9adf9618"
+    },
+    {
+      "source": "benchmark-gpt-oss-120b-mxfp4-bf16-20261015-185559.json",
+      "published": "results/baseline/benchmark-gpt-oss-120b-mxfp4-bf16-20261015-185559.json",
+      "source_sha256": "0b7152d51345e8fa47f6480b1fff051e29fac924e31d4337f56a31647e66548a",
+      "published_sha256": "92256b53c5b2dd16792f0b85e2d90fb306607da3d01fb0161665b96ea3facfae"
+    },
+    {
+      "source": "benchmark-gpt-oss-120b-mxfp4-bf16-20261018-085757.json",
+      "published": "results/baseline/benchmark-gpt-oss-120b-mxfp4-bf16-20261018-085757.json",
+      "source_sha256": "c229ddf7004a05e8337f652d402777cdc6eab012dabc6c10d52a4983a03702dc",
+      "published_sha256": "31390046873c3b2569cb546a30962b17d6fe58ce688cb015a9740483a34cae8e"
+    },
+    {
+      "source": "agent-evaluation-20261015/agent-GLM-4.7-Flash-8bit.json",
+      "published": "results/agent-initial/agent-GLM-4.7-Flash-8bit.json",
+      "source_sha256": "078aad727802165ea5f96419be28f16ddf25b5f744581cca7400b2b79c41c44b",
+      "published_sha256": "c3b73681b7f6cf791d354a48735eb0166deb2459fa11b2bb0735acf837a636ce"
+    },
+    {
+      "source": "agent-evaluation-20261015/agent-gpt-oss-120b-mxfp4-bf16.json",
+      "published": "results/agent-initial/agent-gpt-oss-120b-mxfp4-bf16.json",
+      "source_sha256": "31189be00a0b9629de4a20c851ea6bbba48c5b6c9e65efce4f072f506a8716f3",
+      "published_sha256": "1a3a5ee6246f80c8621636727be3b9a2b81bc64c6bc56edb799e9d6e4faff61b"
+    },
+    {
+      "source": "retest-20261015/agent-GLM-4.7-Flash-8bit.json",
+      "published": "results/retest-20261015/agent-GLM-4.7-Flash-8bit.json",
+      "source_sha256": "84e8d8544dbad122ed7c799a251a89b6261d374770390acf30d2253311295bd4",
+      "published_sha256": "502afc5a407d60fc9204a56fd53a16e41f01ad32eaee5d87fc592efe5ba7aada"
+    },
+    {
+      "source": "retest-20261015/agent-gpt-oss-120b-mxfp4-bf16.json",
+      "published": "results/retest-20261015/agent-gpt-oss-120b-mxfp4-bf16.json",
+      "source_sha256": "b76bf0004ed308d206065142e656d6682820cc5f8636d08c467cc25665f23178",
+      "published_sha256": "696a864a22d44cdc35f97be0c52f35464e12ba7d1bd3c4fe73518b4ab0555345"
+    },
+    {
+      "source": "retest-20261018-085218/agent-GLM-4.7-Flash-8bit.json",
+      "published": "results/retest-20261018/agent-GLM-4.7-Flash-8bit.json",
+      "source_sha256": "0f5670f1e7be64dd32eb85411e6eab254aceb65949b54fbc5c71ff76e9f5272a",
+      "published_sha256": "33f5d91ee6473604555eef1cc8e56cf0ba4df43e124746550d23b27fe1a351ec"
+    },
+    {
+      "source": "retest-20261018-085218/agent-gpt-oss-120b-mxfp4-bf16.json",
+      "published": "results/retest-20261018/agent-gpt-oss-120b-mxfp4-bf16.json",
+      "source_sha256": "95038bc4ded8bac4c7a7c2072b2954b2ea67a26ea502844906f1ee64444be9a8",
+      "published_sha256": "cc336a9974162794169b4676b9d0393851e5a9574e8b6fa8bd0d5fce1691a74d"
+    },
+    {
+      "source": "agent-candidates-20261018/agent-Muse-Glimmer-30B-8bit-advanced.json",
+      "published": "results/candidates/agent-Muse-Glimmer-30B-8bit-advanced.json",
+      "source_sha256": "31f353f009b1c3cb28efe00fc895684552a56a9f2177838eb30dd66777071402",
+      "published_sha256": "30896975dc7e1cac2ff0db7ebbaf45a228b4f79f8a40a3233f9da8b4f7f9ac89"
+    },
+    {
+      "source": "agent-candidates-20261018/agent-Muse-Glimmer-30B-8bit.json",
+      "published": "results/candidates/agent-Muse-Glimmer-30B-8bit.json",
+      "source_sha256": "005f49e7489fd5067d32b99ff08d50597be18645b2e13295da8801f486f1890e",
+      "published_sha256": "76e47b09eb6373907cf5294919f3f5aed0e81ac7e69e6f96bdb5a5dc45539c3f"
+    },
+    {
+      "source": "agent-candidates-20261018/agent-NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit-advanced.json",
+      "published": "results/candidates/agent-NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit-advanced.json",
+      "source_sha256": "b341960b7f8bf5be0f1267edab87e87da9c75c5fb04f471a15a3004be40474a7",
+      "published_sha256": "fa963c6bb132dbcbb98713b03d24d15a357c125123f80e5db0f1ace3b0bcf06a"
+    },
+    {
+      "source": "agent-candidates-20261018/agent-NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit.json",
+      "published": "results/candidates/agent-NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit.json",
+      "source_sha256": "c3489ce9b2060b6e815430419b0bd13a57d0b13273f078f7bbc2aa6f696584ed",
+      "published_sha256": "6b8a08725cc54611658eb612ddea80e7dbb9bc0dabb3a2cdb92805922fd35f0e"
+    },
+    {
+      "source": "agent-candidates-20261018/agent-gemma-4-31b-it-8bit-advanced.json",
+      "published": "results/candidates/agent-gemma-4-31b-it-8bit-advanced.json",
+      "source_sha256": "fcc7dc5fe61555f137d7bc36b9bbfd53cc454967d343e07825ddf32448fbfe52",
+      "published_sha256": "4a9c16b0a27a5c4a0329508563db010e08a3cb4b221d265c477f42a7a75c3952"
+    },
+    {
+      "source": "agent-candidates-20261018/agent-gemma-4-31b-it-8bit.json",
+      "published": "results/candidates/agent-gemma-4-31b-it-8bit.json",
+      "source_sha256": "83fa03ff4c7343b60b54a2688788cdca57cdf19d67d6938eb7df1a1f26a4e9e3",
+      "published_sha256": "2571d30e9318c69080bab4f88f0ad03ac0695468744c6ebd6b26bea783a032e6"
+    },
+    {
+      "source": "retest-20261015/proxy-results.json",
+      "published": "results/proxy/retest-20261015-proxy-results.json",
+      "source_sha256": "168f56efa15bf3b116d28bf23b3dac023231d0b20bd03747c410c73124de828f",
+      "published_sha256": "10b99fb9e3b1bbad22813c6ba6437241394dbe86a11c8254377b3b91b4cdc7ec"
+    },
+    {
+      "source": "retest-20261015/proxy-long-4096.json",
+      "published": "results/proxy/retest-20261015-proxy-long-4096.json",
+      "source_sha256": "6afcc94678212266203e8aa3f1dfa16a29758c6240958eec21a58d8574d9c6ea",
+      "published_sha256": "2c81ae2b7639ae2885c1cfa9376343f1f3d6a81f27919b589253a4e40115ee56"
+    },
+    {
+      "source": "retest-20261018-085218/proxy-results.json",
+      "published": "results/proxy/retest-20261018-085218-proxy-results.json",
+      "source_sha256": "2e18f15a51317b2e131af213b13c7cfcb743ec9eca659c14541b4864002f5114",
+      "published_sha256": "ac1cf27eef7a1d289f54ef801e97ea518a5fde5457af30dd57ae084fa5ff894c"
+    },
+    {
+      "source": "pi-install-smoke/verified-events.jsonl",
+      "published": "results/pi-smoke/verified-events.jsonl",
+      "source_sha256": "579e556641256457bbfbb0a3c1055eb2d6561044e0edb00477b5e054c9962327",
+      "published_sha256": "961cc52493be70af95e501b80ce837abd5d070814b4604929b4bc74f1f66688b"
+    },
+    {
+      "source": "pi-install-smoke/events.jsonl",
+      "published": "results/pi-smoke/events.jsonl",
+      "source_sha256": "f88a4dfe7ef139f7fdba1d3ce957b4d1cb3858dc24cc705de87dbecb9de99b76",
+      "published_sha256": "85bfb0289d4d8fb01fb4ed57908196e737a46560a9a175c14b374323569144d8"
+    },
+    {
+      "source": "pi-install-smoke/edit-events.jsonl",
+      "published": "results/pi-smoke/edit-events.jsonl",
+      "source_sha256": "4a319fa0851ccebcf264751eac1da7c90e8edf75d839f868a551e053e3cf723f",
+      "published_sha256": "5cde117e5fb65bc2df337c3cca76581878b03e904fa7c692eb47b325b63c2f59"
+    },
+    {
+      "source": "pi-install-smoke/installation-result.json",
+      "published": "results/pi-smoke/installation-result.json",
+      "source_sha256": "80f22aeb48e1da23e8f9b6169344a4de55384a6ddee1e82b0f35f238030c3a30",
+      "published_sha256": "8032f284c8a47132062f9d8b19c34c441db4e3526f36a792b7ec9f518ca69464"
+    },
+    {
+      "source": "agent-candidates-20261018/gemma-4-31b-it-8bit-verified-manifest.json",
+      "published": "environment/gemma-4-31b-it-8bit-verified-manifest.json",
+      "source_sha256": "1a8d3879dea2ddb0677f966c4f5b01785d0a4f11fd45e3f5b1fdd4ffbd0a2dee",
+      "published_sha256": "7509e285d8e277be3e59d75e9229b32e8455f2b256723e55596f182d3edd3678"
+    },
+    {
+      "source": "agent-candidates-20261018/Muse-Glimmer-30B-8bit-verified-manifest.json",
+      "published": "environment/Muse-Glimmer-30B-8bit-verified-manifest.json",
+      "source_sha256": "d0a0d52b35941fa843bd2d003fa4885f58112a9d764bc9c81b2fabfa33b9072d",
+      "published_sha256": "e840630e497f7117494da529c7c1306e23f367acc5cb4c8f02223cd89889414f"
+    },
+    {
+      "source": "agent-candidates-20261018/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit-verified-manifest.json",
+      "published": "environment/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit-verified-manifest.json",
+      "source_sha256": "c5721ebb166acdcebc04df61a6fca9bed8ad7e9a98f34d0f19fe3311e6098747",
+      "published_sha256": "b9bc0dbad71b8f271eec868854f4785d7b3718cdf76368c4022b5347c2732cce"
+    },
+    {
+      "source": "gpt-oss-120b-manifest.json",
+      "published": "environment/gpt-oss-120b-manifest.json",
+      "source_sha256": "647f1328e9f209977dac1d87f6cb8895a8e76fe5a38a7c2f1128ae2afb442082",
+      "published_sha256": "dcfef0b5167a9e1c1d4d2f724d6f40a2cbe395076fa3e54b40a0ef5b0a31227a"
+    },
+    {
+      "source": "agent-evaluation-20261015/glm47-manifest.json",
+      "published": "environment/glm47-manifest.json",
+      "source_sha256": "b81327f174aedce86172bee2687f813d1b3f58cd25a3d4a7625204fef03d0954",
+      "published_sha256": "0de82f9ff7e9b43b133e7a9cc7e796b7ef81a987d57004051e03fb8f4b4932da"
+    },
+    {
+      "source": "qwen38-reap320-manifest.json",
+      "published": "environment/qwen38-reap320-manifest.json",
+      "source_sha256": "42c1c523bb30694640a153cf9336015986a3c2c22739763ff44bafe6c401dcda",
+      "published_sha256": "1e972e126f46e457315a8548aba436ab390f3932461d0604c3be45c2d3ac04dc"
+    },
+    {
+      "source": "qwen38-27b-manifest.json",
+      "published": "environment/qwen38-27b-manifest.json",
+      "source_sha256": "5f1cf66000689e53dcdd3c93043a74f69ba87951919d643820f2df2c3b99b413",
+      "published_sha256": "429da851aa25c716b58bfc184c2ab7f9567f769df2a80eef07c3d8b86007627e"
+    },
+    {
+      "source": "qwen38-oq4e-manifest.json",
+      "published": "environment/qwen38-oq4e-manifest.json",
+      "source_sha256": "a3ee83b3d8cb975fe5dae1de1fc62ea2863190e5b8fb328af3701d72a9b1cfc0",
+      "published_sha256": "1e4daed1066a834c309a7023847b307a8ba5eb5156fb8d2d9585651ff04927bc"
+    },
+    {
+      "source": "benchmark_four_models.py",
+      "published": "harness/benchmark_four_models.py",
+      "source_sha256": "1c354766130b0c72cac4fc013f5988e02fbf801319f22b985ace38a5e6269dee",
+      "published_sha256": "eae64a1d3f7a745a87df1a77bbd027cadebaf5756b87e42d5d08da9624b092b4",
+      "changes": "Only environment/output/import-path portability; scoring logic preserved."
+    },
+    {
+      "source": "agent-evaluation-20261015/agent_suite.py",
+      "published": "harness/agent_suite.py",
+      "source_sha256": "258645e05219ad2d593f4dc2f571a210afb3b15f2d2f1fced83a149be2b09622",
+      "published_sha256": "ce8093343ce43202797e12e6dcaa46b7709e80c29e0ea74dc924fbc675d41a32",
+      "changes": "Only environment/output/import-path portability; scoring logic preserved."
+    },
+    {
+      "source": "agent-candidates-20261018/advanced_cases.py",
+      "published": "harness/advanced_cases.py",
+      "source_sha256": "db3cc00316a18f544b3f3d0b381f1fe0c52baf0883995f7e61f6e8fd29223316",
+      "published_sha256": "db3cc00316a18f544b3f3d0b381f1fe0c52baf0883995f7e61f6e8fd29223316",
+      "changes": "Only environment/output/import-path portability; scoring logic preserved."
+    }
+  ]
+}

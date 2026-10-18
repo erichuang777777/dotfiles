@@ -1,0 +1,81 @@
+{
+  "repo": "mlx-community/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+  "sha": "881a85f9e84dac5ab1a61d4493739b5ef67efeaa",
+  "files": [
+    {
+      "name": ".gitattributes",
+      "size": 1570,
+      "sha256": null
+    },
+    {
+      "name": "README.md",
+      "size": 1440,
+      "sha256": null
+    },
+    {
+      "name": "chat_template.jinja",
+      "size": 9867,
+      "sha256": null
+    },
+    {
+      "name": "config.json",
+      "size": 2932,
+      "sha256": null
+    },
+    {
+      "name": "generation_config.json",
+      "size": 210,
+      "sha256": null
+    },
+    {
+      "name": "model-00001-of-00007.safetensors",
+      "size": 5359226316,
+      "sha256": "7ce9d0b7b01bb133ebf089a65dbcce23dcf35d73eb28dfa20b639a21e86711f3"
+    },
+    {
+      "name": "model-00002-of-00007.safetensors",
+      "size": 5046688726,
+      "sha256": "ad229b96564455b865364db16918a557d55f21199e4ff7a9d0e0952e56c5c9e0"
+    },
+    {
+      "name": "model-00003-of-00007.safetensors",
+      "size": 4963631598,
+      "sha256": "a2c01a7ae42cc9881768fc3f4c1820a86c00766f8f88f154fd17e32d10ed1a46"
+    },
+    {
+      "name": "model-00004-of-00007.safetensors",
+      "size": 5051598289,
+      "sha256": "f9afcd3cedfc7e107b7e199fea995d105ee2ad56929fd3dd017ce6dd24ea9f55"
+    },
+    {
+      "name": "model-00005-of-00007.safetensors",
+      "size": 4938766121,
+      "sha256": "bf8ef73665e3d894d5badd01cef18a99e7da7dcc3a21c52c80a298976499420c"
+    },
+    {
+      "name": "model-00006-of-00007.safetensors",
+      "size": 5026732862,
+      "sha256": "bbd2d487828c3e2434ca181673023a1489699a6739c2725250ac0c91d5eb1e17"
+    },
+    {
+      "name": "model-00007-of-00007.safetensors",
+      "size": 3173319638,
+      "sha256": "01b0ace9963a901962e9bbe492d66faa5a0ed47b09ade9da5529375694fa770e"
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "size": 65410,
+      "sha256": null
+    },
+    {
+      "name": "tokenizer.json",
+      "size": 17077484,
+      "sha256": "623c34567aebb18582765289fbe23d901c62704d6518d71866e0e58db892b5b7"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "size": 430,
+      "sha256": null
+    }
+  ]
+}

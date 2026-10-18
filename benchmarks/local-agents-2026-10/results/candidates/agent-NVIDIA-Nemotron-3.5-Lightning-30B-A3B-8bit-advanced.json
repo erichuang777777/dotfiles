@@ -1,0 +1,3354 @@
+{
+  "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+  "started": "2026-10-18T00:12:26.676529",
+  "raw_endpoint": true,
+  "repeats": 1,
+  "max_tokens": 4096,
+  "top_p": 0.95,
+  "cases": [
+    {
+      "api": "chat",
+      "repeat": 0,
+      "case": "typed_nested",
+      "turns": [
+        {
+          "text": "",
+          "finish": "tool_calls",
+          "calls": [
+            {
+              "name": "create_draft",
+              "arguments": "{\"title\": \"測試訂單\", \"items\": [{\"sku\": \"TW-0042\", \"quantity\": 3}], \"dry_run\": true}",
+              "id": "call_bc75adf9"
+            }
+          ],
+          "raw": {
+            "id": "chatcmpl-65664bc2",
+            "object": "chat.completion",
+            "created": 1792307548,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "reasoning_content": "We need to call create_draft with given parameters, then output JSON with key draft_id. The tool likely returns some result, maybe includes draft_id. We must output only JSON, not analysis. Let's call function.",
+                  "tool_calls": [
+                    {
+                      "id": "call_bc75adf9",
+                      "type": "function",
+                      "function": {
+                        "name": "create_draft",
+                        "arguments": "{\"title\": \"測試訂單\", \"items\": [{\"sku\": \"TW-0042\", \"quantity\": 3}], \"dry_run\": true}"
+                      }
+                    }
+                  ]
+                },
+                "finish_reason": "tool_calls"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1079,
+              "completion_tokens": 114,
+              "total_tokens": 1193,
+              "input_tokens": 1079,
+              "output_tokens": 114,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "time_to_first_token": 0.34,
+              "total_time": 1.34,
+              "prompt_eval_duration": 0.34,
+              "generation_duration": 1.0,
+              "prompt_tokens_per_second": 3147.09,
+              "generation_tokens_per_second": 113.8
+            }
+          }
+        },
+        {
+          "text": "{\"draft_id\": \"D-09Z\"}",
+          "finish": "stop",
+          "calls": [],
+          "raw": {
+            "id": "chatcmpl-e1abc5f1",
+            "object": "chat.completion",
+            "created": 1792307548,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"draft_id\": \"D-09Z\"}",
+                  "reasoning_content": "We need to output only JSON with key draft_id, presumably just the value from response. The response already is JSON {\"draft_id\": \"D-09Z\"}. The instruction: \"只輸出 JSON，鍵名 draft_id。\" So output that JSON."
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1222,
+              "completion_tokens": 72,
+              "total_tokens": 1294,
+              "input_tokens": 1222,
+              "output_tokens": 72,
+              "prompt_tokens_details": {
+                "cached_tokens": 1073
+              },
+              "time_to_first_token": 0.21,
+              "total_time": 0.85,
+              "prompt_eval_duration": 0.21,
+              "generation_duration": 0.64,
+              "prompt_tokens_per_second": 706.32,
+              "generation_tokens_per_second": 112.99
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 2.203
+    },
+    {
+      "api": "chat",
+      "repeat": 0,
+      "case": "id_fidelity",
+      "turns": [
+        {
+          "text": "",
+          "finish": "tool_calls",
+          "calls": [
+            {
+              "name": "lookup_ticket",
+              "arguments": "{\"ticket_id\": \"T-00O1lI-09Z\"}",
+              "id": "call_848b508c"
+            }
+          ],
+          "raw": {
+            "id": "chatcmpl-60561d9f",
+            "object": "chat.completion",
+            "created": 1792307550,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "reasoning_content": "We need to call lookup_ticket with ticket_id \"T-00O1lI-09Z\". Then output JSON with keys ticket_id and status. The user says \"只輸出 JSON，鍵名 ticket_id、status。\" So we need to output only JSON, no extra text.\n\nWe must preserve case and zeros; we just pass the ticket_id as given.\n\nWe'll call lookup_ticket.",
+                  "tool_calls": [
+                    {
+                      "id": "call_848b508c",
+                      "type": "function",
+                      "function": {
+                        "name": "lookup_ticket",
+                        "arguments": "{\"ticket_id\": \"T-00O1lI-09Z\"}"
+                      }
+                    }
+                  ]
+                },
+                "finish_reason": "tool_calls"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1061,
+              "completion_tokens": 127,
+              "total_tokens": 1188,
+              "input_tokens": 1061,
+              "output_tokens": 127,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "time_to_first_token": 0.39,
+              "total_time": 1.51,
+              "prompt_eval_duration": 0.39,
+              "generation_duration": 1.12,
+              "prompt_tokens_per_second": 2686.79,
+              "generation_tokens_per_second": 113.9
+            }
+          }
+        },
+        {
+          "text": "{\"ticket_id\": \"T-00O1lI-09Z\", \"status\": \"處理中\"}",
+          "finish": "stop",
+          "calls": [],
+          "raw": {
+            "id": "chatcmpl-ecdeb68e",
+            "object": "chat.completion",
+            "created": 1792307551,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"ticket_id\": \"T-00O1lI-09Z\", \"status\": \"處理中\"}",
+                  "reasoning_content": "The tool returned JSON: {\"ticket_id\": \"T-00O1lI-09Z\", \"status\": \"處理中\"}. We need to output only the JSON. The user wants only final answer, not analysis. So output that JSON."
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1231,
+              "completion_tokens": 82,
+              "total_tokens": 1313,
+              "input_tokens": 1231,
+              "output_tokens": 82,
+              "prompt_tokens_details": {
+                "cached_tokens": 1055
+              },
+              "time_to_first_token": 0.22,
+              "total_time": 0.94,
+              "prompt_eval_duration": 0.22,
+              "generation_duration": 0.72,
+              "prompt_tokens_per_second": 814.65,
+              "generation_tokens_per_second": 113.13
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 2.462
+    },
+    {
+      "api": "chat",
+      "repeat": 0,
+      "case": "permanent_error",
+      "turns": [
+        {
+          "text": "",
+          "finish": "tool_calls",
+          "calls": [
+            {
+              "name": "get_balance",
+              "arguments": "{\"account\": \"A-0042\"}",
+              "id": "call_8b87afe1"
+            }
+          ],
+          "raw": {
+            "id": "chatcmpl-17ca26ac",
+            "object": "chat.completion",
+            "created": 1792307552,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "reasoning_content": "We need to call get_balance with account \"A-0042\". Then output JSON with key \"balance\". If error (unretryable), stop and output null. But we just call tool; assume it will return something. We'll call get_balance.",
+                  "tool_calls": [
+                    {
+                      "id": "call_8b87afe1",
+                      "type": "function",
+                      "function": {
+                        "name": "get_balance",
+                        "arguments": "{\"account\": \"A-0042\"}"
+                      }
+                    }
+                  ]
+                },
+                "finish_reason": "tool_calls"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1075,
+              "completion_tokens": 84,
+              "total_tokens": 1159,
+              "input_tokens": 1075,
+              "output_tokens": 84,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "time_to_first_token": 0.4,
+              "total_time": 1.15,
+              "prompt_eval_duration": 0.4,
+              "generation_duration": 0.75,
+              "prompt_tokens_per_second": 2680.91,
+              "generation_tokens_per_second": 112.4
+            }
+          }
+        },
+        {
+          "text": "{\n  \"balance\": null\n}",
+          "finish": "stop",
+          "calls": [],
+          "raw": {
+            "id": "chatcmpl-3e313f0b",
+            "object": "chat.completion",
+            "created": 1792307553,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n  \"balance\": null\n}",
+                  "reasoning_content": "The tool returned an error with retryable false. According to instructions:若工具回傳不可重試的錯誤，立即停止，不得重試或捏造。只輸出 JSON，鍵名 balance，無法取得時為 null。\n\nThus output JSON with balance: null."
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1192,
+              "completion_tokens": 80,
+              "total_tokens": 1272,
+              "input_tokens": 1192,
+              "output_tokens": 80,
+              "prompt_tokens_details": {
+                "cached_tokens": 1069
+              },
+              "time_to_first_token": 0.2,
+              "total_time": 0.91,
+              "prompt_eval_duration": 0.2,
+              "generation_duration": 0.71,
+              "prompt_tokens_per_second": 615.16,
+              "generation_tokens_per_second": 113.24
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 2.064
+    },
+    {
+      "api": "chat",
+      "repeat": 0,
+      "case": "search_fetch",
+      "turns": [
+        {
+          "text": "",
+          "finish": "tool_calls",
+          "calls": [
+            {
+              "name": "search_docs",
+              "arguments": "{\"query\": \"備份政策\"}",
+              "id": "call_bdde0c8b"
+            }
+          ],
+          "raw": {
+            "id": "chatcmpl-9228e514",
+            "object": "chat.completion",
+            "created": 1792307554,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "reasoning_content": "We need to search docs for \"備份政策\". Then fetch document with the ID returned. Then output JSON with key retention_days presumably from the document content.\n\nWe must first call search_docs with query \"備份政策\".",
+                  "tool_calls": [
+                    {
+                      "id": "call_bdde0c8b",
+                      "type": "function",
+                      "function": {
+                        "name": "search_docs",
+                        "arguments": "{\"query\": \"備份政策\"}"
+                      }
+                    }
+                  ]
+                },
+                "finish_reason": "tool_calls"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1061,
+              "completion_tokens": 74,
+              "total_tokens": 1135,
+              "input_tokens": 1061,
+              "output_tokens": 74,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "time_to_first_token": 0.39,
+              "total_time": 1.05,
+              "prompt_eval_duration": 0.39,
+              "generation_duration": 0.65,
+              "prompt_tokens_per_second": 2693.41,
+              "generation_tokens_per_second": 113.1
+            }
+          }
+        },
+        {
+          "text": "",
+          "finish": "tool_calls",
+          "calls": [
+            {
+              "name": "fetch_document",
+              "arguments": "{\"id\": \"DOC-00B7\"}",
+              "id": "call_11478dbc"
+            }
+          ],
+          "raw": {
+            "id": "chatcmpl-d05ae57b",
+            "object": "chat.completion",
+            "created": 1792307555,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "reasoning_content": "Now we have document_id \"DOC-00B7\". Need to fetch_document with that ID.",
+                  "tool_calls": [
+                    {
+                      "id": "call_11478dbc",
+                      "type": "function",
+                      "function": {
+                        "name": "fetch_document",
+                        "arguments": "{\"id\": \"DOC-00B7\"}"
+                      }
+                    }
+                  ]
+                },
+                "finish_reason": "tool_calls"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1165,
+              "completion_tokens": 52,
+              "total_tokens": 1217,
+              "input_tokens": 1165,
+              "output_tokens": 52,
+              "prompt_tokens_details": {
+                "cached_tokens": 1055
+              },
+              "time_to_first_token": 0.2,
+              "total_time": 0.66,
+              "prompt_eval_duration": 0.2,
+              "generation_duration": 0.46,
+              "prompt_tokens_per_second": 553.45,
+              "generation_tokens_per_second": 112.42
+            }
+          }
+        },
+        {
+          "text": "{\"retention_days\": 37}",
+          "finish": "stop",
+          "calls": [],
+          "raw": {
+            "id": "chatcmpl-1d659f28",
+            "object": "chat.completion",
+            "created": 1792307555,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"retention_days\": 37}",
+                  "reasoning_content": "We need to output JSON with key retention_days. The value is 37. Must output only final answer JSON, no extra text. So output: {\"retention_days\": 37}."
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1243,
+              "completion_tokens": 50,
+              "total_tokens": 1293,
+              "input_tokens": 1243,
+              "output_tokens": 50,
+              "prompt_tokens_details": {
+                "cached_tokens": 1159
+              },
+              "time_to_first_token": 0.23,
+              "total_time": 0.67,
+              "prompt_eval_duration": 0.23,
+              "generation_duration": 0.45,
+              "prompt_tokens_per_second": 367.43,
+              "generation_tokens_per_second": 112.3
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 2.4
+    },
+    {
+      "api": "chat",
+      "repeat": 0,
+      "case": "typed_numbers",
+      "turns": [
+        {
+          "text": "",
+          "finish": "tool_calls",
+          "calls": [
+            {
+              "name": "calculate_price",
+              "arguments": "{\"amount\": 1299.5, \"quantity\": 2, \"currency\": \"TWD\"}",
+              "id": "call_9ce9b27a"
+            }
+          ],
+          "raw": {
+            "id": "chatcmpl-ad416219",
+            "object": "chat.completion",
+            "created": 1792307557,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "reasoning_content": "The user asks to call calculate_price with amount 1299.5, quantity 2, currency TWD. Then output only the JSON with key \"total\" from the tool's return.\n\nWe need to call the function. Use the correct parameters.\n\nFunction signature: calculate_price(amount: number, quantity: integer, currency: \"TWD\" | \"USD\").\n\nWe'll call with amount 1299.5, quantity 2, currency \"TWD\". Then we need to output only the JSON of total. Probably the tool returns something like {\"total\": ...}. We need to extract that.\n\nWe will call the function.",
+                  "tool_calls": [
+                    {
+                      "id": "call_9ce9b27a",
+                      "type": "function",
+                      "function": {
+                        "name": "calculate_price",
+                        "arguments": "{\"amount\": 1299.5, \"quantity\": 2, \"currency\": \"TWD\"}"
+                      }
+                    }
+                  ]
+                },
+                "finish_reason": "tool_calls"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1063,
+              "completion_tokens": 183,
+              "total_tokens": 1246,
+              "input_tokens": 1063,
+              "output_tokens": 183,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "time_to_first_token": 0.4,
+              "total_time": 2.01,
+              "prompt_eval_duration": 0.4,
+              "generation_duration": 1.61,
+              "prompt_tokens_per_second": 2651.64,
+              "generation_tokens_per_second": 113.81
+            }
+          }
+        },
+        {
+          "text": "{\"total\": 2599}",
+          "finish": "stop",
+          "calls": [],
+          "raw": {
+            "id": "chatcmpl-cb661bc1",
+            "object": "chat.completion",
+            "created": 1792307558,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"total\": 2599}",
+                  "reasoning_content": "The tool returned JSON string: {\"total\": 2599}. The user wants only output the JSON with key total. So we output just that."
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1272,
+              "completion_tokens": 42,
+              "total_tokens": 1314,
+              "input_tokens": 1272,
+              "output_tokens": 42,
+              "prompt_tokens_details": {
+                "cached_tokens": 1057
+              },
+              "time_to_first_token": 0.23,
+              "total_time": 0.6,
+              "prompt_eval_duration": 0.23,
+              "generation_duration": 0.38,
+              "prompt_tokens_per_second": 943.93,
+              "generation_tokens_per_second": 111.8
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 2.624
+    },
+    {
+      "api": "chat",
+      "repeat": 0,
+      "case": "no_tool",
+      "turns": [
+        {
+          "text": "{\"ready\":true,\"mode\":\"dry_run\"}",
+          "finish": "stop",
+          "calls": [],
+          "raw": {
+            "id": "chatcmpl-5f786f8c",
+            "object": "chat.completion",
+            "created": 1792307559,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"ready\":true,\"mode\":\"dry_run\"}",
+                  "reasoning_content": "The user says: \"這題不需要工具，而且禁止呼叫任何工具。只原樣輸出 JSON：{\"ready\":true,\"mode\":\"dry_run\"}。\" So we just need to output that JSON exactly. No analysis, no tool calls. So final answer should be exactly that JSON."
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 1043,
+              "completion_tokens": 80,
+              "total_tokens": 1123,
+              "input_tokens": 1043,
+              "output_tokens": 80,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "time_to_first_token": 0.39,
+              "total_time": 1.1,
+              "prompt_eval_duration": 0.39,
+              "generation_duration": 0.71,
+              "prompt_tokens_per_second": 2657.66,
+              "generation_tokens_per_second": 113.16
+            }
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 1.104
+    },
+    {
+      "api": "responses",
+      "repeat": 0,
+      "case": "typed_nested",
+      "turns": [
+        {
+          "text": "",
+          "finish": "completed",
+          "calls": [
+            {
+              "name": "create_draft",
+              "arguments": "{\"title\": \"測試訂單\", \"items\": [{\"sku\": \"TW-0042\", \"quantity\": 3}], \"dry_run\": true}",
+              "id": "call_4a1c4d52"
+            }
+          ],
+          "raw": {
+            "id": "resp_e6ce3fe529aa42c897bed57d",
+            "object": "response",
+            "created_at": 1792307561,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_25e3b2caa82e486580b923be",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "We need to call create_draft with given parameters and then output JSON with key draft_id. The tool likely returns some result, maybe includes draft_id. We need to output only the JSON with draft_id. So first we need to invoke create_draft."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_0e9314d901054018a1dcaf57",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              },
+              {
+                "type": "function_call",
+                "id": "fc_80152818",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": "call_4a1c4d52",
+                "name": "create_draft",
+                "arguments": "{\"title\": \"測試訂單\", \"items\": [{\"sku\": \"TW-0042\", \"quantity\": 3}], \"dry_run\": true}",
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1079,
+              "output_tokens": 121,
+              "total_tokens": 1200,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 52
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        },
+        {
+          "text": "{\n  \"draft_id\": \"D-09Z\"\n}",
+          "finish": "completed",
+          "calls": [],
+          "raw": {
+            "id": "resp_b9d8b0b6f4e0422d8c290039",
+            "object": "response",
+            "created_at": 1792307561,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_87843821db8b4f239c1ad90c",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "The tool returned JSON with draft_id \"D-09Z\". We must output only the JSON with key draft_id. Probably just output that JSON."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_97656bd11e7941238e4f4e5a",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "{\n  \"draft_id\": \"D-09Z\"\n}",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1229,
+              "output_tokens": 47,
+              "total_tokens": 1276,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 31
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 2.266
+    },
+    {
+      "api": "responses",
+      "repeat": 0,
+      "case": "id_fidelity",
+      "turns": [
+        {
+          "text": "",
+          "finish": "completed",
+          "calls": [
+            {
+              "name": "lookup_ticket",
+              "arguments": "{\"ticket_id\": \"T-00O1lI-09Z\"}",
+              "id": "call_190e4ec3"
+            }
+          ],
+          "raw": {
+            "id": "resp_97a86e375ba442adacef57ef",
+            "object": "response",
+            "created_at": 1792307563,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_5ff58e4139df4ae5acd67dc4",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "The user asks: \"請用 lookup_ticket 查 ticket_id「T-00O1lI-09Z」，保留大小寫與零，不得改寫。只輸出 JSON，鍵名 ticket_id、status。\"\n\nWe must call lookup_ticket with ticket_id \"T-00O1lI-09Z\". Then output JSON with keys ticket_id and status. Preserve case and zeros, not modify. So just output the JSON with the ticket_id as given and status from result.\n\nWe need to use the tool. Let's call lookup_ticket."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_043a517547584f419b7a6774",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              },
+              {
+                "type": "function_call",
+                "id": "fc_9ac97f43",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": "call_190e4ec3",
+                "name": "lookup_ticket",
+                "arguments": "{\"ticket_id\": \"T-00O1lI-09Z\"}",
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1061,
+              "output_tokens": 170,
+              "total_tokens": 1231,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 132
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        },
+        {
+          "text": "{\n  \"ticket_id\": \"T-00O1lI-09Z\",\n  \"status\": \"處理中\"\n}",
+          "finish": "completed",
+          "calls": [],
+          "raw": {
+            "id": "resp_fdf0d5af4bda4e279a00caf2",
+            "object": "response",
+            "created_at": 1792307564,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_e3ee9d8756c74fca89b863d3",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "We have the result: ticket_id and status. Need to output only JSON with those keys. Ensure we preserve case and zeros, which is already. Output just JSON."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_9f7891396f00428f95c96921",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "{\n  \"ticket_id\": \"T-00O1lI-09Z\",\n  \"status\": \"處理中\"\n}",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1274,
+              "output_tokens": 65,
+              "total_tokens": 1339,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 34
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 2.85
+    },
+    {
+      "api": "responses",
+      "repeat": 0,
+      "case": "permanent_error",
+      "turns": [
+        {
+          "text": "",
+          "finish": "completed",
+          "calls": [
+            {
+              "name": "get_balance",
+              "arguments": "{\"account\": \"A-0042\"}",
+              "id": "call_644b44d1"
+            }
+          ],
+          "raw": {
+            "id": "resp_d7bc99542b784fd393bc8eb6",
+            "object": "response",
+            "created_at": 1792307565,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_70ee316d5ec04cafb503f496",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "We need to call get_balance with account \"A-0042\". Then we need to output JSON with key \"balance\". If tool returns an error (non-retryable), we must stop and output JSON with null. Probably we just call the tool and then format output. Let's call get_balance."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_aa7506b9e7c845c6ad0da786",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              },
+              {
+                "type": "function_call",
+                "id": "fc_472ae5b2",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": "call_644b44d1",
+                "name": "get_balance",
+                "arguments": "{\"account\": \"A-0042\"}",
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1075,
+              "output_tokens": 93,
+              "total_tokens": 1168,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 64
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        },
+        {
+          "text": "{\n  \"balance\": null\n}",
+          "finish": "completed",
+          "calls": [],
+          "raw": {
+            "id": "resp_6103b946af3c4eb89b545377",
+            "object": "response",
+            "created_at": 1792307567,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_f786cc4bb1fb4affbaf0c078",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "The tool returned an error with retryable false. According to instruction: 若工具回傳不可重試的錯誤，立即停止，不得重試或捏造。只輸出 JSON，鍵名 balance，無法取得時為 null。\n\nThus we output JSON {\"balance\": null}."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_6262e0ba3279407a9ac5261d",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "{\n  \"balance\": null\n}",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1201,
+              "output_tokens": 82,
+              "total_tokens": 1283,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 73
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 2.355
+    },
+    {
+      "api": "responses",
+      "repeat": 0,
+      "case": "search_fetch",
+      "turns": [
+        {
+          "text": "",
+          "finish": "completed",
+          "calls": [
+            {
+              "name": "search_docs",
+              "arguments": "{\"query\": \"備份政策\"}",
+              "id": "call_7cb00863"
+            }
+          ],
+          "raw": {
+            "id": "resp_3efd6c5fb8ca4deabd84d7ab",
+            "object": "response",
+            "created_at": 1792307568,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_098dd8b607014ee6a425ef60",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "We need to search docs for exact string \"備份政策\". Then fetch document using document_id returned, and output JSON with key retention_days. So steps: call search_docs with query \"備份政策\". Then get result, which likely includes document id. Then call fetch_document with that id. Then extract retention_days? Not sure what field contains retention_days. Possibly the document has that field. We'll just output JSON with key retention_days and value from fetched doc. Let's do calls."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_fbe536dcb010479391d473be",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              },
+              {
+                "type": "function_call",
+                "id": "fc_0f5858f2",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": "call_7cb00863",
+                "name": "search_docs",
+                "arguments": "{\"query\": \"備份政策\"}",
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1061,
+              "output_tokens": 130,
+              "total_tokens": 1191,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 102
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        },
+        {
+          "text": "",
+          "finish": "completed",
+          "calls": [
+            {
+              "name": "fetch_document",
+              "arguments": "{\"id\": \"DOC-00B7\"}",
+              "id": "call_7881ec09"
+            }
+          ],
+          "raw": {
+            "id": "resp_221172c32f2d4c679d2f8fd0",
+            "object": "response",
+            "created_at": 1792307569,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_6a590352c2c84d20bfaa94dc",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "Now we have document_id DOC-00B7. Need to fetch it."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_15b11c0ac203466887fc4f10",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              },
+              {
+                "type": "function_call",
+                "id": "fc_1f740dac",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": "call_7881ec09",
+                "name": "fetch_document",
+                "arguments": "{\"id\": \"DOC-00B7\"}",
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1221,
+              "output_tokens": 47,
+              "total_tokens": 1268,
+              "input_tokens_details": {
+                "cached_tokens": 1055
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 17
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        },
+        {
+          "text": "{\n  \"retention_days\": 37\n}",
+          "finish": "completed",
+          "calls": [],
+          "raw": {
+            "id": "resp_c21fa4311628415696085eec",
+            "object": "response",
+            "created_at": 1792307569,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_c87398965570466ba676ec6c",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "We have retention_days: 37. Need output JSON with key retention_days. So just output {\"retention_days\": 37}. Ensure only JSON."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_6dfdff114bd043b2bca9beb8",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "{\n  \"retention_days\": 37\n}",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1294,
+              "output_tokens": 46,
+              "total_tokens": 1340,
+              "input_tokens_details": {
+                "cached_tokens": 1215
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 33
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 2.824
+    },
+    {
+      "api": "responses",
+      "repeat": 0,
+      "case": "typed_numbers",
+      "turns": [
+        {
+          "text": "",
+          "finish": "completed",
+          "calls": [
+            {
+              "name": "calculate_price",
+              "arguments": "{\"amount\": 1299.5, \"quantity\": 2, \"currency\": \"TWD\"}",
+              "id": "call_cb0419db"
+            }
+          ],
+          "raw": {
+            "id": "resp_cdc5750e2df34c779a51eece",
+            "object": "response",
+            "created_at": 1792307571,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_31abf2eb0c614c43a6cc8c5c",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "The user wants to call calculate_price with amount 1299.5, quantity 2, currency TWD. Output only the JSON of total key from the tool's response. So we need to call the function. Use correct param. Then after getting result, output JSON like {\"total\": ...}. They said \"只輸出工具回傳 total 的 JSON，鍵名 total.\" So we need to output only the JSON with key total. Likely just the object.\n\nWe will call calculate_price with given values."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_ca757c4e6127438ca26637c8",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              },
+              {
+                "type": "function_call",
+                "id": "fc_ae7bd9b4",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": "call_cb0419db",
+                "name": "calculate_price",
+                "arguments": "{\"amount\": 1299.5, \"quantity\": 2, \"currency\": \"TWD\"}",
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1063,
+              "output_tokens": 163,
+              "total_tokens": 1226,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 112
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        },
+        {
+          "text": "{\"total\": 2599}",
+          "finish": "completed",
+          "calls": [],
+          "raw": {
+            "id": "resp_780d30f7b93f4e4fa50250d7",
+            "object": "response",
+            "created_at": 1792307572,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_ca1ad7e7456e44198ee53bfe",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "The tool returned JSON with total 2599. Need to output only JSON with key total. So output: {\"total\": 2599}. Ensure only output that."
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_fab349f833234455a0c71cb4",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "{\"total\": 2599}",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1252,
+              "output_tokens": 48,
+              "total_tokens": 1300,
+              "input_tokens_details": {
+                "cached_tokens": 0
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 38
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 2.595
+    },
+    {
+      "api": "responses",
+      "repeat": 0,
+      "case": "no_tool",
+      "turns": [
+        {
+          "text": "{\"ready\":true,\"mode\":\"dry_run\"}",
+          "finish": "completed",
+          "calls": [],
+          "raw": {
+            "id": "resp_7918aa196b7c4a5cb0c18b49",
+            "object": "response",
+            "created_at": 1792307572,
+            "model": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-8bit",
+            "status": "completed",
+            "output": [
+              {
+                "type": "reasoning",
+                "id": "rs_ddc3843dad144281b80970e1",
+                "status": "completed",
+                "role": null,
+                "content": null,
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": [
+                  {
+                    "type": "summary_text",
+                    "text": "We need to output only the JSON as requested, no analysis. So output:\n\n{\"ready\":true,\"mode\":\"dry_run\"}"
+                  }
+                ]
+              },
+              {
+                "type": "message",
+                "id": "msg_4fc6c0c7540a49bfb42b2639",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                  {
+                    "type": "output_text",
+                    "text": "{\"ready\":true,\"mode\":\"dry_run\"}",
+                    "annotations": []
+                  }
+                ],
+                "call_id": null,
+                "name": null,
+                "arguments": null,
+                "summary": null
+              }
+            ],
+            "usage": {
+              "input_tokens": 1043,
+              "output_tokens": 39,
+              "total_tokens": 1082,
+              "input_tokens_details": {
+                "cached_tokens": 1037
+              },
+              "output_tokens_details": {
+                "reasoning_tokens": 27
+              }
+            },
+            "text": null,
+            "tool_choice": "auto",
+            "tools": [
+              {
+                "type": "function",
+                "name": "create_draft",
+                "description": "合成測試工具，無外部操作：create_draft",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "sku": {
+                            "type": "string"
+                          },
+                          "quantity": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "sku",
+                          "quantity"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "dry_run": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "items",
+                    "dry_run"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "lookup_ticket",
+                "description": "合成測試工具，無外部操作：lookup_ticket",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "ticket_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ticket_id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "get_balance",
+                "description": "合成測試工具，無外部操作：get_balance",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "account": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "account"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "search_docs",
+                "description": "合成測試工具，無外部操作：search_docs",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "fetch_document",
+                "description": "合成測試工具，無外部操作：fetch_document",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              },
+              {
+                "type": "function",
+                "name": "calculate_price",
+                "description": "合成測試工具，無外部操作：calculate_price",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    },
+                    "quantity": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "TWD",
+                        "USD"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "quantity",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                },
+                "strict": null
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "max_output_tokens": 4096,
+            "previous_response_id": null,
+            "metadata": {},
+            "truncation": null,
+            "error": null,
+            "incomplete_details": null
+          }
+        }
+      ],
+      "pass": true,
+      "strict_pass": true,
+      "seconds": 0.398
+    }
+  ],
+  "summary": {
+    "passed": 12,
+    "strict_passed": 12,
+    "total": 12,
+    "median_seconds": 2.3775,
+    "errors": 0
+  },
+  "finished": "2026-10-18T00:12:52.852421"
+}

@@ -37,3 +37,7 @@ chmod +x install.sh
 
 ### 隱私設定與私鑰
 安裝腳本會自動產生一份 `~/.bashrc.local`，請將您單機專用的金鑰（如 API Key）放在此處，此檔案不會被 Git 追蹤。
+
+## 本機模型與 Agent 實測
+
+[Mac Studio 本機模型與 Agent 測試報告](benchmarks/local-agents-2026-10/README.md)：包含 Nemotron、Muse Glimmer、Gemma、gpt-oss、GLM 與早期 Qwen 的測試紀錄、上下文設定、CSV／JSON bench data、Pi 驗證及可重跑程式。

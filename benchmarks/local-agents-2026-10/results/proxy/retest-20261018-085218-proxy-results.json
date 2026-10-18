@@ -1,0 +1,179 @@
+[
+  {
+    "model": "gpt-oss-120b-mxfp4-bf16",
+    "case": "locale_long",
+    "text": "1. 先建立以年份、專案或型別命名的主資料夾，於內依功能分子資料夾，檔案依日期或版本重新命名，利用檔案總管搜尋與排序，定期刪除重複或過期檔。  \n2. 下載前先確認來源網站安全憑證，使用瀏覽器防毒外掛；下載時儲存於固定下載資料夾，完成後檢查檔案大小與雜湊值，確保未被竄改或植入惡意碼。  \n3. 開啟瀏覽器設定頁，先啟用「阻擋彈出視窗」與「追蹤保護」功能；再調整隱私權設定，限制第三方 Cookie，使用 HTTPS‑Only 模式，並定期清除快取與瀏覽紀錄以防資訊外洩。  \n4. 使用外接硬碟或雲端服務做週期備份，先在電腦建立備份資料夾，將重要檔案、相片與專案檔案分門別類；設定自動同步或排程備份，確保每週至少一次完整備份，並於不同位置儲存副本。  \n5. 啟用作業系統與應用程式的自動更新功能，定期檢查更新內容與安全說明；若無自動更新，可手動下載安裝最新補丁，更新後重新啟動電腦以確保修復生效，避免使用過期版本。  \n6. 設定強度高且唯一的密碼，結合大小寫、數字與符號；開啟雙因素驗證，使用驗證碼或指紋辨識；定期檢查登入紀錄，若發現異常立即更換密碼並通報服務平臺。  \n測試結束",
+    "finish": "stop",
+    "seconds": 41.276283625,
+    "replacement_character": false,
+    "simplified": "",
+    "repetition": false,
+    "ends_correctly": true,
+    "raw": {
+      "id": "chatcmpl-d023a2b0",
+      "object": "chat.completion",
+      "created": 1792339240,
+      "model": "gpt-oss-120b-mxfp4-bf16",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 先建立以年份、專案或型別命名的主資料夾，於內依功能分子資料夾，檔案依日期或版本重新命名，利用檔案總管搜尋與排序，定期刪除重複或過期檔。  \n2. 下載前先確認來源網站安全憑證，使用瀏覽器防毒外掛；下載時儲存於固定下載資料夾，完成後檢查檔案大小與雜湊值，確保未被竄改或植入惡意碼。  \n3. 開啟瀏覽器設定頁，先啟用「阻擋彈出視窗」與「追蹤保護」功能；再調整隱私權設定，限制第三方 Cookie，使用 HTTPS‑Only 模式，並定期清除快取與瀏覽紀錄以防資訊外洩。  \n4. 使用外接硬碟或雲端服務做週期備份，先在電腦建立備份資料夾，將重要檔案、相片與專案檔案分門別類；設定自動同步或排程備份，確保每週至少一次完整備份，並於不同位置儲存副本。  \n5. 啟用作業系統與應用程式的自動更新功能，定期檢查更新內容與安全說明；若無自動更新，可手動下載安裝最新補丁，更新後重新啟動電腦以確保修復生效，避免使用過期版本。  \n6. 設定強度高且唯一的密碼，結合大小寫、數字與符號；開啟雙因素驗證，使用驗證碼或指紋辨識；定期檢查登入紀錄，若發現異常立即更換密碼並通報服務平臺。  \n測試結束",
+            "reasoning_content": "User asks: \"請用臺灣繁體中文寫六個編號段落，說明如何整理電腦檔案、下載檔案、設定瀏覽器、備份資料、更新軟體、保護網路帳號。每段約六十字。最後另起一行只寫「測試結束」.\"\n\nWe need to produce six numbered paragraphs, each about ~60 Chinese characters (approx). Provide instructions for each topic. Then a line with \"測試結束\". Use Traditional Chinese in Taiwan usage. No analysis. Just final answer. Ensure about 60 characters each; approximate ok. Let's craft.\n\nWe must not output analysis. Just final answer.\n\nWe'll count characters roughly.\n\nParagraph 1: 整理電腦檔案 – about 60 characters.\n\nLet's draft:\n\n1. 先建立以年份、專案或類型命名的主資料夾，然後在每個資料夾內依功能分子資料夾；將檔案依日期或版本重新命名，使用檔案總管的快速搜尋與排序功能，定期移除重複或過期資料。\n\nCount characters: Let's count. Each Chinese char counts as 1. We'll count.\n\n\"先\"1 \"建\"2 \"立\"3 \"以\"4 \"年\"5 \"份\"6 \"、\"7 \"專\"8 \"案\"9 \"或\"10 \"類\"11 \"型\"12 \"命\"13 \"名\"14 \"的\"15 \"主\"16 \"資\"17 \"料\"18 \"夾\"19 \"，\"20 \"然\"21 \"後\"22 \"在\"23 \"每\"24 \"個\"25 \"資\"26 \"料\"27 \"夾\"28 \"內\"29 \"依\"30 \"功\"31 \"能\"32 \"分\"33 \"子\"34 \"資\"35 \"料\"36 \"夾\"37 \"；\"38 \"將\"39 \"檔\"40 \"案\"41 \"依\"42 \"日\"43 \"期\"44 \"或\"45 \"版\"46 \"本\"47 \"重\"48 \"新\"49 \"命\"50 \"名\"51 \"，\"52 \"使\"53 \"用\"54 \"檔\"55 \"案\"56 \"總\"57 \"管\"58 \"的\"59 \"快\"60 \"速\"61 \"搜\"62 \"尋\"63 \"與\"64 \"排\"65 \"序\"66 \"功\"67 \"能\"68 \"，\"69 \"定\"70 \"期\"71 \"移\"72 \"除\"73 \"重\"74 \"複\"75 \"或\"76 \"過\"77 \"期\"78 \"資\"79 \"料\"80 \"。\"\n\n80 characters, a bit too long. Need about 60. Let's shorten.\n\nTry: \"先建立以年份、專案或類型命名的主資料夾，於內依功能分子資料夾，檔案依日期或版本重新命名，利用檔案總管快速搜尋與排序，定期刪除重複或過期檔。\"\n\nCount:\n\n先1 建2 立3 以4 年5 份6 、7 專8 案9 或10 類11 型12 命13 名14 的15 主16 資17 資18 料19 夾20 ，21 於22 內23 依24 功25 能26 分27 子28 資29 料30 夾31 ，32 檔33 案34 依35 日36 期37 或38 版39 本40 重41 新42 命43 名44 ，45 利46 用47 檔48 案49 總50 管51 快52 速53 搜54 尋55 與56 排57 序58 ，59 定60 期61 刪62 除63 重64 複65 或66 過67 期68 檔69 。70\n\n70 characters. Slightly over but acceptable? They said approx 60. 70 might be okay. Let's try to reduce a bit: Remove some words.\n\n\"先建立以年份、專案或類型命名的主資料夾，於內依功能分子資料夾，檔案依日期或版本重新命名，利用檔案總管搜尋與排序，定期刪除重複或過期檔。\"\n\nCount again.\n\n先1 建2 立3 以4 年5 份6 、7 專8 案9 或10 類11 型12 命13 名14 的15 主16 資17 資18 料19 夾20 ，21 於22 內23 依24 功25 能26 分27 子28 資29 料30 夾31 ，32 檔33 案34 依35 日36 期37 或38 版39 本40 重41 新42 命43 名44 ，45 利46 用47 檔48 案49 總50 管51 搜52 尋53 與54 排55 序56 ，57 定58 期59 刪60 除61 重62 複63 或64 過65 期66 檔67 。68\n\n68 characters, okay.\n\nParagraph 2: 下載檔案 – about 60.\n\n\"下載前先確認來源網站的安全憑證，使用瀏覽器的防毒插件或安全模式；下載時選擇儲存於固定的下載資料夾，完成後即檢查檔案大小與雜湊值，確保未受損或被植入惡意碼。\"\n\nCount:\n\n下1 載2 前3 先4 確5 認6 來7 源8 網9 站10 的11 安12 全13 憑14 證15 ，16 使17 用18 瀏覽器19 的20 防21 毒22 插23 件24 或25 安26 全27 模28 式29 ；30 下31 載32 時33 選34 擇35 儲36 存37 於38 固39 定40 的41 下42 載43 資44 料45 夾46 ，47 完48 成49 後50 即51 檢52 查53 檔54 案55 大56 小57 與58 雜59 湊60 值61 ，62 確63 保64 未65 受66 損67 或68 被69 植70 入71 惡72 意73 碼74 。75\n\n75 characters, a bit high but maybe okay. Let's shorten.\n\n\"下載前先確認來源網站安全憑證，使用瀏覽器防毒插件；下載時儲存於固定下載資料夾，完成後檢查檔案大小與雜湊值，確保未被竄改或植入惡意碼。\"\n\nCount:\n\n下1 載2 前3 先4 確5 認6 來7 源8 網9 站10 安11 全12 憑13 證14 ，15 使16 用17 瀏覽器18 防19 毒20 插21 件22 ；23 下24 載25 時26 儲27 存28 於29 固30 定31 下32 載33 資34 料35 夾36 ，37 完38 成39 後40 檢41 查42 檔43 案44 大45 小46 與47 雜48 湊49 值50 ，51 確52 保53 未54 被55 竄56 改57 或58 植59 入60 惡61 意62 碼63 。64\n\n64 characters, acceptable.\n\nParagraph 3: 設定瀏覽器 – about 60.\n\n\"開啟瀏覽器設定頁，先啟用「阻擋彈出視窗」與「追蹤保護」功能；再調整隱私權設定，限制第三方 Cookie，使用 HTTPS‑Only 模式，並定期清除快取與瀏覽紀錄以防資訊外洩。\"\n\nCount:\n\n開1 啟2 瀏覽器3 設定頁4 ，5 先6 啟7 用8 「9 阻10 擋11 彈12 出13 視14 窗15 」16 與17 「18 追19 蹤20 保21 護」22 功23 能24 ；25 再26 調27 整28 隱29 私30 權31 設32 定33 ，34 限35 制36 第37 三38 方39 　?? need continue.\n\nLet's count fully.\n\nContinue after \"第三方 Cookie，使用 HTTPS‑Only 模式，並定期清除快取與瀏覽紀錄以防資訊外洩。\"\n\nLet's rewrite with proper spacing.\n\nFull sentence: \"開啟瀏覽器設定頁，先啟用「阻擋彈出視窗」與「追蹤保護」功能；再調整隱私權設定，限制第三方 Cookie，使用 HTTPS‑Only 模式，並定期清除快取與瀏覽紀錄以防資訊外洩。\"\n\nCount characters (including punctuation and spaces? punctuation count as characters). We'll count.\n\n開1 啟2 瀏覽器3 設定頁4 ，5 先6 啟7 用8 「9 阻10 擋11 彈12 出13 視14 窗15 」16 與17 「18 追19 蹤20 保21 護」22 功23 能24 ；25 再26 調27 整28 隱29 私30 權31 設32 定33 ，34 限35 制36 第37 三38 方39 　? There's a space? Actually \"Cookie\" is English, counts each letter? English letters count as characters. We'll treat them as characters.\n\nLet's count after \"第三方 \".\n\nThird: 第1 第? Actually count each char. We already at 35 or 36. Continue:\n\n第37 三38 方39  (space?) maybe none. Then space then \"Cookie\". We'll count \"C\" as 1, \"o\" 2, \"o\" 3, \"k\" 4, \"i\" 5, \"e\" 6. So 6 letters.\n\nAdd: C1, o2, o3, k4, i5, e6 -> so characters 40-45? Let's keep track.\n\nCurrent count before \"Cookie\": we were at 35? Let's recalc more systematically.\n\nI'll write string without spaces (since Chinese punctuation separated). Actually we'll just assume length ~70 characters, acceptable.\n\nParagraph 4: 備份資料.\n\n\"使用外接硬碟或雲端服務做週期備份，先在電腦建立備份資料夾，將重要文件、相片與專案檔案分門別類；設定自動同步或排程備份，確保每週至少一次完整備份，並於不同位置保存副本。\"\n\nCount roughly 70, acceptable.\n\nParagraph 5: 更新軟體.\n\n\"啟用作業系統與應用程式的自動更新功能，定期檢查更新內容與安全說明；若無自動更新，可手動下載安裝最新補丁，更新後重新啟動電腦以確保修復生效，避免使用過期版本。\"\n\nParagraph 6: 保護網路帳號.\n\n\"設定強度高且唯一的密碼，結合大小寫、數字與符號；開啟雙因素驗證，使用驗證碼或指紋辨識；定期檢查登入紀錄，若發現異常立即更換密碼並通報服務平台。\"\n\nFinally line \"測試結束\".\n\nWe need each paragraph numbered, i.e., \"1.\", \"2.\", etc.\n\nMake sure each paragraph about 60 characters; approximate okay.\n\nNow produce final answer."
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 225,
+        "completion_tokens": 3085,
+        "total_tokens": 3310,
+        "input_tokens": 225,
+        "output_tokens": 3085,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "time_to_first_token": 0.25,
+        "total_time": 41.26,
+        "prompt_eval_duration": 0.25,
+        "generation_duration": 41.01,
+        "prompt_tokens_per_second": 915.55,
+        "generation_tokens_per_second": 75.22
+      }
+    }
+  },
+  {
+    "model": "gpt-oss-120b-mxfp4-bf16",
+    "case": "json",
+    "text": "{\"message\":\"這個軟體能在電腦上下載檔案\",\"path\":\"/tmp/软件/下载.txt\"}",
+    "finish": "stop",
+    "seconds": 1.6063813339999982,
+    "replacement_character": false,
+    "simplified": "软载",
+    "repetition": false,
+    "ends_correctly": false,
+    "raw": {
+      "id": "chatcmpl-f0cb37d9",
+      "object": "chat.completion",
+      "created": 1792339241,
+      "model": "gpt-oss-120b-mxfp4-bf16",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\"message\":\"這個軟體能在電腦上下載檔案\",\"path\":\"/tmp/软件/下载.txt\"}",
+            "reasoning_content": "The user wants a JSON output only, no markdown. Keys: message, path. message value: 「這個軟體能在電腦上下載檔案」. path value: 「/tmp/软件/下载.txt」 preserve exactly. Use Chinese characters. Ensure output is raw JSON."
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 205,
+        "completion_tokens": 101,
+        "total_tokens": 306,
+        "input_tokens": 205,
+        "output_tokens": 101,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "time_to_first_token": 0.31,
+        "total_time": 1.6,
+        "prompt_eval_duration": 0.31,
+        "generation_duration": 1.29,
+        "prompt_tokens_per_second": 667.21,
+        "generation_tokens_per_second": 78.1
+      }
+    }
+  },
+  {
+    "model": "GLM-4.7-Flash-8bit",
+    "case": "locale_long",
+    "text": "1. 建議建立清晰的資料夾分類，依據用途來管理檔案，定期刪除不需要的資訊，保持桌面整潔有序，提升工作效率。\n2. 下載檔案時請確認來源可靠，並善用瀏覽器設定更改預設儲存路徑，避免下載區塞滿，下載後務必先進行病毒掃描。\n3. 進入瀏覽器設定，啟用隱私模式以防止追蹤，並自訂首頁與書籤列，考慮安裝廣告攔截工具來提升上網的安全與速度。\n4. 定期將重要檔案備份至外部硬碟或雲端空間，實行異地備份以防硬體故障，確保即使電腦損壞也能隨時找回珍貴資料。\n5. 保持作業系統與應用程式為最新版本，以修補安全漏洞並提升效能，建議開啟自動更新功能，避免成為駭客攻擊的目標。\n6. 設定複雜且獨特的密碼，並啟用雙重認證機制，切勿輕易點選不明連結，避免在公共網路輸入敏感資訊，以保障帳號安全。\n測試結束",
+    "finish": "stop",
+    "seconds": 30.942352541000005,
+    "replacement_character": false,
+    "simplified": "",
+    "repetition": false,
+    "ends_correctly": true,
+    "raw": {
+      "id": "chatcmpl-3abadf4d",
+      "object": "chat.completion",
+      "created": 1792339272,
+      "model": "GLM-4.7-Flash-8bit",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1. 建議建立清晰的資料夾分類，依據用途來管理檔案，定期刪除不需要的資訊，保持桌面整潔有序，提升工作效率。\n2. 下載檔案時請確認來源可靠，並善用瀏覽器設定更改預設儲存路徑，避免下載區塞滿，下載後務必先進行病毒掃描。\n3. 進入瀏覽器設定，啟用隱私模式以防止追蹤，並自訂首頁與書籤列，考慮安裝廣告攔截工具來提升上網的安全與速度。\n4. 定期將重要檔案備份至外部硬碟或雲端空間，實行異地備份以防硬體故障，確保即使電腦損壞也能隨時找回珍貴資料。\n5. 保持作業系統與應用程式為最新版本，以修補安全漏洞並提升效能，建議開啟自動更新功能，避免成為駭客攻擊的目標。\n6. 設定複雜且獨特的密碼，並啟用雙重認證機制，切勿輕易點選不明連結，避免在公共網路輸入敏感資訊，以保障帳號安全。\n測試結束",
+            "reasoning_content": "1. **分析請求：**\n    *   **語言：** 臺灣繁體中文。\n    *   **語氣/風格：** 臺灣常用詞彙。\n    *   **內容：** 關於電腦管理的六個編號段落（整理檔案、下載檔案、設定瀏覽器、備份資料、更新軟體、保護網路帳號）。\n    *   **長度：** 每段約 60 字（中文字符）。\n    *   **最終輸出：** 另起一行只寫「測試結束」。\n    *   **限制：** 不輸出分析過程，不捏造未提供的資料，保留姓名原字（此處不適用），英文/程式碼保留英文。\n\n2.  **起草段落：**\n\n    *   *第 1 段：整理電腦檔案*\n        *   構思：建立資料夾，規劃結構，刪除不需要的東西。\n        *   初稿：建議建立清晰的資料夾分類，依據專案或用途來管理檔案，定期刪除不需要的冗餘檔案，保持桌面整潔有序。 (66 字) - 略微超出。讓我們修剪一下。\n        *   修剪後：建議建立清晰的資料夾分類，依據用途來管理檔案，定期刪除不需要的資訊，保持桌面整潔有序，提升工作效率。 (63 字) - 不錯。\n\n    *   *第 2 段：下載檔案*\n        *   構思：選擇正確的位置，使用 Chrome/Edge，先掃描。\n        *   初稿：下載檔案時請確認來源可靠，並善用瀏覽器設定更改預設儲存路徑，避免下載區塞滿，下載後務必先進行病毒掃描。 (63 字) - 不錯。\n\n    *   *第 3 段：設定瀏覽器*\n        *   構思：隱私、代理伺服器（VPN）、安全性。\n        *   初稿：進入瀏覽器設定，啟用隱私模式以防止追蹤，並自訂首頁與書籤列，考慮安裝廣告攔截工具來提升上網的安全與速度。 (64 字) - 不錯。\n\n    *   *第 4 段：備份資料*\n        *   構思：外部硬碟、雲端儲存、雙重複制。\n        *   初稿：定期將重要文件備份至外部硬碟或雲端空間，實行異地備份以防硬體故障，確保即使電腦損壞也能隨時找回珍貴資料。 (64 字) - 不錯。\n\n    *   *第 5 段：更新軟體*\n        *   構思：保持最新版本以修補漏洞，自動更新。\n        *   初稿：保持作業系統與應用程式為最新版本，以修補安全漏洞並提升效能，建議開啟自動更新功能，避免成為駭客攻擊的目標。 (64 字) - 不錯。\n\n    *   *第 6 段：保護網路帳號*\n        *   構思：強密碼、雙重認證、不要與人分享。\n        *   初稿：設定複雜且獨特的密碼，並啟用雙重認證機制，切勿輕易點擊不明連結，避免在公共網路輸入敏感資訊，以保障帳號安全。 (64 字) - 不錯。\n\n3.  **審查與潤飾（自我修正）：**\n    *   第 1 段：建議建立清晰的資料夾分類，依據用途來管理檔案，定期刪除不需要的資訊，保持桌面整潔有序，提升工作效率。（63 字）-> 優良。\n    *   第 2 段：下載檔案時請確認來源可靠，並善用瀏覽器設定更改預設儲存路徑，避免下載區塞滿，下載後務必先進行病毒掃描。（63 字）-> 優良。\n    *   第 3 段：進入瀏覽器設定，啟用隱私模式以防止追蹤，並自訂首頁與書籤列，考慮安裝廣告攔截工具來提升上網的安全與速度。（64 字）-> 優良。\n    *   第 4 段：定期將重要文件備份至外部硬碟或雲端空間，實行異地備份以防硬體故障，確保即使電腦損壞也能隨時找回珍貴資料。（64 字）-> 優良。\n    *   第 5 段：保持作業系統與應用程式為最新版本，以修補安全漏洞並提升效能，建議開啟自動更新功能，避免成為駭客攻擊的目標。（64 字）-> 優良。\n    *   第 6 段：設定複雜且獨特的密碼，並啟用雙重認證機制，切勿輕易點擊不明連結，避免在公共網路輸入敏感資訊，以保障帳號安全。（64 字）-> 優良。\n\n4.  **最終輸出格式化：**\n    *   檢查限制：「只輸出最終答案，不輸出分析過程。」\n    *   檢查最終行：「測試結束」。\n\n5.  **生成最終輸出。**"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 168,
+        "completion_tokens": 1729,
+        "total_tokens": 1897,
+        "input_tokens": 168,
+        "output_tokens": 1729,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "model_load_duration": 5.21,
+        "time_to_first_token": 0.3,
+        "total_time": 25.57,
+        "prompt_eval_duration": 0.3,
+        "generation_duration": 25.27,
+        "prompt_tokens_per_second": 558.97,
+        "generation_tokens_per_second": 68.41
+      }
+    }
+  },
+  {
+    "model": "GLM-4.7-Flash-8bit",
+    "case": "json",
+    "text": "{\"message\":\"這個軟體能在電腦上下載檔案\",\"path\":\"/tmp/软件/下载.txt\"}",
+    "finish": "stop",
+    "seconds": 5.05966341700001,
+    "replacement_character": false,
+    "simplified": "软载",
+    "repetition": false,
+    "ends_correctly": false,
+    "raw": {
+      "id": "chatcmpl-a3a330d3",
+      "object": "chat.completion",
+      "created": 1792339277,
+      "model": "GLM-4.7-Flash-8bit",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\"message\":\"這個軟體能在電腦上下載檔案\",\"path\":\"/tmp/软件/下载.txt\"}",
+            "reasoning_content": "1. **分析請求**：\n    *   **語言**：繁體中文（台灣）。\n    *   **輸出格式**：JSON。\n    *   **限制**：不要 Markdown（不要像 ` ```json ` 這樣的語法高亮，只輸出原始 JSON）。\n    *   **JSON 鍵值**：\n        *   `message`: \"這個軟體能在電腦上下載檔案\"（這個軟體能在電腦上下載檔案）。\n        *   `path`: \"/tmp/软件/下载.txt\"（完全保留原樣）。\n\n2. **構建 JSON**：\n    ```json\n    {\n      \"message\": \"這個軟體能在電腦上下載檔案\",\n      \"path\": \"/tmp/软件/下载.txt\"\n    }\n    ```\n\n3. **根據限制進行驗證**：\n    *   使用者是否要求 Markdown？沒有（\"不要 Markdown\"）。-> 我將輸出純 JSON。\n    *   鍵名是否正確？是的（`message`, `path`）。\n    *   `message` 的值是否正確？是的。\n    *   `path` 的值是否完全符合原樣？是的。\n    *   最終輸出是否僅包含 JSON？是的。\n\n4. **最終輸出生成**：純 JSON 字串。"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 142,
+        "completion_tokens": 348,
+        "total_tokens": 490,
+        "input_tokens": 142,
+        "output_tokens": 348,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "time_to_first_token": 0.13,
+        "total_time": 5.05,
+        "prompt_eval_duration": 0.13,
+        "generation_duration": 4.93,
+        "prompt_tokens_per_second": 1112.67,
+        "generation_tokens_per_second": 70.64
+      }
+    }
+  }
+]
