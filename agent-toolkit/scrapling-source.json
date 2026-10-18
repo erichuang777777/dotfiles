@@ -1,0 +1,9 @@
+{
+  "repo": "d4vinci/Scrapling",
+  "skill_source_sha": "3a8bf4e4d3ed91257ba0aa5b7dc66241d1e23840",
+  "pypi_version": "0.5",
+  "extras": [
+    "ai",
+    "shell"
+  ]
+}

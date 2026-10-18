@@ -1,0 +1,21 @@
+{
+  "initialized": true,
+  "tools": [
+    "browser_open",
+    "browser_save_state",
+    "browser_load_state",
+    "open_request_session",
+    "close_session",
+    "list_sessions",
+    "make_request",
+    "browser_fetch_once",
+    "browser_fetch",
+    "session_make_request",
+    "browser_extract",
+    "browser_actions",
+    "browser_evaluate",
+    "browser_network_requests",
+    "browser_network_request",
+    "browser_screenshot"
+  ]
+}

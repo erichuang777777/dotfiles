@@ -182,5 +182,15 @@
       "current-doc",
       "doc-authoring"
     ]
+  },
+  {
+    "repo": "d4vinci/Scrapling",
+    "sha": "3a8bf4e4d3ed91257ba0aa5b7dc66241d1e23840",
+    "paths": [
+      "agent-skill/Scrapling-Skill"
+    ],
+    "names": [
+      "scrapling-official"
+    ]
   }
 ]

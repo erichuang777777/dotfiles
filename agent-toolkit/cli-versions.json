@@ -11,7 +11,8 @@
   },
   "uv": {
     "google-colab-cli": "0.7.4",
-    "clauder-mcp": "0.16.1"
+    "clauder-mcp": "0.16.1",
+    "scrapling[ai,shell]": "0.5"
   },
   "github-cli": "2.102.0",
   "R": "4.6.1",

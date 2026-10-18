@@ -1,7 +1,7 @@
 {
   "date": "2026-10-18",
-  "installed_skills": 76,
-  "pi_discovered_including_preexisting": 77,
+  "installed_skills": 77,
+  "pi_discovered_including_preexisting": 78,
   "pi_diagnostics": [],
   "gemini_shared_skills_discovered": true,
   "wrangler_local_worker": {
@@ -53,5 +53,20 @@
         "warningCount": 0
       }
     }
+  },
+  "scrapling": {
+    "version": "0.5",
+    "http_css_test_passed": true,
+    "mcp_initialize_passed": true,
+    "mcp_tools": 16,
+    "mcp_http_extraction_passed": true,
+    "mcp_javascript_browser_extraction_passed": true,
+    "hosts_configured": [
+      "codex",
+      "claude",
+      "gemini",
+      "pi"
+    ],
+    "browser": "existing Playwright Chromium 1248"
   }
 }

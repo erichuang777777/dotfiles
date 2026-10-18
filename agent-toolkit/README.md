@@ -4,7 +4,7 @@
 
 ## 共用 Skills
 
-共 76 個 skills，來源固定於 Git commit。Codex、Pi、Gemini 共用 `~/.agents/skills`；Claude 透過 `~/.claude/skills` 符號連結載入。重新啟動 Agent 後生效。
+共 77 個 skills，來源固定於 Git commit。Codex、Pi、Gemini 共用 `~/.agents/skills`；Claude 透過 `~/.claude/skills` 符號連結載入。重新啟動 Agent 後生效。
 
 | 類別 | 專案 | Skills 數 | 狀態 |
 |---|---|---:|---|
@@ -22,6 +22,7 @@
 | 設計與介面 | [alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design) | 1 | 已安裝 |
 | 程式理解與上下文最佳化 | [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd) | 1 | 已安裝 |
 | 文件與簡報 | [simonliu-ai-product/open-doc](https://github.com/simonliu-ai-product/open-doc) | 5 | 已安裝 |
+| 資料蒐集與網頁擷取 | [d4vinci/Scrapling](https://github.com/d4vinci/Scrapling) | 1 | 已安裝 |
 
 ## CLI、MCP 與雲端
 
@@ -56,7 +57,7 @@ python3 agent-toolkit/restore-skills.py --apply
 
 ## 驗證範圍
 
-- Pi 實際載入 77 個 skills（含原有 ego-browser），沒有格式診斷警告。
+- Pi 實際載入 78 個 skills（含原有 ego-browser），沒有格式診斷警告。
 - Gemini CLI 實際列出共用 skills。
 - CodeGraph 範例 TypeScript 索引與 square 符號查詢通過；僅範例專案建立索引。
 - ClaudeR MCP 與 CodeGraph MCP 的 initialize／tools/list 通過。ClaudeR 有 41 個工具。
@@ -65,3 +66,5 @@ python3 agent-toolkit/restore-skills.py --apply
 - AOCI 執行檔通過 SHA256 與 GitHub provenance attestation 驗證；範例 init／scan／status 通過。
 - Skills 安裝與格式驗證不代表所有上游功能都做過端到端測試。
 - Transitions 的 description 過長，僅縮短 YAML 中繼資料，保留完整指令本文；詳見 local-adaptations.json。
+
+Scrapling CLI、MCP、JavaScript 擷取測試與 Python 使用方式見 [Scrapling](scrapling.md)。

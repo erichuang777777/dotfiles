@@ -620,6 +620,25 @@
         }
       ],
       "status": "installed"
+    },
+    {
+      "repo": "d4vinci/Scrapling",
+      "sha": "3a8bf4e4d3ed91257ba0aa5b7dc66241d1e23840",
+      "paths": [
+        "agent-skill/Scrapling-Skill"
+      ],
+      "names": [
+        "scrapling-official"
+      ],
+      "category": "資料蒐集與網頁擷取",
+      "skills": [
+        {
+          "name": "scrapling-official",
+          "installed": true,
+          "sha256": "c6ea3753922e1c21669139ebf60a989499f326c10879257ab958c258386ed088"
+        }
+      ],
+      "status": "installed"
     }
   ]
 }

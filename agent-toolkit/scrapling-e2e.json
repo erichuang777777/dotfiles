@@ -1,0 +1,70 @@
+{
+  "tests": [
+    {
+      "tool": "make_request",
+      "passed": true,
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"status\": 200,\n  \"content\": [\n    \"before-js\",\n    \"\"\n  ],\n  \"url\": \"http://127.0.0.1:50583/\"\n}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": {
+          "status": 200,
+          "content": [
+            "before-js",
+            ""
+          ],
+          "url": "http://127.0.0.1:50583/"
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "browser_fetch_once",
+      "passed": true,
+      "result": {
+        "meta": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"status\": 200,\n  \"content\": [\n    \"after-js\",\n    \"\"\n  ],\n  \"url\": \"http://127.0.0.1:50583/\"\n}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structuredContent": {
+          "status": 200,
+          "content": [
+            "after-js",
+            ""
+          ],
+          "url": "http://127.0.0.1:50583/"
+        },
+        "isError": false
+      }
+    }
+  ],
+  "tools": [
+    "browser_open",
+    "browser_save_state",
+    "browser_load_state",
+    "open_request_session",
+    "close_session",
+    "list_sessions",
+    "make_request",
+    "browser_fetch_once",
+    "browser_fetch",
+    "session_make_request",
+    "browser_extract",
+    "browser_actions",
+    "browser_evaluate",
+    "browser_network_requests",
+    "browser_network_request",
+    "browser_screenshot"
+  ]
+}

@@ -454,5 +454,11 @@
     "sha256": "3469a77ec603507f2e3367b949ac20f291bda8f529a5dc6dfb56b41812ca2850",
     "claude_link_valid": true,
     "description_length": 606
+  },
+  {
+    "name": "scrapling-official",
+    "sha256": "c6ea3753922e1c21669139ebf60a989499f326c10879257ab958c258386ed088",
+    "claude_link_valid": true,
+    "description_length": 342
   }
 ]
