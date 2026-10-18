@@ -1,0 +1,46 @@
+[
+  {
+    "node": {
+      "id": "function:fde9cf8dbac06726615fe1a1269f9982",
+      "kind": "function",
+      "name": "square",
+      "qualifiedName": "square",
+      "filePath": "math.ts",
+      "language": "typescript",
+      "startLine": 1,
+      "endLine": 1,
+      "startColumn": 7,
+      "endColumn": 71,
+      "signature": "(value: number): number",
+      "visibility": null,
+      "isExported": true,
+      "isAsync": false,
+      "isStatic": false,
+      "isAbstract": false,
+      "updatedAt": 1792318322476
+    },
+    "score": 90.70562193841165
+  },
+  {
+    "node": {
+      "id": "import:e358dd9db659756b9bd6eb38b40c8ca2",
+      "kind": "import",
+      "name": "./math",
+      "qualifiedName": "./math",
+      "filePath": "main.ts",
+      "language": "typescript",
+      "startLine": 1,
+      "endLine": 1,
+      "startColumn": 0,
+      "endColumn": 32,
+      "signature": "import { square } from './math';",
+      "visibility": null,
+      "isExported": false,
+      "isAsync": false,
+      "isStatic": false,
+      "isAbstract": false,
+      "updatedAt": 1792318322474
+    },
+    "score": 1.4407727372901353
+  }
+]

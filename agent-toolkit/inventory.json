@@ -1,0 +1,625 @@
+{
+  "date": "2026-10-18",
+  "shared_skills": [
+    {
+      "repo": "s0xDk/refactoring-ui-skill",
+      "sha": "48872143abb0a8feb6d9bf58e222afbd800210b0",
+      "paths": [
+        "."
+      ],
+      "names": [
+        "refactoring-ui"
+      ],
+      "category": "設計與介面",
+      "skills": [
+        {
+          "name": "refactoring-ui",
+          "installed": true,
+          "sha256": "2e3a4aa0b5d5fc35d7c81ca1120564a229a0ad323d21e44b4b6a3d77614446c1"
+        }
+      ],
+      "status": "installed"
+    },
+    {
+      "repo": "Yuan1z0825/nature-skills",
+      "sha": "f8797feed6405035e7d57f59cb8ba393c6a98802",
+      "paths": [
+        "skills/nature-academic-search",
+        "skills/nature-citation",
+        "skills/nature-data",
+        "skills/nature-downloader",
+        "skills/nature-experiment-log",
+        "skills/nature-figure",
+        "skills/nature-image2ppt",
+        "skills/nature-literature-pipeline",
+        "skills/nature-paper-card",
+        "skills/nature-paper-to-patent",
+        "skills/nature-paper-trans",
+        "skills/nature-paper-xray",
+        "skills/nature-paper2ppt",
+        "skills/nature-polishing",
+        "skills/nature-proposal-writer",
+        "skills/nature-reader",
+        "skills/nature-ref-verifier",
+        "skills/nature-response",
+        "skills/nature-reviewer",
+        "skills/nature-shared",
+        "skills/nature-social-science",
+        "skills/nature-statistics",
+        "skills/nature-writing"
+      ],
+      "names": null,
+      "category": "研究方法與科學繪圖",
+      "skills": [
+        {
+          "name": "nature-academic-search",
+          "installed": true,
+          "sha256": "3ed327e3e9c56cddfaa0e48ffb3503b1f9e27f917916013798ef57bf8131101a"
+        },
+        {
+          "name": "nature-citation",
+          "installed": true,
+          "sha256": "f0436639c2bcf966e8f8cdda6e06501b396bb32cc3b7cce57f67eb0cd7b5a44d"
+        },
+        {
+          "name": "nature-data",
+          "installed": true,
+          "sha256": "4ef9c383411b069265901e9f157cb4d73861f42f6ddd28611084005e67eafa43"
+        },
+        {
+          "name": "nature-downloader",
+          "installed": true,
+          "sha256": "0351f9069e77a4b027893592d295f3c511301bc7d2ec7d299ab49ee2c106be54"
+        },
+        {
+          "name": "nature-experiment-log",
+          "installed": true,
+          "sha256": "1f7fffcbc950d4f60fcb5ad9f2aabe82246ebbd83bf29621a0e90c9ff4ec4b8b"
+        },
+        {
+          "name": "nature-figure",
+          "installed": true,
+          "sha256": "5aefe708a2531c5ddaa8ee74d5155d747e96c0f21a33143d38316b7c5c88ffc4"
+        },
+        {
+          "name": "nature-image2ppt",
+          "installed": true,
+          "sha256": "0b49331f7b97e0751248c84506cada638f29ff44bb3023686f89a9f858748e9e"
+        },
+        {
+          "name": "nature-literature-pipeline",
+          "installed": true,
+          "sha256": "1dcaa692457ec9c2be409cb7777f834a2db833788b2e9b680baf0e961126b01a"
+        },
+        {
+          "name": "nature-paper-card",
+          "installed": true,
+          "sha256": "a71e3dbc446523e415ed4b896bed8ea60e0c598fb8655c587679d719648b68c9"
+        },
+        {
+          "name": "nature-paper-to-patent",
+          "installed": true,
+          "sha256": "b65243157addf3e4e38de4cb35136d95478c2c997bdd5600e6ae21f91f4d06f0"
+        },
+        {
+          "name": "nature-paper-trans",
+          "installed": true,
+          "sha256": "f340351f110b67d37a7b272b81c15740ec4863e125698a817d68b8b27866a7fe"
+        },
+        {
+          "name": "nature-paper-xray",
+          "installed": true,
+          "sha256": "c889b3751672fa453d761f0a2956cf8304b51a383be6d10f06d27f0371012d87"
+        },
+        {
+          "name": "nature-paper2ppt",
+          "installed": true,
+          "sha256": "a8d0fd14ca0863602cfc76305467d0f5a6ac2c104abedd7f7e86dfcf46bf04cf"
+        },
+        {
+          "name": "nature-polishing",
+          "installed": true,
+          "sha256": "9391b2a2487306cf2ed560377d4bc10c339fd2c220a79db278cb7f9d31e79023"
+        },
+        {
+          "name": "nature-proposal-writer",
+          "installed": true,
+          "sha256": "9be8ae52f909969592529414fb6f5bb54059c8cbe520e78b53d22b297cef5e4a"
+        },
+        {
+          "name": "nature-reader",
+          "installed": true,
+          "sha256": "999a5c1b116558133d0389ce6c1bbc3dc9cf5242d1be2870358789769d97a84e"
+        },
+        {
+          "name": "nature-ref-verifier",
+          "installed": true,
+          "sha256": "6a975074d7a1c62c00dd9e8c7367cd2af0ef9d573d6d6ce5ea12f70d9320a516"
+        },
+        {
+          "name": "nature-response",
+          "installed": true,
+          "sha256": "a8283db56e73879413311cbcde1db4c72dd4390bbe21ab2f62f1f968610b5de1"
+        },
+        {
+          "name": "nature-reviewer",
+          "installed": true,
+          "sha256": "8ca28cc8e8bda2b5254056940d2a696dc0d3cabcd5573cdec98ffc3cbd162610"
+        },
+        {
+          "name": "nature-shared",
+          "installed": true,
+          "sha256": "3d914e73f023cab4f247d82f906a948307de8a867fd6c33df999badf67c5d5f2"
+        },
+        {
+          "name": "nature-social-science",
+          "installed": true,
+          "sha256": "62c1b5624734ba954da28330adb93f2330605d4dfb2a463044fae9e539c037eb"
+        },
+        {
+          "name": "nature-statistics",
+          "installed": true,
+          "sha256": "89d2a101fc45d7adf8ca327a6da4bda4a696d6364d7c36ead4f53413627a9b6f"
+        },
+        {
+          "name": "nature-writing",
+          "installed": true,
+          "sha256": "ce7c4d20329b96b03b0f0c0bb744411b1b4deaa7a7b69b90757705a83c195b12"
+        }
+      ],
+      "status": "installed"
+    },
+    {
+      "repo": "lucasmarkes/hairline",
+      "sha": "37d2e78dcb333ab30c3338e28ed4a690364ea014",
+      "paths": [
+        "skills/hairline-create",
+        "skills/hairline-adopt"
+      ],
+      "names": null,
+      "category": "設計與介面",
+      "skills": [
+        {
+          "name": "hairline-create",
+          "installed": true,
+          "sha256": "8675ceec106ec227aec00cd6a4ec883333e1acc16da5cc96e8e10a3c758ea841"
+        },
+        {
+          "name": "hairline-adopt",
+          "installed": true,
+          "sha256": "0b53d688ce047d5bcca29fe4d2ae3d834ed4b9ff5100c02de72e7e4913404f42"
+        }
+      ],
+      "status": "installed"
+    },
+    {
+      "repo": "ChenLiu-1996/figures4papers",
+      "sha": "16c00e69bf7427a30df9646e220df4072cca3600",
+      "paths": [
+        "scientific-figure-making"
+      ],
+      "names": null,
+      "category": "研究方法與科學繪圖",
+      "skills": [
+        {
+          "name": "scientific-figure-making",
+          "installed": true,
+          "sha256": "952300b4d0bd8fbd0c55aaa732a47a0abb8e9707bc80965c8e70221ef13f0292"
+        }
+      ],
+      "status": "installed"
+    },
+    {
+      "repo": "Jakubantalik/transitions.dev",
+      "sha": "7ec0b0b0b8beb15788a9de68a40ec6be2d5e84b5",
+      "paths": [
+        "skills/transitions-dev",
+        "skills/transitions-polish",
+        "skills/transitions-ui-generation"
+      ],
+      "names": null,
+      "category": "動畫與影片",
+      "skills": [
+        {
+          "name": "transitions-dev",
+          "installed": true,
+          "sha256": "dcd18014ca1aad5d194d38e1172647f29556be8c15c341eca2f1f7483a568aea"
+        },
+        {
+          "name": "transitions-polish",
+          "installed": true,
+          "sha256": "cd7ca4bb79acb72fa1951bb79f5251570e2ef9d290c0ddf9a83a097067226cfa"
+        },
+        {
+          "name": "transitions-ui-generation",
+          "installed": true,
+          "sha256": "3adcf2383602801e2c60f4477b635d0fdc46a680d5d276145a3ee3429edfa781"
+        }
+      ],
+      "status": "installed"
+    },
+    {
+      "repo": "DietrichGebert/ponytail",
+      "sha": "09c434ab73ca43761c5d8b0c5d341926c2fba710",
+      "paths": [
+        "skills/ponytail",
+        "skills/ponytail-audit",
+        "skills/ponytail-debt",
+        "skills/ponytail-gain",
+        "skills/ponytail-help",
+        "skills/ponytail-review"
+      ],
+      "names": null,
+      "category": "程式理解與上下文最佳化",
+      "skills": [
+        {
+          "name": "ponytail",
+          "installed": true,
+          "sha256": "9badd22a32e19cb884e46dfa8d3aae82bb81dfa5484105b8b4f0262df823a509"
+        },
+        {
+          "name": "ponytail-audit",
+          "installed": true,
+          "sha256": "2b3223a02c386d1263e1b08343cb8eb3a53e444cdafb1d79e26c8ec2a8fcad28"
+        },
+        {
+          "name": "ponytail-debt",
+          "installed": true,
+          "sha256": "b5ec2762f6ba8c4af9ea7173aa6c9f91b88655a25e43f9de0264f6ce8722b25f"
+        },
+        {
+          "name": "ponytail-gain",
+          "installed": true,
+          "sha256": "231034a896d6762e4b5c8468287083422c56b499119976ec9f76821f7d083090"
+        },
+        {
+          "name": "ponytail-help",
+          "installed": true,
+          "sha256": "86ab0ce0af70cbeeeef499d5c884873b393f87f86401dcc45553662ce2c1eff9"
+        },
+        {
+          "name": "ponytail-review",
+          "installed": true,
+          "sha256": "33fe4ebe22a460924e5d4a261e223df22e409cc94ab76182bee9fb91a3ef022e"
+        }
+      ],
+      "status": "installed"
+    },
+    {
+      "repo": "cathrynlavery/diagram-design",
+      "sha": "550fd66edff058bc73056c3416b76d69cfe865ba",
+      "paths": [
+        "skills/diagram-design"
+      ],
+      "names": null,
+      "category": "設計與介面",
+      "skills": [
+        {
+          "name": "diagram-design",
+          "installed": true,
+          "sha256": "b5155b43191ab360c5d1183e86bb9c10878bb11f9b0e097126c5a9be7a322b89"
+        }
+      ],
+      "status": "installed"
+    },
+    {
+      "repo": "JuliusBrussee/caveman",
+      "sha": "bad48a0e1df55e05e3f52249afa35ecc1909ee76",
+      "paths": [
+        "skills/caveman",
+        "skills/caveman-compress",
+        "skills/caveman-stats"
+      ],
+      "names": null,
+      "category": "Agent 工作流程與輸出",
+      "skills": [
+        {
+          "name": "caveman",
+          "installed": true,
+          "sha256": "415d43518f2b1a9498c15a445d4657117b129ee5e81b19454ce348439cc6672b"
+        },
+        {
+          "name": "caveman-compress",
+          "installed": true,
+          "sha256": "dd5388f085316f9f6a8b34ad906441023033596f8ac1d63b81fb20e8d3f50283"
+        },
+        {
+          "name": "caveman-stats",
+          "installed": true,
+          "sha256": "4632f1611a56483df7851a0dabcc1e0c1952393cd8f5d08ddeda17f81a4e1e50"
+        }
+      ],
+      "status": "installed"
+    },
+    {
+      "repo": "pbakaus/impeccable",
+      "sha": "9304afa97f89b30609e4c538584fb3e0cd4df013",
+      "paths": [
+        ".agents/skills/impeccable"
+      ],
+      "names": null,
+      "category": "設計與介面",
+      "skills": [
+        {
+          "name": "impeccable",
+          "installed": true,
+          "sha256": "5fb0d412928c03e62d2536adfd878ad6aad6f9ce343956aa4f7164da06da3459"
+        }
+      ],
+      "status": "installed"
+    },
+    {
+      "repo": "21st-dev/skill",
+      "sha": "15c7436c41dc88c54094f1be93ce53bda456b114",
+      "paths": [
+        "skills/21st-ai",
+        "skills/21st-cli-use",
+        "skills/21st-design-sync",
+        "skills/21st-registry",
+        "skills/21st-ui-build",
+        "skills/21st-ui-explore",
+        "skills/21st-ui-review"
+      ],
+      "names": null,
+      "category": "設計與介面",
+      "skills": [
+        {
+          "name": "21st-ai",
+          "installed": true,
+          "sha256": "229119802d835ec000e860186ffab60dac272b7aeb2ef2fd90d5f9780c786012"
+        },
+        {
+          "name": "21st-cli-use",
+          "installed": true,
+          "sha256": "88ff054abb4334a5095462dd20b5c4ec214c9b99f3256eae60dadb384d136bca"
+        },
+        {
+          "name": "21st-design-sync",
+          "installed": true,
+          "sha256": "65cc94c842e066f69d8914af3dd94923545418b28e1fb23059473bff52bd0fe4"
+        },
+        {
+          "name": "21st-registry",
+          "installed": true,
+          "sha256": "b1dd7ca00383b73d89bfa6b26e8bcd9724c8f03c83b2c66abd70bdae18a09b74"
+        },
+        {
+          "name": "21st-ui-build",
+          "installed": true,
+          "sha256": "151dbc3e97289a4ba945438f6552c0f597a40d8b5b1dc5d917dd9a5b65389641"
+        },
+        {
+          "name": "21st-ui-explore",
+          "installed": true,
+          "sha256": "1b94d8d00e7ae87c3737e37c2019cbdc680393ef17a96388e9845f541367f1ec"
+        },
+        {
+          "name": "21st-ui-review",
+          "installed": true,
+          "sha256": "78939e830bceb64b8e2d32f831b80472008d5d2e50b31c8a8f38af5e5a015088"
+        }
+      ],
+      "status": "installed"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "sha": "76ba031dccef188a133c0f47806483c661151d68",
+      "paths": [
+        "skills/embedded-captions",
+        "skills/faceless-explainer",
+        "skills/figma",
+        "skills/general-video",
+        "skills/hyperframes-animation",
+        "skills/hyperframes-audio",
+        "skills/hyperframes-cli",
+        "skills/hyperframes-core",
+        "skills/hyperframes-creative",
+        "skills/hyperframes-keyframes",
+        "skills/hyperframes-registry",
+        "skills/hyperframes-studio",
+        "skills/hyperframes",
+        "skills/media-use",
+        "skills/motion-graphics",
+        "skills/music-to-video",
+        "skills/pr-to-video",
+        "skills/product-launch-video",
+        "skills/remotion-to-hyperframes",
+        "skills/slideshow",
+        "skills/talking-head-recut"
+      ],
+      "names": null,
+      "category": "動畫與影片",
+      "skills": [
+        {
+          "name": "embedded-captions",
+          "installed": true,
+          "sha256": "983a4e61310d05c4a5c5a4fff2262c24ef1929478831e3afb76b0ab584b09bce"
+        },
+        {
+          "name": "faceless-explainer",
+          "installed": true,
+          "sha256": "3d246a7a01fd12207d919db23c0f2e5cc635c26428adba94a3f3033478a12b57"
+        },
+        {
+          "name": "figma",
+          "installed": true,
+          "sha256": "7de64558985ceec0afcaaaebb432a44b6188d640825cffa5929809d94765d1c3"
+        },
+        {
+          "name": "general-video",
+          "installed": true,
+          "sha256": "db87c1909eff755d810f83de6064bfb7c52a76e76ba388d4b00c98893dddcb1f"
+        },
+        {
+          "name": "hyperframes-animation",
+          "installed": true,
+          "sha256": "b35f1f8eff68e9ff480a5d5d343a1bf5a40ebb7d0d9be20b0b980cfdb36047f3"
+        },
+        {
+          "name": "hyperframes-audio",
+          "installed": true,
+          "sha256": "daf3250390426ef096a7d2f71082919418099decbd1f31288640a43b43c7e293"
+        },
+        {
+          "name": "hyperframes-cli",
+          "installed": true,
+          "sha256": "be481984f8d3c871c353a4ba82bb295a416634e11938de2081b950e9e488a3ff"
+        },
+        {
+          "name": "hyperframes-core",
+          "installed": true,
+          "sha256": "a8d6fe52471be6bcf1816ba0b9eb16c6d1efc830c668de533d6bee8d41d86e11"
+        },
+        {
+          "name": "hyperframes-creative",
+          "installed": true,
+          "sha256": "9da7b7ac84c8d884b54125887ecca1a645a38337013082b96af2fdc0259c945a"
+        },
+        {
+          "name": "hyperframes-keyframes",
+          "installed": true,
+          "sha256": "d6484e8367ed522f2a89af9ec30ae3cd86ae243b5a23c5ab00a7a682e3d1a791"
+        },
+        {
+          "name": "hyperframes-registry",
+          "installed": true,
+          "sha256": "f1925b202cabd125b509658b11db593b55340b1926ecb056fc31aa4233a2b4f6"
+        },
+        {
+          "name": "hyperframes-studio",
+          "installed": true,
+          "sha256": "85a595e24674c0a95c868359570aed467cbd01c8621c0d36b4bd55769b98bea7"
+        },
+        {
+          "name": "hyperframes",
+          "installed": true,
+          "sha256": "dd67af24e6ca148769f191abd68e670bade17c4b8c847d1ff9aa847fbd7ffe23"
+        },
+        {
+          "name": "media-use",
+          "installed": true,
+          "sha256": "c10e80df15020ffa0788d086c717d57e0f0fd983de7e8310bf11b38c90e25528"
+        },
+        {
+          "name": "motion-graphics",
+          "installed": true,
+          "sha256": "0024b21e05ca584b81598347abb58e4735988d56fe23721e70be9b08b805fce2"
+        },
+        {
+          "name": "music-to-video",
+          "installed": true,
+          "sha256": "a13f792408a391e32cbd8625857fd5cb915704b73a24fd1e471a4239921f1545"
+        },
+        {
+          "name": "pr-to-video",
+          "installed": true,
+          "sha256": "0cee428928b6c29459e39c4e4189c784836af3bc6bc5abf71d967bd39378bdd6"
+        },
+        {
+          "name": "product-launch-video",
+          "installed": true,
+          "sha256": "b7e8071a7d5328195abd4b907e7ba3fca8c016652391b2b5d149aa1dcef7aa77"
+        },
+        {
+          "name": "remotion-to-hyperframes",
+          "installed": true,
+          "sha256": "883495113b6130e7ee48724bc00705cd28966197ef0bc2d8543a2ff2d6776187"
+        },
+        {
+          "name": "slideshow",
+          "installed": true,
+          "sha256": "a17b9d27ec3a3256bda717cf4796b8b8bd1d6770fbd4dbf5cd2f7f59662ac11e"
+        },
+        {
+          "name": "talking-head-recut",
+          "installed": true,
+          "sha256": "84bb6ba0ac3cb0505f09dd1ded0a07e2298daed6c33c05d7bb9a56d0ade53d2c"
+        }
+      ],
+      "status": "installed"
+    },
+    {
+      "repo": "alchaincyf/huashu-design",
+      "sha": "798c4235ebff03d5c45e3c8affdf5e9d18f9dfa7",
+      "paths": [
+        "."
+      ],
+      "names": [
+        "huashu-design"
+      ],
+      "category": "設計與介面",
+      "skills": [
+        {
+          "name": "huashu-design",
+          "installed": true,
+          "sha256": "63cbc2ffcfd99f7b8acb6ff92adbbbba4bfaeec84373703d81df6a6fc6055a23"
+        }
+      ],
+      "status": "installed"
+    },
+    {
+      "repo": "ayghri/i-have-adhd",
+      "sha": "1ecea1993b7fce257ffbd686c070948b5e07eda6",
+      "paths": [
+        "skills/i-have-adhd"
+      ],
+      "names": null,
+      "category": "程式理解與上下文最佳化",
+      "skills": [
+        {
+          "name": "i-have-adhd",
+          "installed": true,
+          "sha256": "88955c019bbb1419ff4b49dbb1f80a867467de6233d7865af2e06a7d7b76c7d3"
+        }
+      ],
+      "status": "installed"
+    },
+    {
+      "repo": "simonliu-ai-product/open-doc",
+      "sha": "360b5ec310b802889b81eaef3a42bf4cafc18062",
+      "paths": [
+        "packages/core/skills/apply-comments",
+        "packages/core/skills/create-doc",
+        "packages/core/skills/create-theme",
+        "packages/core/skills/current-doc",
+        "packages/core/skills/doc-authoring"
+      ],
+      "names": [
+        "apply-comments",
+        "create-doc",
+        "create-theme",
+        "current-doc",
+        "doc-authoring"
+      ],
+      "category": "文件與簡報",
+      "skills": [
+        {
+          "name": "apply-comments",
+          "installed": true,
+          "sha256": "229d24137bda07072027efb50e95f5ddf2b78bd2d9a544535436e6a7760ff1bb"
+        },
+        {
+          "name": "create-doc",
+          "installed": true,
+          "sha256": "c725cb1cf8a50644f96c57750d81f371547c44d73294c1cbe98ecb07a430e2bc"
+        },
+        {
+          "name": "create-theme",
+          "installed": true,
+          "sha256": "9c4745de9934627f09ca807b4ca2a24c281dd93fab5a225c1999392f9e1191a1"
+        },
+        {
+          "name": "current-doc",
+          "installed": true,
+          "sha256": "dc2ac37c2ee4690063462c4070a984d109c153a47f158207790aa28f3abd39cc"
+        },
+        {
+          "name": "doc-authoring",
+          "installed": true,
+          "sha256": "3469a77ec603507f2e3367b949ac20f291bda8f529a5dc6dfb56b41812ca2850"
+        }
+      ],
+      "status": "installed"
+    }
+  ]
+}

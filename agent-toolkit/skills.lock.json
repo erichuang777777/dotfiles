@@ -1,0 +1,186 @@
+[
+  {
+    "repo": "s0xDk/refactoring-ui-skill",
+    "sha": "48872143abb0a8feb6d9bf58e222afbd800210b0",
+    "paths": [
+      "."
+    ],
+    "names": [
+      "refactoring-ui"
+    ]
+  },
+  {
+    "repo": "Yuan1z0825/nature-skills",
+    "sha": "f8797feed6405035e7d57f59cb8ba393c6a98802",
+    "paths": [
+      "skills/nature-academic-search",
+      "skills/nature-citation",
+      "skills/nature-data",
+      "skills/nature-downloader",
+      "skills/nature-experiment-log",
+      "skills/nature-figure",
+      "skills/nature-image2ppt",
+      "skills/nature-literature-pipeline",
+      "skills/nature-paper-card",
+      "skills/nature-paper-to-patent",
+      "skills/nature-paper-trans",
+      "skills/nature-paper-xray",
+      "skills/nature-paper2ppt",
+      "skills/nature-polishing",
+      "skills/nature-proposal-writer",
+      "skills/nature-reader",
+      "skills/nature-ref-verifier",
+      "skills/nature-response",
+      "skills/nature-reviewer",
+      "skills/nature-shared",
+      "skills/nature-social-science",
+      "skills/nature-statistics",
+      "skills/nature-writing"
+    ],
+    "names": null
+  },
+  {
+    "repo": "lucasmarkes/hairline",
+    "sha": "37d2e78dcb333ab30c3338e28ed4a690364ea014",
+    "paths": [
+      "skills/hairline-create",
+      "skills/hairline-adopt"
+    ],
+    "names": null
+  },
+  {
+    "repo": "ChenLiu-1996/figures4papers",
+    "sha": "16c00e69bf7427a30df9646e220df4072cca3600",
+    "paths": [
+      "scientific-figure-making"
+    ],
+    "names": null
+  },
+  {
+    "repo": "Jakubantalik/transitions.dev",
+    "sha": "7ec0b0b0b8beb15788a9de68a40ec6be2d5e84b5",
+    "paths": [
+      "skills/transitions-dev",
+      "skills/transitions-polish",
+      "skills/transitions-ui-generation"
+    ],
+    "names": null
+  },
+  {
+    "repo": "DietrichGebert/ponytail",
+    "sha": "09c434ab73ca43761c5d8b0c5d341926c2fba710",
+    "paths": [
+      "skills/ponytail",
+      "skills/ponytail-audit",
+      "skills/ponytail-debt",
+      "skills/ponytail-gain",
+      "skills/ponytail-help",
+      "skills/ponytail-review"
+    ],
+    "names": null
+  },
+  {
+    "repo": "cathrynlavery/diagram-design",
+    "sha": "550fd66edff058bc73056c3416b76d69cfe865ba",
+    "paths": [
+      "skills/diagram-design"
+    ],
+    "names": null
+  },
+  {
+    "repo": "JuliusBrussee/caveman",
+    "sha": "bad48a0e1df55e05e3f52249afa35ecc1909ee76",
+    "paths": [
+      "skills/caveman",
+      "skills/caveman-compress",
+      "skills/caveman-stats"
+    ],
+    "names": null
+  },
+  {
+    "repo": "pbakaus/impeccable",
+    "sha": "9304afa97f89b30609e4c538584fb3e0cd4df013",
+    "paths": [
+      ".agents/skills/impeccable"
+    ],
+    "names": null
+  },
+  {
+    "repo": "21st-dev/skill",
+    "sha": "15c7436c41dc88c54094f1be93ce53bda456b114",
+    "paths": [
+      "skills/21st-ai",
+      "skills/21st-cli-use",
+      "skills/21st-design-sync",
+      "skills/21st-registry",
+      "skills/21st-ui-build",
+      "skills/21st-ui-explore",
+      "skills/21st-ui-review"
+    ],
+    "names": null
+  },
+  {
+    "repo": "heygen-com/hyperframes",
+    "sha": "76ba031dccef188a133c0f47806483c661151d68",
+    "paths": [
+      "skills/embedded-captions",
+      "skills/faceless-explainer",
+      "skills/figma",
+      "skills/general-video",
+      "skills/hyperframes-animation",
+      "skills/hyperframes-audio",
+      "skills/hyperframes-cli",
+      "skills/hyperframes-core",
+      "skills/hyperframes-creative",
+      "skills/hyperframes-keyframes",
+      "skills/hyperframes-registry",
+      "skills/hyperframes-studio",
+      "skills/hyperframes",
+      "skills/media-use",
+      "skills/motion-graphics",
+      "skills/music-to-video",
+      "skills/pr-to-video",
+      "skills/product-launch-video",
+      "skills/remotion-to-hyperframes",
+      "skills/slideshow",
+      "skills/talking-head-recut"
+    ],
+    "names": null
+  },
+  {
+    "repo": "alchaincyf/huashu-design",
+    "sha": "798c4235ebff03d5c45e3c8affdf5e9d18f9dfa7",
+    "paths": [
+      "."
+    ],
+    "names": [
+      "huashu-design"
+    ]
+  },
+  {
+    "repo": "ayghri/i-have-adhd",
+    "sha": "1ecea1993b7fce257ffbd686c070948b5e07eda6",
+    "paths": [
+      "skills/i-have-adhd"
+    ],
+    "names": null
+  },
+  {
+    "repo": "simonliu-ai-product/open-doc",
+    "sha": "360b5ec310b802889b81eaef3a42bf4cafc18062",
+    "paths": [
+      "packages/core/skills/apply-comments",
+      "packages/core/skills/create-doc",
+      "packages/core/skills/create-theme",
+      "packages/core/skills/current-doc",
+      "packages/core/skills/doc-authoring"
+    ],
+    "names": [
+      "apply-comments",
+      "create-doc",
+      "create-theme",
+      "current-doc",
+      "doc-authoring"
+    ]
+  }
+]

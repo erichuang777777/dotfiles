@@ -1,0 +1,31 @@
+{
+  "initialized": true,
+  "tools": [
+    "list_documents",
+    "read_document",
+    "create_document",
+    "list_templates",
+    "create_from_template",
+    "write_document",
+    "rename_document",
+    "duplicate_document",
+    "delete_document",
+    "read_text",
+    "write_text",
+    "add_comment",
+    "list_themes",
+    "read_theme",
+    "list_assets",
+    "upload_asset",
+    "find_asset_usages",
+    "delete_asset",
+    "list_folders",
+    "create_folder",
+    "file_document",
+    "check_layout",
+    "render_page",
+    "export_document",
+    "diff_document",
+    "import_markdown"
+  ]
+}

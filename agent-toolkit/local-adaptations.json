@@ -1,0 +1,8 @@
+[
+  {
+    "skill": "transitions-dev",
+    "reason": "Upstream description exceeds the 1024-character Agent Skills limit; shortened metadata only, body unchanged.",
+    "upstream_installed_sha256": "558bc963743b1bac98529617d22c4266a0602eadcb0797848c5a82906e1d7608",
+    "installed_sha256": "dcd18014ca1aad5d194d38e1172647f29556be8c15c341eca2f1f7483a568aea"
+  }
+]

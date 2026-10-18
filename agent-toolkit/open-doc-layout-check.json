@@ -1,0 +1,115 @@
+[
+  {
+    "docId": "getting-started",
+    "title": "Getting started with open-doc",
+    "pageCount": 14,
+    "errors": 12,
+    "warnings": 0,
+    "findings": [
+      {
+        "page": 4,
+        "rule": "unresolved-ref",
+        "severity": "error",
+        "message": "Cross-reference points at \"f-workflow\", which no figure, table, or footnote declares.",
+        "element": "span: [?f-workflow]",
+        "loc": "287:4"
+      },
+      {
+        "page": 4,
+        "rule": "unresolved-ref",
+        "severity": "error",
+        "message": "Cross-reference points at \"t-config\", which no figure, table, or footnote declares.",
+        "element": "span: [?t-config]",
+        "loc": "317:4"
+      },
+      {
+        "page": 5,
+        "rule": "unresolved-ref",
+        "severity": "error",
+        "message": "Cross-reference points at \"t-toolbar\", which no figure, table, or footnote declares.",
+        "element": "span: [?t-toolbar]",
+        "loc": "386:4"
+      },
+      {
+        "page": 7,
+        "rule": "unresolved-ref",
+        "severity": "error",
+        "message": "Cross-reference points at \"t-design\", which no figure, table, or footnote declares.",
+        "element": "span: [?t-design]",
+        "loc": "477:4"
+      },
+      {
+        "page": 7,
+        "rule": "unresolved-ref",
+        "severity": "error",
+        "message": "Cross-reference points at \"t-sizes\", which no figure, table, or footnote declares.",
+        "element": "span: [?t-sizes]",
+        "loc": "528:4"
+      },
+      {
+        "page": 9,
+        "rule": "unresolved-ref",
+        "severity": "error",
+        "message": "Cross-reference points at \"t-keys\", which no figure, table, or footnote declares.",
+        "element": "span: [?t-keys]",
+        "loc": "620:4"
+      },
+      {
+        "page": 9,
+        "rule": "unresolved-ref",
+        "severity": "error",
+        "message": "Cross-reference points at \"f-chart\", which no figure, table, or footnote declares.",
+        "element": "span: [?f-chart]",
+        "loc": "620:4"
+      },
+      {
+        "page": 9,
+        "rule": "unresolved-ref",
+        "severity": "error",
+        "message": "Cross-reference points at \"t-usage\", which no figure, table, or footnote declares.",
+        "element": "span: [?t-usage]",
+        "loc": "641:4"
+      },
+      {
+        "page": 10,
+        "rule": "unresolved-ref",
+        "severity": "error",
+        "message": "Cross-reference points at \"f-workflow\", which no figure, table, or footnote declares.",
+        "element": "span: [?f-workflow]",
+        "loc": "687:4"
+      },
+      {
+        "page": 11,
+        "rule": "unresolved-ref",
+        "severity": "error",
+        "message": "Cross-reference points at \"t-formats\", which no figure, table, or footnote declares.",
+        "element": "span: [?t-formats]",
+        "loc": "741:4"
+      },
+      {
+        "page": 11,
+        "rule": "unresolved-ref",
+        "severity": "error",
+        "message": "Cross-reference points at \"t-cli\", which no figure, table, or footnote declares.",
+        "element": "span: [?t-cli]",
+        "loc": "767:4"
+      },
+      {
+        "page": 12,
+        "rule": "unresolved-ref",
+        "severity": "error",
+        "message": "Cross-reference points at \"t-skills\", which no figure, table, or footnote declares.",
+        "element": "span: [?t-skills]",
+        "loc": "844:4"
+      }
+    ]
+  },
+  {
+    "docId": "getting-started-zh",
+    "title": "open-doc 使用手冊",
+    "pageCount": 13,
+    "errors": 0,
+    "warnings": 0,
+    "findings": []
+  }
+]

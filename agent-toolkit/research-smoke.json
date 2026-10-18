@@ -1,0 +1,8 @@
+{
+  "figure_png": true,
+  "figure_pdf": true,
+  "docx_roundtrip": true,
+  "pptx_roundtrip": true,
+  "xlsx_roundtrip": true,
+  "spreadsheet_formula_recalculation_tested": false
+}

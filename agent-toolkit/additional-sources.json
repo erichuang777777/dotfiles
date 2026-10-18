@@ -1,0 +1,14 @@
+[
+  {
+    "repo": "OnlyTerp/toolrush",
+    "source_sha": "4ecd8810fdc9e6e0c64af3d532f876d06f6a278e",
+    "status": "source_only_not_activated"
+  },
+  {
+    "repo": "aoci-spec/aoci-code",
+    "source_sha": "536f3cc42339d1cb5f554026f84d3f2ed0e12d2a",
+    "status": "binary_installed",
+    "installed_release": "v0.1.0-rc21",
+    "installed_commit": "cfa8e93ca9fe546a375f48b41b3d4766ed98b013"
+  }
+]

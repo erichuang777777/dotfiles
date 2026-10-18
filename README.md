@@ -41,3 +41,7 @@ chmod +x install.sh
 ## 本機模型與 Agent 實測
 
 [Mac Studio 本機模型與 Agent 測試報告](benchmarks/local-agents-2026-10/README.md)：包含 Nemotron、Muse Glimmer、Gemma、gpt-oss、GLM 與早期 Qwen 的測試紀錄、上下文設定、CSV／JSON bench data、Pi 驗證及可重跑程式。
+
+## Agent 工具與 Skills
+
+[分類清單、固定來源與安裝驗證](agent-toolkit/README.md)，以及 [雲端 CLI／ClaudeR／open-doc](agent-toolkit/cloud-and-research.md)。

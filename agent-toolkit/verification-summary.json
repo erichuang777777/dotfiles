@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-18",
+  "installed_skills": 76,
+  "pi_discovered_including_preexisting": 77,
+  "pi_diagnostics": [],
+  "gemini_shared_skills_discovered": true,
+  "wrangler_local_worker": {
+    "status": 200,
+    "body": "agent-toolkit-ok",
+    "deployed": false
+  },
+  "aoci": {
+    "version": "0.1.0-rc21",
+    "checksum_verified": true,
+    "github_provenance_verified": true,
+    "fixture_init_scan_status_passed": true
+  },
+  "authentication": {
+    "github": "existing_login",
+    "netlify": "login_required",
+    "cloudflare": "login_required",
+    "workspace": "oauth_setup_required",
+    "colab": "not_authorized",
+    "gemini": "not_logged_in_by_this_install"
+  },
+  "toolrush": "source_only_windows_hermes_incompatible",
+  "open_doc_english_sample": "12 unresolved cross-references; PDFs exported",
+  "RStudio": {
+    "version": "2026.10.0+233",
+    "installed": true,
+    "R_session_version": "4.6.1",
+    "ClaudeR_panel_loaded": true,
+    "R_execution_server_started": false
+  },
+  "hyperframes": {
+    "browser_installed": true,
+    "check_ok": true,
+    "checks": {
+      "lint": {
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "runtime": {
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "layout": {
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "contrast": {
+        "errorCount": 0,
+        "warningCount": 0
+      }
+    }
+  }
+}

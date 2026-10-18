@@ -1,0 +1,56 @@
+[
+  {
+    "name": "clauder-mcp",
+    "initialized": true,
+    "tools": [
+      "execute_r",
+      "execute_r_with_plot",
+      "get_r_info",
+      "get_active_document",
+      "modify_code_section",
+      "insert_text",
+      "suggest_edit",
+      "create_task_list",
+      "update_task_status",
+      "clean_error_log",
+      "execute_r_async",
+      "get_async_result",
+      "cancel_async_job",
+      "list_sessions",
+      "connect_session",
+      "read_file",
+      "search_project_code",
+      "probe_scripts",
+      "verify_references",
+      "get_viewer_content",
+      "get_session_history",
+      "run_annotation_job",
+      "get_annotation_job_status",
+      "cancel_annotation_job",
+      "load_annotation_data",
+      "annotate",
+      "checkpoint_session",
+      "restore_session",
+      "list_checkpoints",
+      "screening_report",
+      "set_agent_name",
+      "send_message",
+      "check_messages",
+      "wait_for_message",
+      "coordination_roster",
+      "check_cross_references",
+      "reconcile_values",
+      "generate_codebook",
+      "generate_notebook",
+      "search_citations",
+      "get_bibtex"
+    ]
+  },
+  {
+    "name": "codegraph",
+    "initialized": true,
+    "tools": [
+      "codegraph_explore"
+    ]
+  }
+]
