@@ -72,3 +72,9 @@ Scrapling CLI、MCP、JavaScript 擷取測試與 Python 使用方式見 [Scrapli
 ## 憑證與安全
 
 [1Password 桌面版與 CLI](1password.md) 已安裝。沿用使用者既有付費帳號；使用者已登入並啟用 CLI 整合；核准後同次程序的登入驗證通過，新自動化程序仍可能需重新授權。實際金鑰注入尚未測試，未讀取密碼或 API 金鑰。
+
+## RAG 與向量檢索
+
+[GB10 EmbeddingGemma 2 服務](../services/embeddinggemma2-gb10/README.md) 已部署並由 Mac 驗證；文字向量透過私有網路 API 提供，Mac 不載入此模型。
+
+[Mac gpt-oss 128K 容量實測](../benchmarks/context-capacity-2026-10-18/README.md)：單一 gpt-oss 原生上下文通過；未測 MiniMax H3 或其他大型模型同時常駐。

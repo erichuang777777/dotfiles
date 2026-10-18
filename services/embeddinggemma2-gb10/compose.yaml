@@ -1,0 +1,19 @@
+services:
+  embeddinggemma2:
+    build: .
+    image: local-inference/embeddinggemma2:20261018
+    container_name: local-inference-embeddinggemma2
+    restart: unless-stopped
+    user: "${EMBEDDING_UID:-1000}:${EMBEDDING_GID:-1000}"
+    gpus: all
+    network_mode: bridge
+    shm_size: 2gb
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    ports:
+      - "${GB10_BIND_IP:?Set the GB10 Tailscale IP}:8011:8011"
+    volumes:
+      - "${EMBEDDING_API_KEY_FILE:?Set the private API key path}:/run/secrets/api_key:ro"
+      - "./cache:/models/huggingface"
+    environment:
+      MODEL_REVISION: 914f7f89142e33e77833254d9c9b90c3cef7303b

@@ -1,0 +1,638 @@
+[
+  {
+    "target_tokens": 32768,
+    "tokenizer_count": 32768,
+    "samples": [
+      {
+        "time": 1792321485.778081,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                  3714529.\nPages active:                                 885681.\nPages inactive:                              3022036.\nPages speculative:                              2575.\nPages throttled:                                   0.\nPages wired down:                             298310.\nPages purgeable:                               11532.\n\"Translation faults\":                     1144851962.\nPages copy-on-write:                        32588020.\nPages zero filled:                        1693303424.\nPages reactivated:                           5718272.\nPages purged:                                6989368.\nFile-backed pages:                           3197686.\nAnonymous pages:                              712606.\nPages stored in compressor:                   789041.\nPages occupied by compressor:                 413726.\nDecompressions:                             24781588.\nCompressions:                               26293578.\nPageins:                                   122172798.\nPageouts:                                       8404.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 181091.\nPages tagged resident:                        109115.\nPages tagged compressed:                       71976.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7876.\nPages tag-storage free:                         1691.\nPages tag-storage non-tag pageable:           252447.\nPages tag-storage non-tag wired:                   8.\nBytes of compressed tags:                   10389312.\nTagged compressions:                          132279.\nTagged decompressions:                         49331.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 0,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 0
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321488.820669,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   289374.\nPages active:                                2609085.\nPages inactive:                              4730821.\nPages speculative:                              2715.\nPages throttled:                                   0.\nPages wired down:                             284848.\nPages purgeable:                               20428.\n\"Translation faults\":                     1146599124.\nPages copy-on-write:                        32588618.\nPages zero filled:                        1695051256.\nPages reactivated:                           5718324.\nPages purged:                                6989368.\nFile-backed pages:                           4906678.\nAnonymous pages:                             2435943.\nPages stored in compressor:                   788756.\nPages occupied by compressor:                 413678.\nDecompressions:                             24781873.\nCompressions:                               26293578.\nPageins:                                   123872966.\nPageouts:                                       8404.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 182182.\nPages tagged resident:                        110206.\nPages tagged compressed:                       71976.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7876.\nPages tag-storage free:                         1683.\nPages tag-storage non-tag pageable:           252455.\nPages tag-storage non-tag wired:                   8.\nBytes of compressed tags:                   10389312.\nTagged compressions:                          132279.\nTagged decompressions:                         49331.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 0,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 0
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321491.855188,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                     7343.\nPages active:                                3724239.\nPages inactive:                              3715091.\nPages speculative:                              7177.\nPages throttled:                                   0.\nPages wired down:                             300479.\nPages purgeable:                                9247.\n\"Translation faults\":                     1148092296.\nPages copy-on-write:                        32589009.\nPages zero filled:                        1696555178.\nPages reactivated:                           5795602.\nPages purged:                                6992131.\nFile-backed pages:                           3762031.\nAnonymous pages:                             3684476.\nPages stored in compressor:                   969777.\nPages occupied by compressor:                 582528.\nDecompressions:                             24781875.\nCompressions:                               26475407.\nPageins:                                   125013843.\nPageouts:                                       8405.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 181615.\nPages tagged resident:                        109578.\nPages tagged compressed:                       72037.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7873.\nPages tag-storage free:                          167.\nPages tag-storage non-tag pageable:           253971.\nPages tag-storage non-tag wired:                   8.\nBytes of compressed tags:                   10399808.\nTagged compressions:                          132341.\nTagged decompressions:                         49332.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 0,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 0
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321494.878602,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                     7153.\nPages active:                                3403732.\nPages inactive:                              3398902.\nPages speculative:                              2437.\nPages throttled:                                   0.\nPages wired down:                             303154.\nPages purgeable:                                 510.\n\"Translation faults\":                     1148473386.\nPages copy-on-write:                        32589616.\nPages zero filled:                        1696937484.\nPages reactivated:                           5796623.\nPages purged:                                7000427.\nFile-backed pages:                           3450345.\nAnonymous pages:                             3354726.\nPages stored in compressor:                  1622691.\nPages occupied by compressor:                1221463.\nDecompressions:                             24783458.\nCompressions:                               27130495.\nPageins:                                   125338298.\nPageouts:                                       8424.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 183494.\nPages tagged resident:                        111456.\nPages tagged compressed:                       72038.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7882.\nPages tag-storage free:                          202.\nPages tag-storage non-tag pageable:           253936.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10399872.\nTagged compressions:                          132342.\nTagged decompressions:                         49332.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 0,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 0
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321497.903414,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    10137.\nPages active:                                3141300.\nPages inactive:                              3139801.\nPages speculative:                                42.\nPages throttled:                                   0.\nPages wired down:                             304309.\nPages purgeable:                                 516.\n\"Translation faults\":                     1149016313.\nPages copy-on-write:                        32590011.\nPages zero filled:                        1697489523.\nPages reactivated:                           5797768.\nPages purged:                                7000433.\nFile-backed pages:                           2960085.\nAnonymous pages:                             3321058.\nPages stored in compressor:                  2150840.\nPages occupied by compressor:                1741268.\nDecompressions:                             24785869.\nCompressions:                               27664246.\nPageins:                                   125827092.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184948.\nPages tagged resident:                        112909.\nPages tagged compressed:                       72039.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7935.\nPages tag-storage free:                          965.\nPages tag-storage non-tag pageable:           253130.\nPages tag-storage non-tag wired:                   8.\nBytes of compressed tags:                   10400384.\nTagged compressions:                          132345.\nTagged decompressions:                         49334.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 0,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 0
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321501.1223118,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                     8465.\nPages active:                                2823350.\nPages inactive:                              2966745.\nPages speculative:                                82.\nPages throttled:                                   0.\nPages wired down:                            1519510.\nPages purgeable:                                 659.\n\"Translation faults\":                     1149097766.\nPages copy-on-write:                        32590503.\nPages zero filled:                        1697572218.\nPages reactivated:                           5797768.\nPages purged:                                7000437.\nFile-backed pages:                           2910112.\nAnonymous pages:                             2880065.\nPages stored in compressor:                  1397239.\nPages occupied by compressor:                1018703.\nDecompressions:                             25530487.\nCompressions:                               27664783.\nPageins:                                   125827133.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 185024.\nPages tagged resident:                        112985.\nPages tagged compressed:                       72039.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7922.\nPages tag-storage free:                          302.\nPages tag-storage non-tag pageable:           253772.\nPages tag-storage non-tag wired:                   8.\nBytes of compressed tags:                   10400384.\nTagged compressions:                          132345.\nTagged decompressions:                         49334.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321504.152511,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    13560.\nPages active:                                 929337.\nPages inactive:                              2584684.\nPages speculative:                                80.\nPages throttled:                                   0.\nPages wired down:                            4396529.\nPages purgeable:                                 427.\n\"Translation faults\":                     1149145777.\nPages copy-on-write:                        32590895.\nPages zero filled:                        1697936068.\nPages reactivated:                           5797768.\nPages purged:                                7001629.\nFile-backed pages:                           2804620.\nAnonymous pages:                              709481.\nPages stored in compressor:                   792672.\nPages occupied by compressor:                 412667.\nDecompressions:                             26135057.\nCompressions:                               27664783.\nPageins:                                   125827147.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184628.\nPages tagged resident:                        112590.\nPages tagged compressed:                       72038.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7914.\nPages tag-storage free:                         4381.\nPages tag-storage non-tag pageable:           249652.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10400384.\nTagged compressions:                          132345.\nTagged decompressions:                         49335.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321507.181406,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    12977.\nPages active:                                 930826.\nPages inactive:                              2584950.\nPages speculative:                                89.\nPages throttled:                                   0.\nPages wired down:                            4395415.\nPages purgeable:                                 913.\n\"Translation faults\":                     1149199488.\nPages copy-on-write:                        32591491.\nPages zero filled:                        1698349650.\nPages reactivated:                           5797770.\nPages purged:                                7001631.\nFile-backed pages:                           2805006.\nAnonymous pages:                              710859.\nPages stored in compressor:                   792590.\nPages occupied by compressor:                 412600.\nDecompressions:                             26135141.\nCompressions:                               27664783.\nPageins:                                   125827163.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184686.\nPages tagged resident:                        112648.\nPages tagged compressed:                       72038.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7914.\nPages tag-storage free:                         4334.\nPages tag-storage non-tag pageable:           249697.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10400384.\nTagged compressions:                          132345.\nTagged decompressions:                         49335.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321510.207008,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    12519.\nPages active:                                 931871.\nPages inactive:                              2584685.\nPages speculative:                               101.\nPages throttled:                                   0.\nPages wired down:                            4395089.\nPages purgeable:                                 729.\n\"Translation faults\":                     1149250262.\nPages copy-on-write:                        32592404.\nPages zero filled:                        1698737805.\nPages reactivated:                           5797770.\nPages purged:                                7001637.\nFile-backed pages:                           2804775.\nAnonymous pages:                              711882.\nPages stored in compressor:                   792567.\nPages occupied by compressor:                 412592.\nDecompressions:                             26135174.\nCompressions:                               27664783.\nPageins:                                   125827202.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184591.\nPages tagged resident:                        112553.\nPages tagged compressed:                       72038.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7913.\nPages tag-storage free:                         4285.\nPages tag-storage non-tag pageable:           249746.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10400384.\nTagged compressions:                          132345.\nTagged decompressions:                         49335.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321513.234087,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    26509.\nPages active:                                 934064.\nPages inactive:                              2581460.\nPages speculative:                               110.\nPages throttled:                                   0.\nPages wired down:                            4381985.\nPages purgeable:                                 903.\n\"Translation faults\":                     1149295454.\nPages copy-on-write:                        32593142.\nPages zero filled:                        1699078193.\nPages reactivated:                           5797775.\nPages purged:                                7001645.\nFile-backed pages:                           2801414.\nAnonymous pages:                              714220.\nPages stored in compressor:                   792401.\nPages occupied by compressor:                 412437.\nDecompressions:                             26135340.\nCompressions:                               27664783.\nPageins:                                   125827270.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184590.\nPages tagged resident:                        112552.\nPages tagged compressed:                       72038.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7912.\nPages tag-storage free:                         3877.\nPages tag-storage non-tag pageable:           250154.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10400384.\nTagged compressions:                          132345.\nTagged decompressions:                         49335.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      }
+    ],
+    "started": 1792321485.761318,
+    "usage": {
+      "prompt_tokens": 32768,
+      "completion_tokens": 1,
+      "total_tokens": 32769,
+      "input_tokens": 32768,
+      "output_tokens": 1,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "model_load_duration": 13.75,
+      "time_to_first_token": 16.09,
+      "total_time": 16.1,
+      "prompt_eval_duration": 16.09,
+      "generation_duration": 0.0,
+      "prompt_tokens_per_second": 2036.26,
+      "generation_tokens_per_second": 331.74
+    },
+    "success": true,
+    "elapsed_seconds": 29.91569495201111
+  },
+  {
+    "target_tokens": 65536,
+    "tokenizer_count": 65536,
+    "samples": [
+      {
+        "time": 1792321515.756118,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    11940.\nPages active:                                 937414.\nPages inactive:                              2525704.\nPages speculative:                               118.\nPages throttled:                                   0.\nPages wired down:                            4451062.\nPages purgeable:                                 684.\n\"Translation faults\":                     1149345047.\nPages copy-on-write:                        32593686.\nPages zero filled:                        1699425945.\nPages reactivated:                           5797775.\nPages purged:                                7001668.\nFile-backed pages:                           2745683.\nAnonymous pages:                              717553.\nPages stored in compressor:                   789996.\nPages occupied by compressor:                 410619.\nDecompressions:                             26137758.\nCompressions:                               27664783.\nPageins:                                   125827361.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184603.\nPages tagged resident:                        113052.\nPages tagged compressed:                       71551.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7912.\nPages tag-storage free:                         3462.\nPages tag-storage non-tag pageable:           250562.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10327040.\nTagged compressions:                          132345.\nTagged decompressions:                         49822.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321518.873787,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    31007.\nPages active:                                 941203.\nPages inactive:                              2485270.\nPages speculative:                               134.\nPages throttled:                                   0.\nPages wired down:                            4470149.\nPages purgeable:                                1080.\n\"Translation faults\":                     1149443241.\nPages copy-on-write:                        32594429.\nPages zero filled:                        1699970100.\nPages reactivated:                           5797783.\nPages purged:                                7001685.\nFile-backed pages:                           2705218.\nAnonymous pages:                              721389.\nPages stored in compressor:                   787402.\nPages occupied by compressor:                 409094.\nDecompressions:                             26138711.\nCompressions:                               27664783.\nPageins:                                   125827387.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184632.\nPages tagged resident:                        113082.\nPages tagged compressed:                       71550.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7908.\nPages tag-storage free:                         3049.\nPages tag-storage non-tag pageable:           250975.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10327040.\nTagged compressions:                          132345.\nTagged decompressions:                         49823.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321521.898748,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    30885.\nPages active:                                 953813.\nPages inactive:                              2488448.\nPages speculative:                               137.\nPages throttled:                                   0.\nPages wired down:                            4454480.\nPages purgeable:                               10647.\n\"Translation faults\":                     1149492733.\nPages copy-on-write:                        32595182.\nPages zero filled:                        1700267236.\nPages reactivated:                           5797783.\nPages purged:                                7001685.\nFile-backed pages:                           2708406.\nAnonymous pages:                              733992.\nPages stored in compressor:                   787401.\nPages occupied by compressor:                 409094.\nDecompressions:                             26138718.\nCompressions:                               27664783.\nPageins:                                   125827394.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184562.\nPages tagged resident:                        113012.\nPages tagged compressed:                       71550.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7908.\nPages tag-storage free:                         3001.\nPages tag-storage non-tag pageable:           251023.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10327040.\nTagged compressions:                          132345.\nTagged decompressions:                         49823.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321524.9185028,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    20559.\nPages active:                                 943695.\nPages inactive:                              2493600.\nPages speculative:                               137.\nPages throttled:                                   0.\nPages wired down:                            4469816.\nPages purgeable:                                 780.\n\"Translation faults\":                     1149537336.\nPages copy-on-write:                        32595819.\nPages zero filled:                        1700562645.\nPages reactivated:                           5797783.\nPages purged:                                7001687.\nFile-backed pages:                           2713559.\nAnonymous pages:                              723873.\nPages stored in compressor:                   787313.\nPages occupied by compressor:                 409050.\nDecompressions:                             26138901.\nCompressions:                               27664783.\nPageins:                                   125827401.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184459.\nPages tagged resident:                        112912.\nPages tagged compressed:                       71547.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7908.\nPages tag-storage free:                         2923.\nPages tag-storage non-tag pageable:           251101.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321527.942534,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    15916.\nPages active:                                 944849.\nPages inactive:                              2497146.\nPages speculative:                               140.\nPages throttled:                                   0.\nPages wired down:                            4469691.\nPages purgeable:                                 719.\n\"Translation faults\":                     1149584830.\nPages copy-on-write:                        32596194.\nPages zero filled:                        1700836773.\nPages reactivated:                           5797783.\nPages purged:                                7001687.\nFile-backed pages:                           2717110.\nAnonymous pages:                              725025.\nPages stored in compressor:                   787252.\nPages occupied by compressor:                 408988.\nDecompressions:                             26138903.\nCompressions:                               27664783.\nPageins:                                   125827407.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184517.\nPages tagged resident:                        112970.\nPages tagged compressed:                       71547.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7908.\nPages tag-storage free:                         2846.\nPages tag-storage non-tag pageable:           251178.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321530.966462,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    14518.\nPages active:                                 942513.\nPages inactive:                              2500699.\nPages speculative:                               140.\nPages throttled:                                   0.\nPages wired down:                            4470004.\nPages purgeable:                                 837.\n\"Translation faults\":                     1149633287.\nPages copy-on-write:                        32596753.\nPages zero filled:                        1701116654.\nPages reactivated:                           5797783.\nPages purged:                                7001687.\nFile-backed pages:                           2720667.\nAnonymous pages:                              722685.\nPages stored in compressor:                   787237.\nPages occupied by compressor:                 408983.\nDecompressions:                             26138918.\nCompressions:                               27664783.\nPageins:                                   125827417.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184570.\nPages tagged resident:                        113023.\nPages tagged compressed:                       71547.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7908.\nPages tag-storage free:                         2751.\nPages tag-storage non-tag pageable:           251273.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321533.993587,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    11960.\nPages active:                                 944387.\nPages inactive:                              2502528.\nPages speculative:                                91.\nPages throttled:                                   0.\nPages wired down:                            4468909.\nPages purgeable:                                 978.\n\"Translation faults\":                     1149679707.\nPages copy-on-write:                        32597133.\nPages zero filled:                        1701389397.\nPages reactivated:                           5797783.\nPages purged:                                7001691.\nFile-backed pages:                           2722448.\nAnonymous pages:                              724558.\nPages stored in compressor:                   787234.\nPages occupied by compressor:                 408982.\nDecompressions:                             26138921.\nCompressions:                               27664783.\nPageins:                                   125827419.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184441.\nPages tagged resident:                        112894.\nPages tagged compressed:                       71547.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7906.\nPages tag-storage free:                         2695.\nPages tag-storage non-tag pageable:           251329.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      }
+    ],
+    "started": 1792321515.7407308,
+    "usage": {
+      "prompt_tokens": 65536,
+      "completion_tokens": 1,
+      "total_tokens": 65537,
+      "input_tokens": 65536,
+      "output_tokens": 1,
+      "prompt_tokens_details": {
+        "cached_tokens": 32767
+      },
+      "time_to_first_token": 19.14,
+      "total_time": 19.15,
+      "prompt_eval_duration": 19.14,
+      "generation_duration": 0.01,
+      "prompt_tokens_per_second": 1711.84,
+      "generation_tokens_per_second": 188.8
+    },
+    "success": true,
+    "elapsed_seconds": 19.26295232772827
+  },
+  {
+    "target_tokens": 130560,
+    "tokenizer_count": 130560,
+    "samples": [
+      {
+        "time": 1792321535.14328,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    10965.\nPages active:                                 962111.\nPages inactive:                              2369344.\nPages speculative:                                18.\nPages throttled:                                   0.\nPages wired down:                            4585439.\nPages purgeable:                               12385.\n\"Translation faults\":                     1149709898.\nPages copy-on-write:                        32597588.\nPages zero filled:                        1701607464.\nPages reactivated:                           5797784.\nPages purged:                                7001693.\nFile-backed pages:                           2589239.\nAnonymous pages:                              742234.\nPages stored in compressor:                   787223.\nPages occupied by compressor:                 408980.\nDecompressions:                             26138932.\nCompressions:                               27664783.\nPageins:                                   125827441.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184624.\nPages tagged resident:                        113077.\nPages tagged compressed:                       71547.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7906.\nPages tag-storage free:                         2605.\nPages tag-storage non-tag pageable:           251419.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321538.381452,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    86828.\nPages active:                                 956896.\nPages inactive:                              2275212.\nPages speculative:                                32.\nPages throttled:                                   0.\nPages wired down:                            4614178.\nPages purgeable:                                 496.\n\"Translation faults\":                     1149849921.\nPages copy-on-write:                        32597989.\nPages zero filled:                        1702343217.\nPages reactivated:                           5797786.\nPages purged:                                7003219.\nFile-backed pages:                           2495114.\nAnonymous pages:                              737026.\nPages stored in compressor:                   778261.\nPages occupied by compressor:                 403711.\nDecompressions:                             26140356.\nCompressions:                               27664783.\nPageins:                                   125827465.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184594.\nPages tagged resident:                        113047.\nPages tagged compressed:                       71547.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7900.\nPages tag-storage free:                         3898.\nPages tag-storage non-tag pageable:           250126.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321541.4111738,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    81761.\nPages active:                                 972251.\nPages inactive:                              2278972.\nPages speculative:                                80.\nPages throttled:                                   0.\nPages wired down:                            4600082.\nPages purgeable:                               12448.\n\"Translation faults\":                     1149895881.\nPages copy-on-write:                        32598743.\nPages zero filled:                        1702582979.\nPages reactivated:                           5797786.\nPages purged:                                7003219.\nFile-backed pages:                           2498413.\nAnonymous pages:                              752890.\nPages stored in compressor:                   778258.\nPages occupied by compressor:                 403711.\nDecompressions:                             26140359.\nCompressions:                               27664783.\nPageins:                                   125827525.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184538.\nPages tagged resident:                        112991.\nPages tagged compressed:                       71547.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7900.\nPages tag-storage free:                         3502.\nPages tag-storage non-tag pageable:           250522.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321544.438522,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    78933.\nPages active:                                 957025.\nPages inactive:                              2282252.\nPages speculative:                               120.\nPages throttled:                                   0.\nPages wired down:                            4614817.\nPages purgeable:                                 770.\n\"Translation faults\":                     1149942930.\nPages copy-on-write:                        32599309.\nPages zero filled:                        1702830546.\nPages reactivated:                           5797786.\nPages purged:                                7003219.\nFile-backed pages:                           2501738.\nAnonymous pages:                              737659.\nPages stored in compressor:                   778249.\nPages occupied by compressor:                 403710.\nDecompressions:                             26140368.\nCompressions:                               27664783.\nPageins:                                   125827577.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184512.\nPages tagged resident:                        112965.\nPages tagged compressed:                       71547.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7900.\nPages tag-storage free:                         3693.\nPages tag-storage non-tag pageable:           250331.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321547.4664268,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    84464.\nPages active:                                 949175.\nPages inactive:                              2285189.\nPages speculative:                               120.\nPages throttled:                                   0.\nPages wired down:                            4614201.\nPages purgeable:                                 834.\n\"Translation faults\":                     1149995141.\nPages copy-on-write:                        32599712.\nPages zero filled:                        1703057877.\nPages reactivated:                           5797832.\nPages purged:                                7003219.\nFile-backed pages:                           2504664.\nAnonymous pages:                              729820.\nPages stored in compressor:                   778244.\nPages occupied by compressor:                 403708.\nDecompressions:                             26140371.\nCompressions:                               27664783.\nPageins:                                   125827579.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184618.\nPages tagged resident:                        113072.\nPages tagged compressed:                       71546.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7900.\nPages tag-storage free:                         3646.\nPages tag-storage non-tag pageable:           250378.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321550.49406,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    81735.\nPages active:                                 949040.\nPages inactive:                              2287543.\nPages speculative:                               128.\nPages throttled:                                   0.\nPages wired down:                            4614703.\nPages purgeable:                                 633.\n\"Translation faults\":                     1150042181.\nPages copy-on-write:                        32600101.\nPages zero filled:                        1703282177.\nPages reactivated:                           5797832.\nPages purged:                                7003219.\nFile-backed pages:                           2507029.\nAnonymous pages:                              729682.\nPages stored in compressor:                   778242.\nPages occupied by compressor:                 403708.\nDecompressions:                             26140373.\nCompressions:                               27664783.\nPageins:                                   125827594.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184517.\nPages tagged resident:                        112971.\nPages tagged compressed:                       71546.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7900.\nPages tag-storage free:                         3540.\nPages tag-storage non-tag pageable:           250484.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321553.5205948,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    76967.\nPages active:                                 950521.\nPages inactive:                              2291245.\nPages speculative:                               208.\nPages throttled:                                   0.\nPages wired down:                            4614208.\nPages purgeable:                                1924.\n\"Translation faults\":                     1150111174.\nPages copy-on-write:                        32605893.\nPages zero filled:                        1703506477.\nPages reactivated:                           5797832.\nPages purged:                                7003219.\nFile-backed pages:                           2510880.\nAnonymous pages:                              731094.\nPages stored in compressor:                   778240.\nPages occupied by compressor:                 403708.\nDecompressions:                             26140377.\nCompressions:                               27664783.\nPageins:                                   125827820.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184471.\nPages tagged resident:                        112925.\nPages tagged compressed:                       71546.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7900.\nPages tag-storage free:                         3430.\nPages tag-storage non-tag pageable:           250594.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321556.546963,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    82645.\nPages active:                                 956337.\nPages inactive:                              2293831.\nPages speculative:                               224.\nPages throttled:                                   0.\nPages wired down:                            4600166.\nPages purgeable:                               10137.\n\"Translation faults\":                     1150162868.\nPages copy-on-write:                        32607005.\nPages zero filled:                        1703707021.\nPages reactivated:                           5797832.\nPages purged:                                7003219.\nFile-backed pages:                           2514269.\nAnonymous pages:                              736123.\nPages stored in compressor:                   778193.\nPages occupied by compressor:                 403654.\nDecompressions:                             26140378.\nCompressions:                               27664783.\nPageins:                                   125827848.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184490.\nPages tagged resident:                        112944.\nPages tagged compressed:                       71546.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7900.\nPages tag-storage free:                         2829.\nPages tag-storage non-tag pageable:           251195.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321559.573204,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    79194.\nPages active:                                 944505.\nPages inactive:                              2296795.\nPages speculative:                               224.\nPages throttled:                                   0.\nPages wired down:                            4612485.\nPages purgeable:                                1541.\n\"Translation faults\":                     1150214266.\nPages copy-on-write:                        32607397.\nPages zero filled:                        1703936745.\nPages reactivated:                           5797832.\nPages purged:                                7003219.\nFile-backed pages:                           2517235.\nAnonymous pages:                              724289.\nPages stored in compressor:                   778191.\nPages occupied by compressor:                 403654.\nDecompressions:                             26140380.\nCompressions:                               27664783.\nPageins:                                   125827850.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184469.\nPages tagged resident:                        112923.\nPages tagged compressed:                       71546.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7900.\nPages tag-storage free:                         3076.\nPages tag-storage non-tag pageable:           250948.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321562.597888,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    74814.\nPages active:                                 944208.\nPages inactive:                              2300117.\nPages speculative:                               226.\nPages throttled:                                   0.\nPages wired down:                            4613838.\nPages purgeable:                                 742.\n\"Translation faults\":                     1150264512.\nPages copy-on-write:                        32607801.\nPages zero filled:                        1704142983.\nPages reactivated:                           5797832.\nPages purged:                                7003219.\nFile-backed pages:                           2520557.\nAnonymous pages:                              723994.\nPages stored in compressor:                   778191.\nPages occupied by compressor:                 403654.\nDecompressions:                             26140380.\nCompressions:                               27664783.\nPageins:                                   125827855.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184399.\nPages tagged resident:                        112853.\nPages tagged compressed:                       71546.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7899.\nPages tag-storage free:                         3081.\nPages tag-storage non-tag pageable:           250943.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321565.619019,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    77473.\nPages active:                                 938405.\nPages inactive:                              2302706.\nPages speculative:                               243.\nPages throttled:                                   0.\nPages wired down:                            4614418.\nPages purgeable:                                 748.\n\"Translation faults\":                     1150312962.\nPages copy-on-write:                        32608575.\nPages zero filled:                        1704344417.\nPages reactivated:                           5797832.\nPages purged:                                7003219.\nFile-backed pages:                           2523917.\nAnonymous pages:                              717437.\nPages stored in compressor:                   778146.\nPages occupied by compressor:                 403612.\nDecompressions:                             26140383.\nCompressions:                               27664783.\nPageins:                                   125827882.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184427.\nPages tagged resident:                        112881.\nPages tagged compressed:                       71546.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7899.\nPages tag-storage free:                         2669.\nPages tag-storage non-tag pageable:           251355.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321568.65016,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    71941.\nPages active:                                 940204.\nPages inactive:                              2306726.\nPages speculative:                               243.\nPages throttled:                                   0.\nPages wired down:                            4614133.\nPages purgeable:                                 289.\n\"Translation faults\":                     1150370315.\nPages copy-on-write:                        32608967.\nPages zero filled:                        1704559176.\nPages reactivated:                           5797835.\nPages purged:                                7004199.\nFile-backed pages:                           2527939.\nAnonymous pages:                              719234.\nPages stored in compressor:                   778144.\nPages occupied by compressor:                 403610.\nDecompressions:                             26140386.\nCompressions:                               27664783.\nPageins:                                   125827884.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184416.\nPages tagged resident:                        112870.\nPages tagged compressed:                       71546.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7899.\nPages tag-storage free:                         2609.\nPages tag-storage non-tag pageable:           251415.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321571.671972,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    68013.\nPages active:                                 940431.\nPages inactive:                              2311584.\nPages speculative:                               244.\nPages throttled:                                   0.\nPages wired down:                            4612975.\nPages purgeable:                                1666.\n\"Translation faults\":                     1150419404.\nPages copy-on-write:                        32609893.\nPages zero filled:                        1704736437.\nPages reactivated:                           5797839.\nPages purged:                                7004199.\nFile-backed pages:                           2532798.\nAnonymous pages:                              719461.\nPages stored in compressor:                   778138.\nPages occupied by compressor:                 403610.\nDecompressions:                             26140402.\nCompressions:                               27664783.\nPageins:                                   125827890.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184346.\nPages tagged resident:                        112800.\nPages tagged compressed:                       71546.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7899.\nPages tag-storage free:                         2563.\nPages tag-storage non-tag pageable:           251461.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321574.6993768,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    65481.\nPages active:                                 952604.\nPages inactive:                              2314896.\nPages speculative:                               244.\nPages throttled:                                   0.\nPages wired down:                            4600022.\nPages purgeable:                                9792.\n\"Translation faults\":                     1150465032.\nPages copy-on-write:                        32610645.\nPages zero filled:                        1704932175.\nPages reactivated:                           5797839.\nPages purged:                                7004199.\nFile-backed pages:                           2536110.\nAnonymous pages:                              731634.\nPages stored in compressor:                   778138.\nPages occupied by compressor:                 403610.\nDecompressions:                             26140408.\nCompressions:                               27664783.\nPageins:                                   125827894.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184463.\nPages tagged resident:                        112917.\nPages tagged compressed:                       71546.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7899.\nPages tag-storage free:                         2528.\nPages tag-storage non-tag pageable:           251496.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321577.729676,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    60080.\nPages active:                                 938390.\nPages inactive:                              2320749.\nPages speculative:                               244.\nPages throttled:                                   0.\nPages wired down:                            4613784.\nPages purgeable:                                1056.\n\"Translation faults\":                     1150520558.\nPages copy-on-write:                        32611037.\nPages zero filled:                        1705145352.\nPages reactivated:                           5797895.\nPages purged:                                7004199.\nFile-backed pages:                           2541943.\nAnonymous pages:                              717440.\nPages stored in compressor:                   778138.\nPages occupied by compressor:                 403610.\nDecompressions:                             26140408.\nCompressions:                               27664783.\nPageins:                                   125827896.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184403.\nPages tagged resident:                        112857.\nPages tagged compressed:                       71546.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7899.\nPages tag-storage free:                         2479.\nPages tag-storage non-tag pageable:           251545.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321580.760755,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    53682.\nPages active:                                 940747.\nPages inactive:                              2325115.\nPages speculative:                               244.\nPages throttled:                                   0.\nPages wired down:                            4613459.\nPages purgeable:                                 291.\n\"Translation faults\":                     1150574084.\nPages copy-on-write:                        32612352.\nPages zero filled:                        1705327856.\nPages reactivated:                           5797895.\nPages purged:                                7004199.\nFile-backed pages:                           2546243.\nAnonymous pages:                              719863.\nPages stored in compressor:                   778138.\nPages occupied by compressor:                 403610.\nDecompressions:                             26140414.\nCompressions:                               27664783.\nPageins:                                   125827901.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184449.\nPages tagged resident:                        112903.\nPages tagged compressed:                       71546.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7899.\nPages tag-storage free:                         2364.\nPages tag-storage non-tag pageable:           251660.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321583.789545,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    46817.\nPages active:                                 943939.\nPages inactive:                              2328774.\nPages speculative:                               244.\nPages throttled:                                   0.\nPages wired down:                            4613473.\nPages purgeable:                                1529.\n\"Translation faults\":                     1150620759.\nPages copy-on-write:                        32612755.\nPages zero filled:                        1705508465.\nPages reactivated:                           5797895.\nPages purged:                                7004201.\nFile-backed pages:                           2549901.\nAnonymous pages:                              723056.\nPages stored in compressor:                   778138.\nPages occupied by compressor:                 403610.\nDecompressions:                             26140414.\nCompressions:                               27664783.\nPageins:                                   125827903.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184458.\nPages tagged resident:                        112912.\nPages tagged compressed:                       71546.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7899.\nPages tag-storage free:                         2349.\nPages tag-storage non-tag pageable:           251675.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      },
+      {
+        "time": 1792321586.815445,
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    45919.\nPages active:                                 940980.\nPages inactive:                              2333111.\nPages speculative:                               244.\nPages throttled:                                   0.\nPages wired down:                            4612993.\nPages purgeable:                                 278.\n\"Translation faults\":                     1150669139.\nPages copy-on-write:                        32613143.\nPages zero filled:                        1705685492.\nPages reactivated:                           5797895.\nPages purged:                                7004201.\nFile-backed pages:                           2554238.\nAnonymous pages:                              720097.\nPages stored in compressor:                   778120.\nPages occupied by compressor:                 403610.\nDecompressions:                             26140418.\nCompressions:                               27664783.\nPageins:                                   125827905.\nPageouts:                                       8433.\nSwapins:                                          80.\nSwapouts:                                        236.\nPages tagged:                                 184432.\nPages tagged resident:                        112886.\nPages tagged compressed:                       71546.\nPages tag-storage:                            262144.\nPages tag-storage holding tags:                 7899.\nPages tag-storage free:                         2298.\nPages tag-storage non-tag pageable:           251726.\nPages tag-storage non-tag wired:                   9.\nBytes of compressed tags:                   10326976.\nTagged compressions:                          132345.\nTagged decompressions:                         49825.\n",
+        "swap": "vm.swapusage: total = 1024.00M  used = 3.69M  free = 1020.31M  (encrypted)",
+        "health": {
+          "status": "healthy",
+          "default_model": "gpt-oss-120b-mxfp4-bf16",
+          "engine_pool": {
+            "model_count": 5,
+            "loaded_count": 1,
+            "final_ceiling": 103079215104,
+            "current_model_memory": 68511353211
+          },
+          "mcp": null
+        }
+      }
+    ],
+    "started": 1792321535.125598,
+    "usage": {
+      "prompt_tokens": 130560,
+      "completion_tokens": 1,
+      "total_tokens": 130561,
+      "input_tokens": 130560,
+      "output_tokens": 1,
+      "prompt_tokens_details": {
+        "cached_tokens": 65535
+      },
+      "time_to_first_token": 53.74,
+      "total_time": 53.75,
+      "prompt_eval_duration": 53.74,
+      "generation_duration": 0.01,
+      "prompt_tokens_per_second": 1209.99,
+      "generation_tokens_per_second": 146.49
+    },
+    "success": true,
+    "elapsed_seconds": 53.97870206832886
+  }
+]

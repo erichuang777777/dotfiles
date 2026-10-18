@@ -1,0 +1,50 @@
+{
+  "model": "gpt-oss-120b-mxfp4-bf16",
+  "physical_ram_GiB": 128,
+  "omlx_ceiling_GiB": 96,
+  "sampling_interval_seconds": 3,
+  "rows": [
+    {
+      "input_tokens": 32768,
+      "output_tokens": 1,
+      "cached_tokens": 0,
+      "success": true,
+      "wall_seconds": 29.92,
+      "time_to_first_token": 16.09,
+      "sampled_process_footprint_peak_GiB": null
+    },
+    {
+      "input_tokens": 65536,
+      "output_tokens": 1,
+      "cached_tokens": 32767,
+      "success": true,
+      "wall_seconds": 19.26,
+      "time_to_first_token": 19.14,
+      "sampled_process_footprint_peak_GiB": null
+    },
+    {
+      "input_tokens": 130560,
+      "output_tokens": 1,
+      "cached_tokens": 65535,
+      "success": true,
+      "wall_seconds": 53.98,
+      "time_to_first_token": 53.74,
+      "sampled_process_footprint_peak_GiB": null
+    },
+    {
+      "input_tokens": 131071,
+      "output_tokens": 1,
+      "cached_tokens": 0,
+      "success": true,
+      "wall_seconds": 86.54,
+      "time_to_first_token": 85.37,
+      "sampled_process_footprint_peak_GiB": 67.82521168887615
+    }
+  ],
+  "other_large_models_concurrently_tested": false,
+  "embedding_on_mac": false,
+  "note": "Capacity only; one output token; does not test long-context reasoning quality or long decoding.",
+  "post_test_kernel_lifetime_peak_GiB": 76.56354839354753,
+  "swap_before_MB": 3.69,
+  "swap_after_MB": 3.69
+}

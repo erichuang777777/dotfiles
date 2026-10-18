@@ -1,0 +1,62 @@
+{
+  "base_url": "GB10_TAILSCALE_IP:8011",
+  "tests": [],
+  "unauthenticated_rejected": true,
+  "health_before": {
+    "status": "ready",
+    "model": "google/embeddinggemma-2",
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "device": "cuda:0",
+    "text_only": true,
+    "cuda_allocated_bytes": 542021120,
+    "cuda_reserved_bytes": 543162368
+  },
+  "document_seconds": 0.5084694160032086,
+  "retrieval_scores": [
+    0.7518349290998515,
+    0.6503760339239824,
+    0.6239773531110648
+  ],
+  "cat_retrieval_passed": true,
+  "mrl_128_passed": true,
+  "empty_batch_rejected": true,
+  "document_dimensions": 768,
+  "document_count": 3,
+  "health_after": {
+    "status": "ready",
+    "model": "google/embeddinggemma-2",
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "device": "cuda:0",
+    "text_only": true,
+    "cuda_allocated_bytes": 575575552,
+    "cuda_reserved_bytes": 599785472
+  },
+  "success": true,
+  "compose_restart_verified": true,
+  "validation_checks": {
+    "no_auth": true,
+    "empty": true,
+    "too_many": true,
+    "too_long": true,
+    "bad_dimensions": true
+  },
+  "health_after_compose_restart": {
+    "status": "ready",
+    "model": "google/embeddinggemma-2",
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "device": "cuda:0",
+    "text_only": true,
+    "cuda_allocated_bytes": 542021120,
+    "cuda_reserved_bytes": 543162368
+  },
+  "max_input_tokens_including_prefix": 8192,
+  "health_final": {
+    "status": "ready",
+    "model": "google/embeddinggemma-2",
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "device": "cuda:0",
+    "text_only": true,
+    "cuda_allocated_bytes": 575575552,
+    "cuda_reserved_bytes": 580911104
+  }
+}

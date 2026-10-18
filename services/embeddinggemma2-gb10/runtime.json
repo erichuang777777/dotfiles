@@ -1,0 +1,10 @@
+{
+  "base_image": "local-inference/comfyui:gb10-20261012",
+  "base_image_id": "sha256:85f46a95c9bbf9ddee2384a190e97817db9c340efed882ffd70969c28c5887f1",
+  "service_image_id": "sha256:f5ac1d92f7439e41150d27e47f6e590ec0b8d07a81edc443c742f05b58c7fb4d",
+  "torch": "2.13.0+cu130",
+  "transformers": "5.20.1",
+  "sentence_transformers": "6.1.0",
+  "fastapi": "0.136.3",
+  "uvicorn": "0.52.4"
+}

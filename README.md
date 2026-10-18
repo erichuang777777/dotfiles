@@ -45,3 +45,7 @@ chmod +x install.sh
 ## Agent 工具與 Skills
 
 [分類清單、固定來源與安裝驗證](agent-toolkit/README.md)，以及 [雲端 CLI／ClaudeR／open-doc](agent-toolkit/cloud-and-research.md)。
+
+## 原生上下文容量與遠端 Embedding
+
+[gpt-oss 128K 容量實測](benchmarks/context-capacity-2026-10-18/README.md) 與 [GB10 EmbeddingGemma 2 服務](services/embeddinggemma2-gb10/README.md)。
