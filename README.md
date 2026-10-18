@@ -7,6 +7,7 @@
 - `os/`: 平台專屬的套件安裝腳本（只跑一次，例如 `os/ubuntu.sh`）
 - `shell/`: 終端設定，共用別名及本機私密環境變數範本 (`.bashrc.local.example`)
 - `tools/`: 開發工具設定檔 (`.tmux.conf`, `daemon.json`, `.gitconfig`)
+- `dot_ssh/config`: SSH 主機設定，`gb10` 與 `gb-10` 使用 `altos` 帳號
 - `services/`: 隨插即用的 Docker Compose 服務模組
 - `install.sh`: 核心掛載腳本，負責建立 Symlink
 
@@ -31,6 +32,8 @@ chmod +x os/ubuntu.sh
 chmod +x install.sh
 ./install.sh
 ```
+
+安裝腳本會將 `~/.ssh/config` 連結至 `dot_ssh/config`；原有設定會先備份到 `~/.dotfiles-ssh-backup.XXXXXXXX/config`。之後執行 `ssh gb10` 即會使用 `altos` 帳號。其他主機的 `IdentityFile` 請依本機私鑰路徑調整。
 
 ### 隱私設定與私鑰
 安裝腳本會自動產生一份 `~/.bashrc.local`，請將您單機專用的金鑰（如 API Key）放在此處，此檔案不會被 Git 追蹤。

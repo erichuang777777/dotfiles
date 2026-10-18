@@ -23,4 +23,17 @@ echo "==> 建立自訂設定檔案目錄與檔案連結..."
 # 可以繼續加入其他的連結，例如 gitconfig
 ln -sf "$DOTFILES_DIR/tools/.gitconfig" "$HOME/.gitconfig"
 
+# 4. 連結 SSH 設定，先保留原有設定
+mkdir -p "$HOME/.ssh"
+chmod 700 "$HOME/.ssh"
+if [ ! -L "$HOME/.ssh/config" ] || [ "$(readlink "$HOME/.ssh/config")" != "$DOTFILES_DIR/dot_ssh/config" ]; then
+    if [ -e "$HOME/.ssh/config" ] || [ -L "$HOME/.ssh/config" ]; then
+        SSH_BACKUP_DIR="$(mktemp -d "$HOME/.dotfiles-ssh-backup.XXXXXXXX")"
+        mv "$HOME/.ssh/config" "$SSH_BACKUP_DIR/config"
+        echo "==> 原有 SSH 設定已備份至 $SSH_BACKUP_DIR/config"
+    fi
+    ln -s "$DOTFILES_DIR/dot_ssh/config" "$HOME/.ssh/config"
+fi
+chmod 600 "$DOTFILES_DIR/dot_ssh/config"
+
 echo "==> 設定檔掛載完成！"

@@ -1,4 +1,4 @@
-﻿# 主力運算節點 (ARM 24G) - Hermes
+# 主力運算節點 (ARM 24G) - Hermes
 Host hermes
     HostName 138.2.38.224
     User ubuntu
