@@ -71,4 +71,4 @@ Scrapling CLI、MCP、JavaScript 擷取測試與 Python 使用方式見 [Scrapli
 
 ## 憑證與安全
 
-[1Password 桌面版與 CLI](1password.md) 已安裝。沿用使用者既有付費帳號；登入、CLI 整合授權與實際金鑰注入仍需使用者完成設定。未讀取保管庫內容。
+[1Password 桌面版與 CLI](1password.md) 已安裝。沿用使用者既有付費帳號；使用者已登入並啟用 CLI 整合；核准後同次程序的登入驗證通過，新自動化程序仍可能需重新授權。實際金鑰注入尚未測試，未讀取密碼或 API 金鑰。
