@@ -68,5 +68,24 @@
       "pi"
     ],
     "browser": "existing Playwright Chromium 1248"
+  },
+  "1password": {
+    "date": "2026-10-18",
+    "category": "憑證與安全",
+    "desktop_version": "8.12.40",
+    "cli_version": "2.41.0",
+    "installed": true,
+    "cli_version_check_passed": true,
+    "op_run_help_passed": true,
+    "op_inject_help_passed": true,
+    "account_login_performed": false,
+    "cli_app_integration_enabled_by_agent": false,
+    "vault_contents_accessed": false,
+    "secret_injection_tested": false,
+    "user_action_required": [
+      "Sign in to the desktop app",
+      "Enable Integrate with 1Password CLI",
+      "Run op whoami in the user terminal and authorize"
+    ]
   }
 }

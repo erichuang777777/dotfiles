@@ -16,5 +16,7 @@
   },
   "github-cli": "2.102.0",
   "R": "4.6.1",
-  "RStudio": "2026.10.0+233"
+  "RStudio": "2026.10.0+233",
+  "1password-cli": "2.41.0",
+  "1password-desktop": "8.12.40"
 }

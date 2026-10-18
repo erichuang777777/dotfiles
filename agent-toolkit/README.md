@@ -68,3 +68,7 @@ python3 agent-toolkit/restore-skills.py --apply
 - Transitions 的 description 過長，僅縮短 YAML 中繼資料，保留完整指令本文；詳見 local-adaptations.json。
 
 Scrapling CLI、MCP、JavaScript 擷取測試與 Python 使用方式見 [Scrapling](scrapling.md)。
+
+## 憑證與安全
+
+[1Password 桌面版與 CLI](1password.md) 已安裝。沿用使用者既有付費帳號；登入、CLI 整合授權與實際金鑰注入仍需使用者完成設定。未讀取保管庫內容。
